@@ -1,0 +1,512 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Olympics",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. Olympics",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/oly\/smr_oly\/{discipline}\/medals\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "OlympicsMedalsMedals",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "discipline",
+                        "in": "path",
+                        "description": "Select Discipline"
+                    },
+                    {
+                        "name": "gender",
+                        "in": "query",
+                        "description": "Returns the gender selected.\n  Default - All genders are returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "Returns season selected \n Default current season"
+                    },
+                    {
+                        "name": "alltime",
+                        "in": "query",
+                        "description": "Returns All seasons \n Default current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player & team names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/oly\/SMR_OLY\/bios\/{playerId}": {
+            "get": {
+                "summary": "Returns Olympic bios",
+                "description": "",
+                "operationId": "OlympicsBiosBios",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "Provide player ID to return information. \n List returns list of players with bios"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/oly\/smr_oly\/{discipline}\/participants\/": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for athletes and can be used to return information on an athlete.",
+                "operationId": "OlympicsParticipantsParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "discipline",
+                        "in": "path",
+                        "description": "Select Discipline"
+                    },
+                    {
+                        "name": "gender",
+                        "in": "query",
+                        "description": "Returns the gender selected.\n  Default - All genders are returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player & team names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/oly\/smr_oly\/{discipline}\/participants\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "This returns only the selected team.",
+                "description": "",
+                "operationId": "OlympicsSingleTeamParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "discipline",
+                        "in": "path",
+                        "description": "Select Discipline"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "To get information on a specific team, enter the team ID."
+                    },
+                    {
+                        "name": "gender",
+                        "in": "query",
+                        "description": "Returns the gender selected.\n  Default - All genders are returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player & team names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/oly\/smr_oly\/{discipline}\/teams\/": {
+            "get": {
+                "summary": "Returns Olympic Teams",
+                "description": "",
+                "operationId": "OlympicsTeamsTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "discipline",
+                        "in": "path",
+                        "description": "Select Discipline"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "A teamId returns information for that team only."
+                    },
+                    {
+                        "name": "gender",
+                        "in": "query",
+                        "description": "Returns the gender selected.\n  Default - All genders are returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player & team names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/oly\/smr_oly\/{discipline}\/events\/": {
+            "get": {
+                "summary": "Live results",
+                "description": "",
+                "operationId": "OlympicsEventsEvents",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "discipline",
+                        "in": "path",
+                        "description": "Select Discipline"
+                    },
+                    {
+                        "name": "gender",
+                        "in": "query",
+                        "description": "Returns the gender selected.\n  Default - All genders are returned"
+                    },
+                    {
+                        "name": "phaseId",
+                        "in": "query",
+                        "description": "Returns the phase entered.\n  Default - All phases are returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "Returns season selected \n Default current season"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player & team names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/oly\/smr_oly\/{discipline}\/standings\/": {
+            "get": {
+                "summary": "Returns Olympics standings",
+                "description": "",
+                "operationId": "OlympicsStandingsStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "discipline",
+                        "in": "path",
+                        "description": "Select Discipline"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "Returns season selected \n Default current season"
+                    },
+                    {
+                        "name": "gender",
+                        "in": "query",
+                        "description": "Returns the gender selected.\n  Default - All genders are returned"
+                    },
+                    {
+                        "name": "pool",
+                        "in": "query",
+                        "description": "Returns the pool standings.\n  Default - False, full standings are returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player & team names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/oly\/smr_oly\/{discipline}\/schedule\/": {
+            "get": {
+                "summary": "Returns the olympic schedule",
+                "description": "",
+                "operationId": "OlympicsScheduleSchedule",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "discipline",
+                        "in": "path",
+                        "description": "Select Discipline"
+                    },
+                    {
+                        "name": "gender",
+                        "in": "query",
+                        "description": "Returns the gender selected.\n  Default - All genders are returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player & team names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/oly\/smr_oly\/stories\/headlines\/": {
+            "get": {
+                "summary": "List of recent stories.",
+                "description": "",
+                "operationId": "OlympicsRecentStoriesOlympicsHeadlines,stories,images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/oly\/smr_oly\/articles\/headlines\/": {
+            "get": {
+                "summary": "List of recent articles.",
+                "description": "",
+                "operationId": "OlympicsRecentArticlesOlympicsHeadlines,stories,images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/oly\/smr_oly\/stories\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full story for a storyId found in headline...",
+                "description": "Get the full story for a storyId found in headlines or stories.",
+                "operationId": "OlympicsFullstoryOlympicsHeadlines,stories,images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/oly\/smr_oly\/articles\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full article for a storyId found in headli...",
+                "description": "Get the full article for a storyId found in headlines or articles.",
+                "operationId": "OlympicsFullArticleOlympicsHeadlines,stories,images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/oly\/smr_oly\/images\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "RetrieveimageOlympicsHeadlines,stories,images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/oly\/smr_oly\/photos\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "RetrievePhotoOlympicsHeadlines,stories,images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/decode\/oly\/smr_oly\/{decodeType}\/": {
+            "get": {
+                "summary": "Olympics - Decodes",
+                "description": "",
+                "operationId": "OlympicsDecodesDecodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "decodeType",
+                        "in": "path",
+                        "description": "The data type to be decoded."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player & team names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
