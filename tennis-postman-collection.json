@@ -1,0 +1,1181 @@
+{
+    "id": "7f43758a3ba13121581b34c1cdf47004",
+    "name": "Tennis",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "7cc4f74e354c38a647dad945b0231a74",
+            "name": "The tennis leagues endpoint serves as a decode for...",
+            "url": "http:\/\/api.stats.com\/\/stats\/tennis\/leagues\/",
+            "description": "The tennis leagues endpoint serves as a decode for the available sub leagues (ATP, WTA, etc.).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "7eff5a649c7f8e87994048e5806e7604",
+            "name": "The events endpoint provides schedules, live score...",
+            "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/events\/{eventId}",
+            "description": "The events endpoint provides schedules, live scores, entrants (seeds), results, and match statistics.  Results & match statistics are not available by full season.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "results",
+                    "description": "Returns match results.  Will be ignored if all events for a full season are returned.\n  Default - false: results will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "matchStats",
+                    "description": "Returns more in depth match stats (aces, serve speed) for a specific event where available. Must be used conjunction with 'results=true'.\n  Default - false: matchStats data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "seeds",
+                    "description": "When true, returns a list of the seeded entrants for the tournament.\n  Default - false: seeds will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return events from a specific date. This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current event(s)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "matchTypeId",
+                    "description": "Only the specified match type will be returned.\n  Default - all match types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tournamentId",
+                    "description": "To get events for a particular tournament, enter the tournamentId. See tournaments decode endpoint for full list of tournament IDs.\n Default - all tournaments",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "9c03caca2972273d57437ef7602fc394",
+            "name": "The participants endpoint provides biographical in...",
+            "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/participants\/",
+            "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, or all players within the subLeague. When no specific playerId is selected, all players that have participated in a tournament for the given subLeague within the last two years are returned.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "180e8a0f51e14600f748e8ef085e2e3d",
+            "name": "This returns only one selected player.",
+            "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/participants\/{playerId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter his\/her ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "59d308638bf2f7f1dc83f9c5d09ac0f0",
+            "name": "Tennis - Single season or career stats for a singl...",
+            "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/stats\/players\/{playerId}",
+            "description": "Tennis - Single season or career stats for a single player",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter his\/her ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "allPlayers",
+                    "description": "When true, all players with stats in the given season are returned.\n  Default - false, all players not returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "enc",
+                    "description": "When true, the encyclopedia returns full career and season-by-season totals.\n  Default - false, full career data is not returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "fd5a68ef4f5a3ff4e62424092f11f56d",
+            "name": "Tennis - Leaders",
+            "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/leaders\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "leaderCategoryId",
+                    "description": "Only one category per query. The leaderCategories decode resource provides a full list of available codes.\n  Default -  Official Player Rankings",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "topCount",
+                    "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortType",
+                    "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Traliers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "3214271dd0ff5bfc820e95b5952eead1",
+            "name": "Tennis - Odds",
+            "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/odds\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return events from a specific date. This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current event(s)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tournamentId",
+                    "description": "To get events for a particular tournament, enter the tournamentId. See tournaments decode endpoint for full list of tournament IDs.\n Default - all tournaments",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Result will return only games for the specific eventType.\n Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventRoundId",
+                    "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 4 (Konckout) is selected\n  Default - all rounds combined",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "06d77c918573a3ec81163d0934c55450",
+            "name": "Tennis - Odds",
+            "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/odds\/{eventId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "b98d18dba057af583c7d1a04a8d6eae4",
+            "name": "List of headlines.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/general\/stories\/headlines\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "9c9940b2d63c602dcee4b006247549dd",
+            "name": "List of headlines.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/general\/articles\/headlines\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "9abcced1c79d7e4ac1ff4da76ec80073",
+            "name": "Recent stories for the selected league.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/recent\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "980b89420d81130869d53eafbaa1b864",
+            "name": "Recent articles for the selected league.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/articles\/recent\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "757f577baba7195436b87dbd7ee7e7a6",
+            "name": "Get the full story for a storyId found in headline...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/{storyId}\/",
+            "description": "Get the full story for a storyId found in headlines or stories.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "storyId",
+                    "description": "storyId",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "d5e627d22f0d9365babef394ac2978c7",
+            "name": "Get the full article for a storyId found in headli...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/articles\/{storyId}\/",
+            "description": "Get the full article for a storyId found in headlines or articles.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "storyId",
+                    "description": "storyId",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "56d01c1f6faa9dbad17212f9b2cb58f0",
+            "name": "Preview for one specific event, must identify leag...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/previews\/events\/{eventId}\/",
+            "description": "Preview for one specific event, must identify league, and eventId",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "ed6f1e110f73d7f06cc576a58486412e",
+            "name": "Recap for one specific event, must identify sport,...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/recaps\/events\/{eventId}\/",
+            "description": "Recap for one specific event, must identify sport, league, and eventId",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "b3d8c64aea7e1dec0b90e105c7dfbdb4",
+            "name": "Recap for one specific event, must identify sport,...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/articles\/recaps\/events\/{eventId}\/",
+            "description": "Recap for one specific event, must identify sport, league, and eventId",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "6b137a4e2eda14a947073bdd75de1d20",
+            "name": "List of available images.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/images\/list\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "originId",
+                    "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "a07a8e44b7e8b99f046dd517749d526f",
+            "name": "List of available photos.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/photos\/list\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "originId",
+                    "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "eb2435193b9f81c42dcbb7edcc02cc4d",
+            "name": "",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/images\/{imageSize}\/{imageId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageSize",
+                    "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageId",
+                    "description": "Photo ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "566f7b148c24711b012fe3a148356b58",
+            "name": "",
+            "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/photos\/{imageSize}\/{imageId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageSize",
+                    "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageId",
+                    "description": "Photo ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "83bc5d89855cb69f1e2d8f46cf608e09",
+            "name": "Tennis - Decodes",
+            "url": "http:\/\/api.stats.com\/\/decode\/tennis\/{subLeagueAbbreviation}\/{decodeType}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "decodeType",
+                    "description": "The data type to be decoded.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        },
+        {
+            "id": "7d907d0ee617ab21bbf7dc96d0d0e6f2",
+            "name": "The teams endpoint for Tennis is available for the...",
+            "url": "http:\/\/api.stats.com\/\/stats\/tennis\/itf\/teams\/{teamId}",
+            "description": "The teams endpoint for Tennis is available for the International Tennis Federation (ITF) only.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the sub league.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "rawModeData": ""
+        }
+    ]
+}
