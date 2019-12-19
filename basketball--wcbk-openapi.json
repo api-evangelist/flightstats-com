@@ -1,0 +1,1537 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Basketball - WCBK",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. WCBK - Women's College Basketball",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/basketball\/wcbk\/teams\/{teamId}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "WCBKTeamsWCBKTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "A conferenceId returns teams in the selected conference."
+                    },
+                    {
+                        "name": "collegeSubDivisionId",
+                        "in": "query",
+                        "description": "Entering a collegeSubDivisionId will return only the teams in that division"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/events\/{eventId}": {
+            "get": {
+                "summary": "Access to this events endpoint will provide you wi...",
+                "description": "Access to this events endpoint will provide you with the highest level of game data including live scores and box scores.  The first 2 parameters (eventId, box) are only applicable for a specific game.\n Events will also provide you with schedule data.",
+                "operationId": "WCBKIfpermissionedforalleventinformationWCBKSchedules,scores,boxscores",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "A conferenceId returns teams in the selected conference."
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "top25PollId",
+                        "in": "query",
+                        "description": "If used, will return only games involving top 25 teams for the selected pollId. Only applicable for a single day's games, and therefore must be used in conjunction with the &date paramenter, or the default (current day) call."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "tournamentId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games for this tournament.\n  Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/events\/teams\/{teamId}": {
+            "get": {
+                "summary": "This gets the event (schedule) information for jus...",
+                "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information.",
+                "operationId": "WCBKIfpermissionedforalleventinformationForoneteamonlyWCBKSchedules,scores,boxscores",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "top25PollId",
+                        "in": "query",
+                        "description": "If used, will return only games involving top 25 teams for the selected pollId. Only applicable for a single day's games, and therefore must be used in conjunction with the &date paramenter, or the default (current day) call."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "tournamentId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games for this tournament.\n  Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/box\/{eventId}": {
+            "get": {
+                "summary": "The box\/ resource provides scores\/schedules and bo...",
+                "description": "The box\/ resource provides scores\/schedules and box score information for WCBK events.",
+                "operationId": "WCBKIfpermissionedforjustschedules,scoresandboxscoresWCBKSchedules,scores,boxscores",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "A conferenceId returns teams in the selected conference."
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "top25PollId",
+                        "in": "query",
+                        "description": "If used, will return only games involving top 25 teams for the selected pollId. Only applicable for a single day's games, and therefore must be used in conjunction with the &date paramenter, or the default (current day) call."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "tournamentId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games for this tournament.\n  Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/box\/teams\/{teamId}": {
+            "get": {
+                "summary": "This gets the event (schedule) information for jus...",
+                "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information.",
+                "operationId": "WCBKIfpermissionedforjustschedules,scoresandboxscoresForoneteamonlyWCBKSchedules,scores,boxscores",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "top25PollId",
+                        "in": "query",
+                        "description": "If used, will return only games involving top 25 teams for the selected pollId. Only applicable for a single day's games, and therefore must be used in conjunction with the &date paramenter, or the default (current day) call."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "tournamentId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games for this tournament.\n  Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/scores\/{eventId}": {
+            "get": {
+                "summary": "The scores\/ resource provides score and schedule i...",
+                "description": "The scores\/ resource provides score and schedule information for WCBK events.  (Box is not an option.)",
+                "operationId": "WCBKIfpermissionedforjustschedulesandscoresWCBKSchedules,scores,boxscores",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "top25PollId",
+                        "in": "query",
+                        "description": "If used, will return only games involving top 25 teams for the selected pollId. Only applicable for a single day's games, and therefore must be used in conjunction with the &date paramenter, or the default (current day) call."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "tournamentId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games for this tournament.\n  Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/scores\/teams\/{teamId}": {
+            "get": {
+                "summary": "This gets the event (schedule) information for jus...",
+                "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information.",
+                "operationId": "WCBKIfpermissionedforjustschedulesandscoresForoneteamonlyWCBKSchedules,scores,boxscores",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "top25PollId",
+                        "in": "query",
+                        "description": "If used, will return only games involving top 25 teams for the selected pollId. Only applicable for a single day's games, and therefore must be used in conjunction with the &date paramenter, or the default (current day) call."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "tournamentId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games for this tournament.\n  Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/standings\/": {
+            "get": {
+                "summary": "The standings endpoint will provide the league sta...",
+                "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+                "operationId": "WCBKStandingsWCBKStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team.\n Default - false"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "A conferenceId returns teams in the selected conference."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/standings\/teams\/{teamId}": {
+            "get": {
+                "summary": "The standings endpoint will provide the league sta...",
+                "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+                "operationId": "WCBKStandingsforasingleteamWCBKStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team.\n Default - false"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/participants\/": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, all teams rosters within the league, or all free agents.",
+                "operationId": "WCBKPlayersWCBKParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sinceYearLast",
+                        "in": "query",
+                        "description": "Anyone who last played since the requested year.  Enter year as YYYY.\n  Default -"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/participants\/teams\/{teamId}": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, all teams rosters within the league, or all free agents.",
+                "operationId": "WCBKAllplayersonasingleteamWCBKParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/participants\/{playerId}": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, all teams rosters within the league, or all free agents.",
+                "operationId": "WCBKSingleplayerWCBKParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/polls\/": {
+            "get": {
+                "summary": "College Basketball polls",
+                "description": "",
+                "operationId": "WCBKPollsWCBKPolls",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pollId",
+                        "in": "query",
+                        "description": "The decodes resource provides a list of available codes.\n Default - Associated Press"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "pollDate",
+                        "in": "query",
+                        "description": "Returns the most recent poll less than or equal to the date entered.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - the most recent poll"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/polls\/teams\/{teamId}": {
+            "get": {
+                "summary": "College Basketball polls",
+                "description": "",
+                "operationId": "WCBKPollinfoforoneteamWCBKPolls",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "pollId",
+                        "in": "query",
+                        "description": "The decodes resource provides a list of available codes.\n Default - Associated Press"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/stats\/players\/{playerId}": {
+            "get": {
+                "summary": "WCBK - Season stats for a single player",
+                "description": "",
+                "operationId": "WCBKPlayerstatsCareerWCBKStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "enc",
+                        "in": "query",
+                        "description": "The 'encyclopedia returns full career and season-by-season totals.\n Notes:\n  The encyclopedia is valid for a single player only.  If playerId is omitted, 'enc=true' will be ignored.\n  If 'enc=true', the seasonId will be ignored if included.\n  Default - the current season"
+                    },
+                    {
+                        "name": "careerOnly",
+                        "in": "query",
+                        "description": "For a single player's career stats, only to be used in conjunction with 'enc=true'"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/stats\/players\/{playerId}\/events\/{eventId}": {
+            "get": {
+                "summary": "WCBK - Season stats for a single player",
+                "description": "",
+                "operationId": "WCBKPlayersinglegamestatsWCBKStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/stats\/players\/{playerId}\/events\/": {
+            "get": {
+                "summary": "WCBK - A player's stats, game-by-game.",
+                "description": "",
+                "operationId": "WCBKPlayergameByGamestatsWCBKStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/stats\/players\/{playerId}\/": {
+            "get": {
+                "summary": "WCBK - Player splits (breakdowns).",
+                "description": "",
+                "operationId": "WCBKPlayersplitsWCBKStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "splitId",
+                        "in": "query",
+                        "description": "Enter the stat split to be returned. (The decodes resource provides a list of available codes.)\n  1. If omitted, only official total stats (splitId = -1) will be returned. \n  2. If 'all', all the splits are returned.\n  3. Otherwise, the entered split is returned.\n  Default - Official totals (splitId = -1)"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/stats\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "WCBK - Team splits (breakdowns).",
+                "description": "",
+                "operationId": "WCBKTeamsplitsWCBKStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "splitId",
+                        "in": "query",
+                        "description": "Enter the stat split to be returned. (The decodes resource provides a list of available codes.)\n  1. If omitted, only official total stats (splitId = -1) will be returned. \n  2. If 'all', all the splits are returned.\n  3. Otherwise, the entered split is returned.\n  Default - Official totals (splitId = -1)"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/stats\/teams\/{teamId}\/events\/{eventId}": {
+            "get": {
+                "summary": "WCBK - A team's stats, game-by-game.",
+                "description": "",
+                "operationId": "WCBKTeamsinglegamestatsWCBKStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/stats\/teams\/{teamId}\/events\/": {
+            "get": {
+                "summary": "WCBK - A team's stats, game-by-game.",
+                "description": "",
+                "operationId": "WCBKTeamgameByGameWCBKStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/leaders\/": {
+            "get": {
+                "summary": "WCBK - Leaders",
+                "description": "",
+                "operationId": "WCBKLeadersWCBKLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - Blank (returns Minutes)."
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players."
+                    },
+                    {
+                        "name": "nonQualifiers",
+                        "in": "query",
+                        "description": "Should non-qualifiers be returned?\n  Default - false"
+                    },
+                    {
+                        "name": "sortType",
+                        "in": "query",
+                        "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Traliers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned."
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "A conferenceId returns teams in the selected conference."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get data for players on one team only, enter the teamId.\n  Default - all players"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/teamLeaders\/": {
+            "get": {
+                "summary": "WCBK - Team Leaders",
+                "description": "",
+                "operationId": "WCBKTeamLeadersWCBKTeamLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - Blank (returns Minutes)."
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players."
+                    },
+                    {
+                        "name": "nonQualifiers",
+                        "in": "query",
+                        "description": "Should non-qualifiers be returned?\n  Default - false"
+                    },
+                    {
+                        "name": "sortType",
+                        "in": "query",
+                        "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Traliers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned."
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "A conferenceId returns teams in the selected conference."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/basketball\/wcbk\/dailyLeaders\/": {
+            "get": {
+                "summary": "WCBK - Daily Leaders",
+                "description": "",
+                "operationId": "WCBKDailyLeadersWCBKDailyLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - Blank (returns Minutes)."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players."
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "A conferenceId returns teams in the selected conference."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Leaders among games in the specified eventRound only. See eventRounds decode endpoint for full list.\n  Default - all rounds"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get data for players on one team only, enter the teamId.\n  Default - all players"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/stories\/recent\/": {
+            "get": {
+                "summary": "Recent stories for the selected league.",
+                "description": "",
+                "operationId": "WCBKRecentstoriesWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/articles\/recent\/": {
+            "get": {
+                "summary": "Recent stories for the selected league.",
+                "description": "",
+                "operationId": "WCBKRecentArticlesWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/stories\/recent\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "Recent stories for the selected league\/team.",
+                "description": "",
+                "operationId": "WCBKRecentstoriesbyteamWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/articles\/recent\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "Recent stories for the selected league\/team.",
+                "description": "",
+                "operationId": "WCBKRecentArticlesbyteamWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/stories\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full story for a storyId found in headline...",
+                "description": "Get the full story for a storyId found in headlines or stories.",
+                "operationId": "WCBKFullstoryWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/articles\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full article for a storyId found in headli...",
+                "description": "Get the full article for a storyId found in headlines or articles.",
+                "operationId": "WCBKFullArticleWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/stories\/previews\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Preview for one specific event, must identify leag...",
+                "description": "Preview for one specific event, must identify league, and eventId",
+                "operationId": "WCBKPreviewsAvailableforoneevent,WCBKNCAATournamentonlyWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/stories\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sport,...",
+                "description": "Recap for one specific event, must identify sport, league, and eventId",
+                "operationId": "WCBKRecapsAvailableforoneeventWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/articles\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sport,...",
+                "description": "Recap for one specific event, must identify sport, league, and eventId",
+                "operationId": "WCBKRecapsArticlesAvailableforoneeventWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/images\/list\/": {
+            "get": {
+                "summary": "List of available images.",
+                "description": "",
+                "operationId": "WCBKListofavailableimagesWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/photos\/list\/": {
+            "get": {
+                "summary": "List of available photos.",
+                "description": "",
+                "operationId": "WCBKListofavailablephotosWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/images\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "RetrieveimageWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/basketball\/wcbk\/photos\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "RetrievePhotoWCBKStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/decode\/basketball\/wcbk\/{decodeType}": {
+            "get": {
+                "summary": "WCBK - Decodes",
+                "description": "",
+                "operationId": "WCBKDecodesWCBKDecodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "decodeType",
+                        "in": "path",
+                        "description": "The data type to be decoded."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "allSeasons",
+                        "in": "query",
+                        "description": "For seasonStructure only. To get complete history of league, select allSeasons=TRUE. Only those permissioned for all historic data will be able to utilize the 'allSeasons' option.\n  Default - false"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
