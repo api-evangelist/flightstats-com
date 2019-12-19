@@ -1,0 +1,3042 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Soccer",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. Soccer",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/soccer\/leagues\/": {
+            "get": {
+                "summary": "The soccer leagues endpoint serves as a decode for...",
+                "description": "The soccer leagues endpoint serves as a decode for the available leagues names, abbrevaitions, and URI paths.",
+                "operationId": "SoccerLeaguesSoccerLeagues",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/teams\/{teamId}": {
+            "get": {
+                "summary": "The teams endpoint will be your source for team na...",
+                "description": "The teams endpoint will be your source for team names, locations, abbreviations, and IDs.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the league",
+                "operationId": "SoccerTeamsSoccerTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "allTeams",
+                        "in": "query",
+                        "description": "The \/teams endpoint will by default return only teams in the most recent round. In order to see all teams in a league with multiple rounds, set allTeams to true."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/matches\/{eventId}": {
+            "get": {
+                "summary": "Access to the matches endpoint will provide you wi...",
+                "description": "Access to the matches endpoint will provide you with live scores, box scores, and play-by-plays.  The box, pbp, & touches parameters are only available when a single game is selected.\n Simple schedules are also available via the events endpoint.",
+                "operationId": "SoccerIfpermissionedfortheTIER6+\/matchesendpoint(alleventinfo,uptoplaybyplays)SoccerSchedules,scor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "pbp",
+                        "in": "query",
+                        "description": "Returns the play-by-play for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'pbp=true'.\n  Default - pbp data will not be returned"
+                    },
+                    {
+                        "name": "touches",
+                        "in": "query",
+                        "description": "Returns touch data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'touches=true'.\n  Default - touch data will not be returned"
+                    },
+                    {
+                        "name": "breakdowns",
+                        "in": "query",
+                        "description": "Returns breakdown data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'breakdowns=true'.\n  Default - breakdown data will not be returned"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "week",
+                        "in": "query",
+                        "description": "Will return all events from a specific week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "originalWeek",
+                        "in": "query",
+                        "description": "Will return all events from a specific original week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/insights\/{eventId}": {
+            "get": {
+                "summary": "Access to the insights endpoint will provide you w...",
+                "description": "Access to the insights endpoint will provide you with the highest level of game data including live scores, box scores, play-by-play, manual commentary, and reporter insights.  The box, pbp, touches, commentary and insights parameters are only available when a single game is selected.\n Simple schedules are also available via the insights endpoint.",
+                "operationId": "SoccerIfpermissionedforthe\/insightsendpoint(alleventinfo,uptoinsights)SoccerSchedules,scores,boxsc",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "pbp",
+                        "in": "query",
+                        "description": "Returns the play-by-play for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'pbp=true'.\n  Default - pbp data will not be returned"
+                    },
+                    {
+                        "name": "touches",
+                        "in": "query",
+                        "description": "Returns touch data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'touches=true'.\n  Default - touch data will not be returned"
+                    },
+                    {
+                        "name": "autoCommentary",
+                        "in": "query",
+                        "description": "Returns automated commentary, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'autoCommentary=true'.\n  Default - Automated commentary will not be returned"
+                    },
+                    {
+                        "name": "commentary",
+                        "in": "query",
+                        "description": "Returns manual commentary, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'commentary=true'.\n  Default - Commentary will not be returned"
+                    },
+                    {
+                        "name": "insights",
+                        "in": "query",
+                        "description": "Returns reporter insights, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'insights=true'.\n  Default - Insights WILL be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "week",
+                        "in": "query",
+                        "description": "Will return all events from a specific week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "originalWeek",
+                        "in": "query",
+                        "description": "Will return all events from a specific original week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/comm\/{eventId}": {
+            "get": {
+                "summary": "Access to the comm endpoint will provide you with ...",
+                "description": "Access to the comm endpoint will provide you with the highest level of game data including live scores, box scores, play-by-play, and manual commentary.  The box, pbp, touches & commentary parameters are only available when a single game is selected.\n Simple schedules are also available via the comm endpoint.",
+                "operationId": "SoccerIfpermissionedforthe\/commendpoint(alleventinfo,uptomanualcommentary)SoccerSchedules,scores,b",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "pbp",
+                        "in": "query",
+                        "description": "Returns the play-by-play for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'pbp=true'.\n  Default - pbp data will not be returned"
+                    },
+                    {
+                        "name": "touches",
+                        "in": "query",
+                        "description": "Returns touch data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'touches=true'.\n  Default - touch data will not be returned"
+                    },
+                    {
+                        "name": "autoCommentary",
+                        "in": "query",
+                        "description": "Returns automated commentary, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'autoCommentary=true'.\n  Default - Automated commentary will not be returned"
+                    },
+                    {
+                        "name": "commentary",
+                        "in": "query",
+                        "description": "Returns manual commentary, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'commentary=true'.\n  Default - Commentary will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "week",
+                        "in": "query",
+                        "description": "Will return all events from a specific week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "originalWeek",
+                        "in": "query",
+                        "description": "Will return all events from a specific original week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/autoComm\/{eventId}": {
+            "get": {
+                "summary": "Access to the autoComm endpoint will provide you w...",
+                "description": "Access to the autoComm endpoint will provide you with live scores, box scores, play-by-play, and automated commentary.  The box, pbp, touches & commentary parameters are only available when a single game is selected.\n Simple schedules are also available via the autoComm endpoint.",
+                "operationId": "SoccerIfpermissionedforthe\/autoCommendpoint(alleventinfo,uptoautomatedcommentary)SoccerSchedules,s",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "pbp",
+                        "in": "query",
+                        "description": "Returns the play-by-play for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'pbp=true'.\n  Default - pbp data will not be returned"
+                    },
+                    {
+                        "name": "touches",
+                        "in": "query",
+                        "description": "Returns touch data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'touches=true'.\n  Default - touch data will not be returned"
+                    },
+                    {
+                        "name": "autoCommentary",
+                        "in": "query",
+                        "description": "Returns automated commentary, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'autoCommentary=true'.\n  Default - Automated commentary will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "week",
+                        "in": "query",
+                        "description": "Will return all events from a specific week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "originalWeek",
+                        "in": "query",
+                        "description": "Will return all events from a specific original week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/events\/{eventId}": {
+            "get": {
+                "summary": "Access to the events endpoint will provide you wit...",
+                "description": "Access to the events endpoint will provide you with live scores, box scores, and play-by-plays.  The box, pbp, & touches parameters are only available when a single game is selected.\n Simple schedules are also available via the events endpoint.",
+                "operationId": "SoccerIfpermissionedforthe\/eventsendpoint(alleventinfo,uptoplaybyplays)SoccerSchedules,scores,boxs",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "pbp",
+                        "in": "query",
+                        "description": "Returns the play-by-play for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'pbp=true'.\n  Default - pbp data will not be returned"
+                    },
+                    {
+                        "name": "touches",
+                        "in": "query",
+                        "description": "Returns touch data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'touches=true'.\n  Default - touch data will not be returned"
+                    },
+                    {
+                        "name": "breakdowns",
+                        "in": "query",
+                        "description": "Returns breakdown data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'breakdowns=true'.\n  Default - breakdown data will not be returned"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "week",
+                        "in": "query",
+                        "description": "Will return all events from a specific week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "originalWeek",
+                        "in": "query",
+                        "description": "Will return all events from a specific original week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/box\/{eventId}": {
+            "get": {
+                "summary": "Access to the box endpoint will provide you with l...",
+                "description": "Access to the box endpoint will provide you with live scores and box scores.  The box parameter is only available when a single game is selected.\n Simple schedules are also available via the box endpoint.",
+                "operationId": "SoccerIfpermissionedforthe\/boxendpoint(alleventinfo,uptoboxscores)SoccerSchedules,scores,boxscores",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "week",
+                        "in": "query",
+                        "description": "Will return all events from a specific week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "originalWeek",
+                        "in": "query",
+                        "description": "Will return all events from a specific original week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/scores\/{eventId}": {
+            "get": {
+                "summary": "Access to the scores endpoint will provide you wit...",
+                "description": "Access to the scores endpoint will provide you with schedules and live scores only.",
+                "operationId": "SoccerIfpermissionedforthe\/scoresendpoint(scoresandschedulesonly)SoccerSchedules,scores,boxscores,",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "week",
+                        "in": "query",
+                        "description": "Will return all events from a specific week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "originalWeek",
+                        "in": "query",
+                        "description": "Will return all events from a specific original week number.\n Default - all weeks"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/projections\/{eventId}": {
+            "get": {
+                "summary": "The soccer projections endpoint provides pre-match...",
+                "description": "The soccer projections endpoint provides pre-match and live projections of a particular match.",
+                "operationId": "SoccerProjectionsSoccerProjections",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "oddsbyevent",
+                        "in": "query",
+                        "description": "Get match odds by play by play event sequence\n  Default - odds by events will not be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/participants\/": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
+                "operationId": "SoccerPlayersSoccerParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "sinceYearLast",
+                        "in": "query",
+                        "description": "Anyone who last played since the requested year.  Enter year as YYYY.\n  Default - Current rosters for all teams in league"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/participants\/teams\/{teamId}": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
+                "operationId": "SoccerAllplayersonasingleteamSoccerParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/participants\/{playerId}": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
+                "operationId": "SoccerSingleplayerSoccerParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/referees\/": {
+            "get": {
+                "summary": "The referees endpoint provides biographical inform...",
+                "description": "The referees endpoint provides biographical information for referees. Default call returns all active refs.",
+                "operationId": "SoccerRefereesSoccerParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "sinceYearLast",
+                        "in": "query",
+                        "description": "Anyone who last played since the requested year.  Enter year as YYYY.\n  Default - Current rosters for all teams in league"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/referees\/{refereeId}": {
+            "get": {
+                "summary": "The referees endpoint provides biographical inform...",
+                "description": "The referees endpoint provides biographical information on a single referee.",
+                "operationId": "SoccerSinglerefereeSoccerParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "refereeId",
+                        "in": "path",
+                        "description": "To get information on a specific referee, enter their ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/standings\/": {
+            "get": {
+                "summary": "The standings endpoint will provide the league sta...",
+                "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+                "operationId": "SoccerStandingsSoccerStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team. Not avaialble for live standings.\n Default - false"
+                    },
+                    {
+                        "name": "live",
+                        "in": "query",
+                        "description": "Where available, live standings reflect projected standings based on in-progress matches.\n  Default - false, live standings will not be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "Standings will be returned for the specified conference only.\n  Default - When used without eventTypeId and eventRoundId, will default to latest round"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/standings\/teams\/{teamId}": {
+            "get": {
+                "summary": "The standings endpoint will provide the league sta...",
+                "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+                "operationId": "SoccerStandingsforasingleteamSoccerStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team. Not avaialble for live standings.\n Default - false"
+                    },
+                    {
+                        "name": "live",
+                        "in": "query",
+                        "description": "Where available, live standings reflect projected standings based on in-progress matches.\n  Default - false, live standings will not be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "Standings will be returned for the specified conference only.\n  Default - When used without eventTypeId and eventRoundId, will default to latest round"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/stats\/players\/{playerId}": {
+            "get": {
+                "summary": "Soccer - Career stats for a single player",
+                "description": "",
+                "operationId": "SoccerPlayerstatsCareerSoccerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "enc",
+                        "in": "query",
+                        "description": "The encyclopedia returns full career and season-by-season totals.\n  Default - when false, returns the current season only"
+                    },
+                    {
+                        "name": "careerOnly",
+                        "in": "query",
+                        "description": "For a single player's career stats, only to be used in conjunction with 'enc=true'"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "breakdowns",
+                        "in": "query",
+                        "description": "Returns breakdown data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'breakdowns=true'.\n  Default - breakdown data will not be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/stats\/players\/{playerId}\/events\/{eventId}": {
+            "get": {
+                "summary": "Soccer - Single game stats for one player",
+                "description": "",
+                "operationId": "SoccerPlayersinglegamestatsSoccerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "breakdowns",
+                        "in": "query",
+                        "description": "Returns breakdown data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'breakdowns=true'.\n  Default - breakdown data will not be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/stats\/players\/{playerId}\/events\/": {
+            "get": {
+                "summary": "Soccer - game-by-game statistics for a single play...",
+                "description": "Soccer - game-by-game statistics for a single player",
+                "operationId": "SoccerPlayergameByGamelogsSoccerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "breakdowns",
+                        "in": "query",
+                        "description": "Returns breakdown data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'breakdowns=true'.\n  Default - breakdown data will not be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/stats\/players\/{playerId}\/teams\/{teamId}": {
+            "get": {
+                "summary": "Soccer - Season stats for a single player",
+                "description": "",
+                "operationId": "SoccerPlayerstatswhileononeteamSoccerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "breakdowns",
+                        "in": "query",
+                        "description": "Returns breakdown data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'breakdowns=true'.\n  Default - breakdown data will not be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/mls\/stats\/players\/{playerId}\/": {
+            "get": {
+                "summary": "Soccer - Season stats for a single player",
+                "description": "",
+                "operationId": "SoccerPlayerSplitsSoccerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "splitId",
+                        "in": "query",
+                        "description": "For MLS only, enter the split to be returned. The splitTypes decode provides a list of all available codes.\n  1. If omitted, only total stats (splitId = 0) will be returned.\n  2. If 'all', all the splits are returned.\n  3. Otherwise, the entered split is returned.\n  Default - totals (splitId = 0)"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/stats\/teams\/{teamId}": {
+            "get": {
+                "summary": "Soccer - Season stats for a single team",
+                "description": "",
+                "operationId": "SoccerTeamstatsYearToDateSoccerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "breakdowns",
+                        "in": "query",
+                        "description": "Returns breakdown data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'breakdowns=true'.\n  Default - breakdown data will not be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/stats\/teams\/{teamId}\/events\/{eventId}": {
+            "get": {
+                "summary": "Soccer - Single game stats for one team",
+                "description": "",
+                "operationId": "SoccerTeamsinglegamestatsSoccerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "breakdowns",
+                        "in": "query",
+                        "description": "Returns breakdown data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'breakdowns=true'.\n  Default - breakdown data will not be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/stats\/teams\/{teamId}\/events\/": {
+            "get": {
+                "summary": "Soccer - game-by-game statistics for a single team...",
+                "description": "Soccer - game-by-game statistics for a single team",
+                "operationId": "SoccerTeamgameByGamelogsSoccerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "breakdowns",
+                        "in": "query",
+                        "description": "Returns breakdown data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'breakdowns=true'.\n  Default - breakdown data will not be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/mls\/stats\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "Soccer - Season stats for a single team",
+                "description": "",
+                "operationId": "SoccerTeamSplitsSoccerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "splitId",
+                        "in": "query",
+                        "description": "For MLS only, enter the split to be returned. The splitTypes decode provides a list of all available codes.\n  1. If omitted, only total stats (splitId = 0) will be returned.\n  2. If 'all', all the splits are returned.\n  3. Otherwise, the entered split is returned.\n  Default - totals (splitId = 0)"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "breakdowns",
+                        "in": "query",
+                        "description": "Returns breakdown data, when available, for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'breakdowns=true'.\n  Default - breakdown data will not be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/stats\/referees\/{refereeId}": {
+            "get": {
+                "summary": "Soccer - Season stats for all active referees, or ...",
+                "description": "Soccer - Season stats for all active referees, or a single referee",
+                "operationId": "SoccerRefereestatsYearToDateSoccerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "refereeId",
+                        "in": "path",
+                        "description": "To get information on a specific referee, enter their ID."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/leaders\/": {
+            "get": {
+                "summary": "Soccer - Leaders",
+                "description": "",
+                "operationId": "SoccerLeadersSoccerLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - Blank (returns Goals)."
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players."
+                    },
+                    {
+                        "name": "nonQualifiers",
+                        "in": "query",
+                        "description": "Should non-qualifiers be returned?\n  Default - false"
+                    },
+                    {
+                        "name": "sortType",
+                        "in": "query",
+                        "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Trailers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get leaders on one specific team only, enter the teamId.\n  Default - leaders on all teams"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/teamLeaders\/": {
+            "get": {
+                "summary": "Soccer - Team Leaders",
+                "description": "",
+                "operationId": "SoccerTeamLeadersSoccerLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - Blank (returns Goals)."
+                    },
+                    {
+                        "name": "sortType",
+                        "in": "query",
+                        "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Trailers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "subSeason",
+                        "in": "query",
+                        "description": "To get events for a different sub-season, enter the sub-season integer value.\n  Default - the current sub-season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/injuries\/": {
+            "get": {
+                "summary": "Soccer - Get all Injuries",
+                "description": "",
+                "operationId": "SoccerInjuriesSoccerInjuries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "healed",
+                        "in": "query",
+                        "description": "Include injuries that have healed (ended)?\n  Default - false:"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/injuries\/players\/{playerId}": {
+            "get": {
+                "summary": "Soccer - Player Injuries",
+                "description": "",
+                "operationId": "SoccerInjuriesbyplayerSoccerInjuries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "healed",
+                        "in": "query",
+                        "description": "Include injuries that have healed (ended)?\n  Default - false:"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/injuries\/players\/{playerId}\/teams\/{teamId}": {
+            "get": {
+                "summary": "By default, results include all injuries for a pla...",
+                "description": "By default, results include all injuries for a player (a) during the time period selected, (b) if the injury has not healed and (c) for all the teams the player was on during the time period.\n To return only those injuries while a player is on a specific team, you must include \/teams\/:teamId in the URI.",
+                "operationId": "SoccerInjuriesbyplayeronaspecificteamSoccerInjuries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "healed",
+                        "in": "query",
+                        "description": "Include injuries that have healed (ended)?\n  Default - false:"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/injuries\/teams\/{teamId}": {
+            "get": {
+                "summary": "NBA - Team Injuries",
+                "description": "",
+                "operationId": "SoccerInjuriesbyteamSoccerInjuries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "healed",
+                        "in": "query",
+                        "description": "Include injuries that have healed (ended)?\n  Default - false:"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/transfers\/{transactionId}": {
+            "get": {
+                "summary": "Soccer - Transfers",
+                "description": "",
+                "operationId": "SoccerTransfersSoccerTransfers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "fromLeagueId",
+                        "in": "query",
+                        "description": "Returns only transfers from a specific league. See soccer\/leagues endpoint for league IDs.\n  Default - Transfers from all leagues."
+                    },
+                    {
+                        "name": "toLeagueId",
+                        "in": "query",
+                        "description": "Returns only transfers to a specific league. See soccer\/leagues endpoint for league IDs.\n  Default - Transfers to all leagues."
+                    },
+                    {
+                        "name": "fromTeamId",
+                        "in": "query",
+                        "description": "Returns only transfers from a specific team. See teams endpoint for team IDs.\n  Default - Transfers from all teams."
+                    },
+                    {
+                        "name": "toTeamId",
+                        "in": "query",
+                        "description": "Returns only transfers to a specific team. See soccer\/leagues endpoint for league IDs.\n  Default - Transfers to all teams."
+                    },
+                    {
+                        "name": "transactionId",
+                        "in": "path",
+                        "description": "To return a single transfer, enter the transaction ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/transfers\/players\/{playerId}": {
+            "get": {
+                "summary": "Soccer - Transfers",
+                "description": "",
+                "operationId": "SoccerTransfersbyplayerSoccerTransfers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "fromLeagueId",
+                        "in": "query",
+                        "description": "Returns only transfers from a specific league. See soccer\/leagues endpoint for league IDs.\n  Default - Transfers from all leagues."
+                    },
+                    {
+                        "name": "toLeagueId",
+                        "in": "query",
+                        "description": "Returns only transfers to a specific league. See soccer\/leagues endpoint for league IDs.\n  Default - Transfers to all leagues."
+                    },
+                    {
+                        "name": "fromTeamId",
+                        "in": "query",
+                        "description": "Returns only transfers from a specific team. See teams endpoint for team IDs.\n  Default - Transfers from all teams."
+                    },
+                    {
+                        "name": "toTeamId",
+                        "in": "query",
+                        "description": "Returns only transfers to a specific team. See soccer\/leagues endpoint for league IDs.\n  Default - Transfers to all teams."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/suspensions\/": {
+            "get": {
+                "summary": "Soccer - Suspensions",
+                "description": "",
+                "operationId": "SoccerSuspensionsSoccerSuspensions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "suspensionTypeId",
+                        "in": "query",
+                        "description": "Limit to either suspensions or near suspensions.\n  Default - All suspension types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/suspensions\/players\/{playerId}": {
+            "get": {
+                "summary": "Soccer - Suspensions",
+                "description": "",
+                "operationId": "SoccerSuspensionsbyplayerSoccerSuspensions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "suspensionTypeId",
+                        "in": "query",
+                        "description": "Limit to either suspensions or near suspensions.\n  Default - All suspension types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/suspensions\/teams\/{teamId}": {
+            "get": {
+                "summary": "Soccer - Suspensions",
+                "description": "",
+                "operationId": "SoccerSuspensionsbyteamSoccerSuspensions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "suspensionTypeId",
+                        "in": "query",
+                        "description": "Limit to either suspensions or near suspensions.\n  Default - All suspension types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/coaches\/": {
+            "get": {
+                "summary": "Soccer - Coaches",
+                "description": "",
+                "operationId": "SoccerCoachesSoccerCoaches",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "coachId",
+                        "in": "query",
+                        "description": "To get results for single coach, enter coach ID.\n  Default - If no ID is entered, all current NBA coaches will be returned."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/coaches\/teams\/{teamId}": {
+            "get": {
+                "summary": "Soccer - Coaches for a single team",
+                "description": "",
+                "operationId": "SoccerCoachesforasingleteamSoccerCoaches",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/odds\/": {
+            "get": {
+                "summary": "Soccer - Odds",
+                "description": "",
+                "operationId": "SoccerOddsSoccerOdds",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/odds\/{eventId}": {
+            "get": {
+                "summary": "Soccer - Odds",
+                "description": "",
+                "operationId": "SoccerOddsforonegameonlySoccerOdds",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/{leaguePath}\/odds\/teams\/{teamId}": {
+            "get": {
+                "summary": "Soccer - Odds",
+                "description": "",
+                "operationId": "SoccerOddsforoneteamonlySoccerOdds",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified eventType.\n  Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for the specified round. Must be used in conjunction with eventTypeId. See the eventRounds decode endpoint for rounds specific to each league & event type.\n Default - all rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/natl\/teamRankings\/": {
+            "get": {
+                "summary": "Soccer - Team Rankings",
+                "description": "",
+                "operationId": "SoccerTeamRankingsSoccerTeamRankings:FIFAWorldCup(natl)only",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/natl\/teamRankings\/teams\/{teamId}": {
+            "get": {
+                "summary": "Soccer - Team Rankings",
+                "description": "",
+                "operationId": "SoccerTeamRankingsforoneteamonlySoccerTeamRankings:FIFAWorldCup(natl)only",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get leaders on one specific team only, enter the teamId.\n  Default - leaders on all teams"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all events from the current date will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/soccer\/mls\/awards\/": {
+            "get": {
+                "summary": "Soccer - Awards",
+                "description": "",
+                "operationId": "SoccerAwardsSoccerAwards:MajorLeagueSoccer(mls)only",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "awardId",
+                        "in": "query",
+                        "description": "To get data for a single award.\n Default - all awards"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/stories\/headlines\/": {
+            "get": {
+                "summary": "List of headlines.",
+                "description": "",
+                "operationId": "HeadlinesByleagueStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/articles\/headlines\/": {
+            "get": {
+                "summary": "List of headlines.",
+                "description": "",
+                "operationId": "HeadlinesArticlesByleagueStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/general\/stories\/recent\/": {
+            "get": {
+                "summary": "All recent stories.",
+                "description": "",
+                "operationId": "RecentstoriesAllStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/general\/articles\/recent\/": {
+            "get": {
+                "summary": "All recent articles.",
+                "description": "",
+                "operationId": "RecentArticlesAllStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/stories\/recent\/teams\/{teamId}": {
+            "get": {
+                "summary": "Recent stories for the selected league\/team.",
+                "description": "",
+                "operationId": "RecentstoriesListbyteamStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/articles\/recent\/teams\/{teamId}": {
+            "get": {
+                "summary": "Recent stories for the selected league\/team.",
+                "description": "",
+                "operationId": "RecentArticlesListbyteamStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/stories\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full story for a storyId found in headline...",
+                "description": "Get the full story for a storyId found in headlines or stories.",
+                "operationId": "FullstoryStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/articles\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full story for a storyId found in headline...",
+                "description": "Get the full story for a storyId found in headlines or stories.",
+                "operationId": "FullArticleStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/stories\/previews\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Preview for one specific event, must identify leag...",
+                "description": "Preview for one specific event, must identify league, and eventId",
+                "operationId": "PreviewsAvailableforoneeventStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/stories\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sport,...",
+                "description": "Recap for one specific event, must identify sport, league, and eventId",
+                "operationId": "RecapsAvailableforoneeventStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/articles\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sport,...",
+                "description": "Recap for one specific event, must identify sport, league, and eventId",
+                "operationId": "RecapsArticlesAvailableforoneeventStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp, and touches parameters.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/images\/list": {
+            "get": {
+                "summary": "List of available images.",
+                "description": "",
+                "operationId": "ListofavailableimagesBysport\/leagueStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/photos\/list": {
+            "get": {
+                "summary": "List of available photos.",
+                "description": "",
+                "operationId": "ListofavailablephotosBysport\/leagueStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/images\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "RetrieveimageStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/soccer\/{leaguePath}\/photos\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "RetrievePhotoStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/decode\/soccer\/{leaguePath}\/{decodeType}\/": {
+            "get": {
+                "summary": "Soccer - Decodes",
+                "description": "",
+                "operationId": "SoccerDecodesSoccerDecodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the soccer\/leagues endpoint"
+                    },
+                    {
+                        "name": "decodeType",
+                        "in": "path",
+                        "description": "The data type to be decoded."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "allSeasons",
+                        "in": "query",
+                        "description": "For complete history of league, select 'true'. Only those permissioned for all historic data will be able to utilize this option.\n  Default - All seasons will not be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
