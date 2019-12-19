@@ -1,0 +1,242 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Boxing",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. Boxing",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/boxing\/boxing\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Schedules and results",
+                "description": "",
+                "operationId": "BoxingSchedulesandresultsBoxingSchedulesandresults",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of boxer, venues, and country names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/boxing\/boxing\/participants\/": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for riders and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
+                "operationId": "BoxingParticipantsBoxingParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sinceYearLast",
+                        "in": "query",
+                        "description": "Anyone who last played since the requested year.  Enter year as YYYY.\n  Default - Anyone who had a fight this year, or the previous year."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of boxer, venues, and country names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/boxing\/boxing\/participants\/{playerId}\/": {
+            "get": {
+                "summary": "Including a player ID will limit data returned to ...",
+                "description": "Including a player ID will limit data returned to the selected player only.",
+                "operationId": "BoxingSinglefighterBoxingParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of boxer, venues, and country names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/boxing\/boxing\/rankings\/": {
+            "get": {
+                "summary": "Boxing Rankings",
+                "description": "",
+                "operationId": "BoxingRankingsBoxingRankings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "orgId",
+                        "in": "query",
+                        "description": "The decodes resource provides a list of available codes.\n Default - All organizations"
+                    },
+                    {
+                        "name": "weightClass",
+                        "in": "query",
+                        "description": "The decodes resource provides a list of available codes.\n Default - All weight classes"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n Default - the current season"
+                    },
+                    {
+                        "name": "pollDate",
+                        "in": "query",
+                        "description": "Will return rankings as of specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current rankings"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/football\/cfb\/polls\/players\/{playerId}": {
+            "get": {
+                "summary": "Boxing Rankings for one boxer",
+                "description": "",
+                "operationId": "BoxingRankingsforoneboxerBoxingRankings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "orgId",
+                        "in": "query",
+                        "description": "The decodes resource provides a list of available codes.\n Default - All organizations"
+                    },
+                    {
+                        "name": "weightClass",
+                        "in": "query",
+                        "description": "The decodes resource provides a list of available codes.\n Default - All weight classes"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n Default - the current season"
+                    },
+                    {
+                        "name": "pollDate",
+                        "in": "query",
+                        "description": "Will return rankings as of specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current rankings"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/decode\/boxing\/boxing\/{decodeType}": {
+            "get": {
+                "summary": "Boxing - Decodes",
+                "description": "",
+                "operationId": "BoxingDecodesBoxingDecodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "decodeType",
+                        "in": "path",
+                        "description": "The data type to be decoded."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n Default - the current season"
+                    },
+                    {
+                        "name": "allSeasons",
+                        "in": "query",
+                        "description": "For seasonStructure only. For complete history of league, select 'true'. Only those permissioned for all historic data will be able to utilize this option.\n  Default - All seasons will not be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of boxer, venues, and country names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
