@@ -1,0 +1,827 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Hockey - Other",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. Hockey - Other",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/hockey\/leagues\/": {
+            "get": {
+                "summary": "The hockey leagues endpoint serves as a decode for...",
+                "description": "The hockey leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
+                "operationId": "HockeyLeaguesHockeyLeagues",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/teams\/{teamId}": {
+            "get": {
+                "summary": "The teams endpoint will be your source for team na...",
+                "description": "The teams endpoint will be your source for team names, locations, abbreviations, and IDs.",
+                "operationId": "HockeyTeamsHockeyTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/events\/{eventId}": {
+            "get": {
+                "summary": "If you are permissioned for the \/events resource, ...",
+                "description": "If you are permissioned for the \/events resource, you have access to the highest level of game data including live scores, box scores, and play-by-play.",
+                "operationId": "HockeyIfpermissionedforalleventinformationHockeySchedules,scores,boxscores,playByPlay",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with box.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "pbp",
+                        "in": "query",
+                        "description": "Returns the play-by-play for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with pbp.\n  Default - pbp data will not be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - all event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/events\/teams\/{teamId}": {
+            "get": {
+                "summary": "This endpoint allows you to select schedule and sc...",
+                "description": "This endpoint allows you to select schedule and score information for just one team.  Getting information for a single team returns only schedule and score information.  If you want detailed event information, you use the example about with the eventId.",
+                "operationId": "HockeyIfpermissionedforalleventinformationScheduleforoneteamonlyHockeySchedules,scores,boxscores,",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - all event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/box\/{eventId}": {
+            "get": {
+                "summary": "The box\/ resource provides scores\/schedules and bo...",
+                "description": "The box\/ resource provides scores\/schedules and box score information for hockey events. (Play-by-play is not an option.)",
+                "operationId": "HockeyIfpermissionedforjustschedules,scoresandboxscoresHockeySchedules,scores,boxscores,playByPl",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with box.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - all event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/box\/teams\/{teamId}": {
+            "get": {
+                "summary": "The box\/ resource provides scores\/schedules and bo...",
+                "description": "The box\/ resource provides scores\/schedules and box score information for hockey events.",
+                "operationId": "HockeyIfpermissionedforjustschedules,scoresandboxscoresScheduleforoneteamonlyHockeySchedules,scor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - all event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/scores\/{eventId}": {
+            "get": {
+                "summary": "The scores\/ resource provides score and schedule i...",
+                "description": "The scores\/ resource provides score and schedule information for Hockey events.",
+                "operationId": "HockeyIfpermissionedforjustschedulesandscoresHockeySchedules,scores,boxscores,playByPlay",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - all event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/scores\/teams\/{teamId}": {
+            "get": {
+                "summary": "The scores\/ resource provides score and schedule i...",
+                "description": "The scores\/ resource provides score and schedule information for Hockey events.",
+                "operationId": "HockeyIfpermissionedforjustschedulesandscoresForoneteamonlyHockeySchedules,scores,boxscores,play",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - all event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n Default - Regular Season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/standings\/": {
+            "get": {
+                "summary": "The standings endpoint will provide the group stan...",
+                "description": "The standings endpoint will provide the group standings, including all team data relevant to standings.",
+                "operationId": "HockeyStandingsHockeyStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team.\n Default - false"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/standings\/teams\/{teamId}": {
+            "get": {
+                "summary": "The standings endpoint will provide the group stan...",
+                "description": "The standings endpoint will provide the group standings, including all team data relevant to standings.",
+                "operationId": "HockeyStandingsforasingleteamHockeyStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team.\n Default - false"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/participants\/": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
+                "operationId": "HockeyPlayersHockeyParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/participants\/teams\/{teamId}": {
+            "get": {
+                "summary": "This will return only those players on the selecte...",
+                "description": "This will return only those players on the selected team",
+                "operationId": "HockeyAllplayersonasingleteamHockeyParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/participants\/{playerId}": {
+            "get": {
+                "summary": "This returns only the selected player.",
+                "description": "",
+                "operationId": "HockeySingleplayerHockeyParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/stats\/players\/{playerId}": {
+            "get": {
+                "summary": "Hockey - Stats for a single player",
+                "description": "",
+                "operationId": "HockeyPlayerstatsHockeyStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventType",
+                        "in": "query",
+                        "description": "To get stats for only one event type, enter the eventTypeId.\n  Default - all event types combined."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/stats\/players\/": {
+            "get": {
+                "summary": "Hockey - Stats for all players on a single team",
+                "description": "",
+                "operationId": "HockeyAllplayersonasingleteamHockeyStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get stats for all players on a single team, enter the teamID."
+                    },
+                    {
+                        "name": "eventType",
+                        "in": "query",
+                        "description": "To get stats for only one event type, enter the eventTypeId.\n  Default - all event types combined."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/{leaguePath}\/dailyLeaders\/": {
+            "get": {
+                "summary": "Hockey - Daily Leaders",
+                "description": "",
+                "operationId": "HockeyDailyLeadersHockeyDailyLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.\n  Default - Blank (returns goals)."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties)."
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "Leaders among specified conference only. See conferences decode endpoint for full list.\n  Default - all"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - all event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n Default - Regular Season"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get stats for all players on a single team, enter the teamID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/decode\/hockey\/{leaguePath}\/{decodeType}": {
+            "get": {
+                "summary": "Hockey -  Decodes",
+                "description": "",
+                "operationId": "HockeyDecodesHockeyDecodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the hockey\/leagues endpoint"
+                    },
+                    {
+                        "name": "decodeType",
+                        "in": "path",
+                        "description": "The data type to be decoded."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
