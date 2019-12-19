@@ -1,0 +1,1581 @@
+{
+    "id": "7b9d69470c43d3ab0faa79d34ff11537",
+    "name": "Cricket",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "dcafbf962bc1ddc000647a80ba911f82",
+            "name": "The cricket leagues endpoint serves as a decode fo...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/leagues\/",
+            "description": "The cricket leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "5d404daa8887ea275fb8700830a763b9",
+            "name": "Team information.",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/teams\/{teamId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "A teamId returns information for that team only.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "36c8711d6ccfe1608e2271547d0edef8",
+            "name": "Access to this events endpoint will provide you wi...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/events\/{eventId}\/",
+            "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, and play-by-plays when applicable.  The 'eventId', 'box', and 'pbp' parameters below are only applicable for a specific game.\n Events will also provide you with schedule data.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "box",
+                    "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pbp",
+                    "description": "Returns the play-by-play for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'pbp=true'.\n  Default - pbp data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "seriesId",
+                    "description": "Will return events from a specific series. See the league specific series decode endpoint for a complete list of series available for any given league.\n Default - No series restrictions",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "37d95e10a923e770ce718ae1eb75e0ff",
+            "name": "This gets the event (schedule) information for jus...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/events\/teams\/{teamId}\/",
+            "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "A teamId returns information for that team only.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "seriesId",
+                    "description": "Will return events from a specific series. See the league specific series decode endpoint for a complete list of series available for any given league.\n Default - No series restrictions",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "8f35fb6c300fc3dce205985c2321d0c7",
+            "name": "Access to this events endpoint will provide you wi...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/box\/{eventId}\/",
+            "description": "Access to this events endpoint will provide you with live scores and box scores when applicable.  The 'eventId' and 'box' parameters below are only applicable for a specific game. The 'box' endpoint will also provide you with schedule data.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "box",
+                    "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "seriesId",
+                    "description": "Will return events from a specific series. See the league specific series decode endpoint for a complete list of series available for any given league.\n Default - No series restrictions",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "8d96e982d8f263ee91ab7bf5ed85f904",
+            "name": "This gets the event (schedule) information for jus...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/box\/teams\/{teamId}\/",
+            "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "A teamId returns information for that team only.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "seriesId",
+                    "description": "Will return events from a specific series. See the league specific series decode endpoint for a complete list of series available for any given league.\n Default - No series restrictions",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "569ea1f1f3077609fe9c674ff4ccc04f",
+            "name": "The scores\/ resource provides score and schedule i...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/scores\/{eventId}\/",
+            "description": "The scores\/ resource provides score and schedule information for events.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "seriesId",
+                    "description": "Will return events from a specific series. See the league specific series decode endpoint for a complete list of series available for any given league.\n Default - No series restrictions",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "b3783e3e6f3926c96ba2561718336248",
+            "name": "This gets the event (schedule) information for jus...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/scores\/teams\/{teamId}\/",
+            "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "A teamId returns information for that team only.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "seriesId",
+                    "description": "Will return events from a specific series. See the league specific series decode endpoint for a complete list of series available for any given league.\n Default - No series restrictions",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "c3c66d367e1e49a1f25dcf91b614878f",
+            "name": "The standings endpoint will provide the league sta...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/standings\/",
+            "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "5d38b5993db0d9d4eafd98a15fdfa4ef",
+            "name": "Standings for a single team.",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/standings\/teams\/{teamId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "A teamId returns information for that team only.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "52adffcf35f95473565f81a8ea18d692",
+            "name": "The participants endpoint provides biographical in...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/participants\/",
+            "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "42559d94e979532dd71fe196e0c5807d",
+            "name": "Including a team ID (required) will limit rosters ...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/participants\/teams\/{teamId}\/",
+            "description": "Including a team ID (required) will limit rosters returned to the selected team only.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "A teamId returns information for that team only.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "290489f4abcf56a1685ac8c394a4a4fa",
+            "name": "Including a player ID (required) will limit data r...",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/participants\/{playerId}\/",
+            "description": "Including a player ID (required) will limit data returned to the selected player only.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter their ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "03bfb4687ee21df4507577a9a50c760c",
+            "name": "Cricket - Career stats for a single player",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/stats\/players\/{playerId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter their ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "seriesId",
+                    "description": "Will return events from a specific series. See the league specific series decode endpoint for a complete list of series available for any given league.\n Default - No series restrictions",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "enc",
+                    "description": "The encyclopedia returns full career and season-by-season totals.\n  The encyclopedia is valid for a single player only.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "a7fc4ce29b8ef52dbcbbaa4ebf0785ae",
+            "name": "Cricket - Team stats",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/stats\/teams\/{teamId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "A teamId returns information for that team only.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "seriesId",
+                    "description": "Will return events from a specific series. See the league specific series decode endpoint for a complete list of series available for any given league.\n Default - No series restrictions",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "091926cc6f9850190c6855cd3ff9e347",
+            "name": "Cricket - Leaders",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/leaders\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "leaderCategoryId",
+                    "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - Blank (returns Bowling).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "topCount",
+                    "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortType",
+                    "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Traliers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "seriesId",
+                    "description": "Will return events from a specific series. See the league specific series decode endpoint for a complete list of series available for any given league.\n Default - No series restrictions",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "To get data for players on one team only, enter the teamId.\n  Default - all players",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "85c3849e8f1cdcb5dc62259ada2b427c",
+            "name": "ICC Team World Rankings",
+            "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/worldRankings\/teams\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Will return events for the specified eventType only. See the league specific eventTypes decode endpoint for a complete list of event types available for any given league.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "93d7a91290f0c235922097abcb5b6112",
+            "name": "List of headlines.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/stories\/headlines\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "9c2653272a460d9af2bc545da3a9abbb",
+            "name": "List of headlines.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/articles\/headlines\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "6043c409e84cf1067d33b2382e4a8010",
+            "name": "Recent stories for the selected league.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/stories\/recent\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "ceb68a6caaf40578647cb5ae7e3e945d",
+            "name": "Recent stories for the selected league.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/articles\/recent\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "e81c0fe832b6bfd4b3ab1127fad21721",
+            "name": "Get the full story for a storyId found in headline...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/stories\/{storyId}\/",
+            "description": "Get the full story for a storyId found in headlines or stories.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "storyId",
+                    "description": "storyId",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "cc1e7df868ee77956b1cf2baf4d76ff3",
+            "name": "Get the full article for a storyId found in headli...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/articles\/{storyId}\/",
+            "description": "Get the full article for a storyId found in headlines or articles.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "storyId",
+                    "description": "storyId",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "821bc206bf82fbeda26a83c3d7879f43",
+            "name": "List of available images.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/images\/list\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "originId",
+                    "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "7ba83b8cbf56a9364570c9e50c4ed8da",
+            "name": "List of available photos.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/photos\/list\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "originId",
+                    "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "3d4513242fb664c96c5edbcb13f59a45",
+            "name": "",
+            "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/images\/{imageSize}\/{imageId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "imageSize",
+                    "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageId",
+                    "description": "Photo ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "016970c5bfa108cfb0eff23132f7be76",
+            "name": "",
+            "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/photos\/{imageSize}\/{imageId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "imageSize",
+                    "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageId",
+                    "description": "Photo ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        },
+        {
+            "id": "469a6cfbc72bfcb75dfe0d256392dda8",
+            "name": "Cricket - Decodes",
+            "url": "http:\/\/api.stats.com\/\/decode\/cricket\/{leaguePath}\/{decodeType}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the cricket\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "decodeType",
+                    "description": "The data type to be decoded.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "allSeasons",
+                    "description": "For seasonStructure only. To get complete history of league, select allSeasons=TRUE. Only those permissioned for all historic data will be able to utilize the 'allSeasons' option.\n  Default - false",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "rawModeData": ""
+        }
+    ]
+}
