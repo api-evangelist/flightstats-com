@@ -1,0 +1,792 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Golf",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. Golf",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/golf\/{association}\/events\/{eventId}": {
+            "get": {
+                "summary": "Access to this events endpoint will provide you wi...",
+                "description": "Access to this events endpoint will provide you with the highest level of event data including live scores, and hole-by-hole information.  Results & hole-by-hole information are only applicable for a single event.\n Simple schedules are also availalbe via the events endpoint.",
+                "operationId": "GOLFIfpermissionedforalleventinformationGOLFSchedules,results,andholeByHoleinformation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned"
+                    },
+                    {
+                        "name": "results",
+                        "in": "query",
+                        "description": "Returns the scores & tee-times for a specific event.  An eventId must also be entered in conjunction with 'results=true'.\n  Default - results will not be returned"
+                    },
+                    {
+                        "name": "holeByHole",
+                        "in": "query",
+                        "description": "Returns the hole-by-hole scores for a specific event.  An eventId must also be entered in conjunction with 'holeByHole=true'.\n  Default - hole-by-hole data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return events from a specific date.\n This parameter is ignored in an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current event(s)"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Default - current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - all event types"
+                    },
+                    {
+                        "name": "tournamentId",
+                        "in": "query",
+                        "description": "To get events for a particular tournament, enter the tournamentId. See tournaments decode endpoint for full list of tournament IDs.\n Default - all tournaments"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player, team, and tournament names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/golf\/{association}\/results\/{eventId}": {
+            "get": {
+                "summary": "The results\/ resource provides schedules & results...",
+                "description": "The results\/ resource provides schedules & results for golf events. (hole-by-hole is not available in the results endpoint.)",
+                "operationId": "GOLFIfpermissionedforjustresultsGOLFSchedules,results,andholeByHoleinformation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned"
+                    },
+                    {
+                        "name": "results",
+                        "in": "query",
+                        "description": "Returns the scores & tee-times for a specific event.  An eventId must also be entered in conjunction with 'results=true'.\n  Default - results will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return events from a specific date.\n This parameter is ignored in an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current event(s)"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Default - current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType.\n  Default - all event types"
+                    },
+                    {
+                        "name": "tournamentId",
+                        "in": "query",
+                        "description": "To get events for a particular tournament, enter the tournamentId. See tournaments decode endpoint for full list of tournament IDs.\n Default - all tournaments"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player, team, and tournament names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/golf\/{association}\/participants\/": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, or all players within the association.",
+                "operationId": "GOLFPlayersGOLFParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "sinceYearLast",
+                        "in": "query",
+                        "description": "Anyone who last played since the requested year.  Enter year as YYYY.\n  Default - current golfers"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player, team, and tournament names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/golf\/{association}\/participants\/{playerId}": {
+            "get": {
+                "summary": "This returns only the selected player.",
+                "description": "",
+                "operationId": "GOLFSingleplayerGOLFParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player, team, and tournament names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/golf\/{association}\/stats\/players\/{playerId}": {
+            "get": {
+                "summary": "GOLF - Single season or career stats for a single ...",
+                "description": "GOLF - Single season or career stats for a single player",
+                "operationId": "GOLFPlayerstatsYearToDateorCareerGOLFStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "allPlayers",
+                        "in": "query",
+                        "description": "When true, all players with stats in the given season are returned.\n  Default - false, all players not returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Default - current season"
+                    },
+                    {
+                        "name": "enc",
+                        "in": "query",
+                        "description": "The encyclopedia returns full career and season-by-season totals.\n Notes:\n  Default - the current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/golf\/{association}\/stats\/players\/{playerId}\/events\/{eventId}": {
+            "get": {
+                "summary": "GOLF - Player's individual event logs.",
+                "description": "",
+                "operationId": "GOLFPlayereventByEventstatsGOLFStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Default - current season"
+                    },
+                    {
+                        "name": "holeByHole",
+                        "in": "query",
+                        "description": "Returns the hole-by-hole scores for a specific event.  An eventId must also be entered in conjunction with 'holeByHole=true'.\n  Default - hole-by-hole data will not be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/golf\/{association}\/leaders\/": {
+            "get": {
+                "summary": "GOLF - Leaders",
+                "description": "",
+                "operationId": "GOLFLeadersGOLFLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query. The leaderCategories decode resource provides a full list of available codes.\n  Default -\n PGA 1961 - 2006: top 3 finishes\n PGA 2007 - now  : FedEx Cup Points\n LPGA: top 3 finishes\n CHMP 1999 - 2009: top 3 finishes\n CHMP 2010 - now : FedEx Cup Points\n WEB: top 3 finishes\n EURO: top 3 finishes"
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties)"
+                    },
+                    {
+                        "name": "sortType",
+                        "in": "query",
+                        "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Traliers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a different season, enter the year as YYYY.\n Default - current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/golf\/{association}\/teams\/{teamId}": {
+            "get": {
+                "summary": "For Cup play events that utilize teams, this endpo...",
+                "description": "For Cup play events that utilize teams, this endpoint will be your source for team names and IDs.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams.",
+                "operationId": "GOLFTeamsGOLFTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player, team, and tournament names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/stories\/headlines\/": {
+            "get": {
+                "summary": "List of headlines.",
+                "description": "",
+                "operationId": "GOLFHeadlinesGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/articles\/headlines\/": {
+            "get": {
+                "summary": "List of headlines.",
+                "description": "",
+                "operationId": "GOLFHeadlinesArticlesGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/stories\/recent\/": {
+            "get": {
+                "summary": "Recent stories for the selected league.",
+                "description": "",
+                "operationId": "GOLFRecentstoriesGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/articles\/recent\/": {
+            "get": {
+                "summary": "Recent stories for the selected league.",
+                "description": "",
+                "operationId": "GOLFRecentArticlesGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/stories\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full story for a storyId found in headline...",
+                "description": "Get the full story for a storyId found in headlines or stories.",
+                "operationId": "GOLFFullstoryGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/articles\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full article for a storyId found in headli...",
+                "description": "Get the full article for a storyId found in headlines or articles.",
+                "operationId": "GOLFFullArticleGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/stories\/previews\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Preview for one specific event, must identify leag...",
+                "description": "Preview for one specific event, must identify league, and eventId",
+                "operationId": "GOLFPreviewsAvailableforoneeventGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/stories\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sport,...",
+                "description": "Recap for one specific event, must identify sport, league, and eventId",
+                "operationId": "GOLFRecapsAvailableforoneeventGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/articles\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sport,...",
+                "description": "Recap for one specific event, must identify sport, league, and eventId",
+                "operationId": "GOLFRecapsArticlesAvailableforoneeventGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/images\/list\/": {
+            "get": {
+                "summary": "List of available images.",
+                "description": "",
+                "operationId": "GOLFListofavailableimagesGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/photos\/list\/": {
+            "get": {
+                "summary": "List of available photos.",
+                "description": "",
+                "operationId": "GOLFListofavailablephotosGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/images\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "RetrieveimageGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/golf\/{association}\/photos\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "RetrievePhotoGOLFStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/decode\/golf\/{association}\/{decodeType}\/": {
+            "get": {
+                "summary": "GOLF - Decodes",
+                "description": "",
+                "operationId": "GOLFDecodesGOLFDecodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "association",
+                        "in": "path",
+                        "description": "Select association"
+                    },
+                    {
+                        "name": "decodeType",
+                        "in": "path",
+                        "description": "The data type to be decoded."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
