@@ -1,0 +1,2742 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Hockey - NHL",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. NHL - National Hockey League",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/hockey\/nhl\/teams\/{teamId}": {
+            "get": {
+                "summary": "The teams endpoint will be your source for team na...",
+                "description": "The teams endpoint will be your source for team names, locations, abbreviations, and IDs.",
+                "operationId": "NHLTeamsTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/events\/{eventId}": {
+            "get": {
+                "summary": "If you are permissioned for the \/events resource, ...",
+                "description": "If you are permissioned for the \/events resource, you have access to the highest level of game data including live scores, box scores, and play-by-play.",
+                "operationId": "NHLIfpermissionedforalleventinformationSchedules,scores,boxscores,playByPlay",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with box.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "pbp",
+                        "in": "query",
+                        "description": "Returns the play-by-play for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with pbp.\n  Default - pbp data will not be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 2 (Postseason) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/events\/teams\/{teamId}": {
+            "get": {
+                "summary": "This endpoint allows you to select schedule and sc...",
+                "description": "This endpoint allows you to select schedule and score information for just one team.  Getting information for a single team returns only schedule and score information.  If you want detailed event information, you use the example about with the eventId.",
+                "operationId": "NHLIfpermissionedforalleventinformationScheduleforoneteamonlySchedules,scores,boxscores,playByPl",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 2 (Postseason) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/box\/{eventId}": {
+            "get": {
+                "summary": "The box\/ resource provides scores\/schedules and bo...",
+                "description": "The box\/ resource provides scores\/schedules and box score information for NHL events.  (Play-by-play is not an option.)",
+                "operationId": "NHLIfpermissionedforjustschedules,scoresandboxscoresSchedules,scores,boxscores,playByPlay",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with box.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 2 (Postseason) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/box\/teams\/{teamId}": {
+            "get": {
+                "summary": "The box\/ resource provides scores\/schedules and bo...",
+                "description": "The box\/ resource provides scores\/schedules and box score information for NHL events.",
+                "operationId": "NHLIfpermissionedforjustschedules,scoresandboxscoresForoneteamonlySchedules,scores,boxscores,play",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 2 (Postseason) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/scores\/{eventId}": {
+            "get": {
+                "summary": "The scores\/ resource provides score and schedule i...",
+                "description": "The scores\/ resource provides score and schedule information for NHL events.",
+                "operationId": "NHLIfpermissionedforjustschedulesandscoresSchedules,scores,boxscores,playByPlay",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 2 (Postseason) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/scores\/teams\/{teamId}": {
+            "get": {
+                "summary": "The scores\/ resource provides score and schedule i...",
+                "description": "The scores\/ resource provides score and schedule information for NHL events.",
+                "operationId": "NHLIfpermissionedforjustschedulesandscoresForoneteamonlySchedules,scores,boxscores,playByPlay",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 2 (Postseason) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/standings\/": {
+            "get": {
+                "summary": "The standings endpoint will provide the league sta...",
+                "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+                "operationId": "NHLStandingsStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team.\n Default - false"
+                    },
+                    {
+                        "name": "conference",
+                        "in": "query",
+                        "description": "Conference returns teams ranked by conference instead of division.\n Default - false"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/standings\/teams\/{teamId}": {
+            "get": {
+                "summary": "The standings endpoint will provide the league sta...",
+                "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+                "operationId": "NHLStandingsforasingleteamStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team.\n Default - false"
+                    },
+                    {
+                        "name": "conference",
+                        "in": "query",
+                        "description": "Conference returns teams ranked by conference instead of division.\n Default - false"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/participants\/": {
+            "get": {
+                "summary": "This will return anyone who has played since the b...",
+                "description": "This will return anyone who has played since the beginning of the entered year (season).",
+                "operationId": "NHLPlayerssinceseasonYYYYParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sinceYearLast",
+                        "in": "query",
+                        "description": "Begin listing players with this season.  Enter as YYYY."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/participants\/teams\/{teamId}": {
+            "get": {
+                "summary": "Historical rosters provide biographical informatio...",
+                "description": "Historical rosters provide biographical information for players that played for a team in a single specified season.",
+                "operationId": "NHLHistoricalRostersParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/participants\/{playerId}": {
+            "get": {
+                "summary": "This returns only the selected player.",
+                "description": "",
+                "operationId": "NHLSingleplayerParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/allStarParticipants\/": {
+            "get": {
+                "summary": "This will return anyone who has played in an NHL A...",
+                "description": "This will return anyone who has played in an NHL All-Star game.",
+                "operationId": "NHLAllStargameplayersParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/players\/{playerId}": {
+            "get": {
+                "summary": "Enter only the playerId and 'enc=true' to get a pl...",
+                "description": "Enter only the playerId and 'enc=true' to get a player's career stats.  Anything else is ignored when 'enc=true'.",
+                "operationId": "NHLPlayerstatsCareerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "enc",
+                        "in": "query",
+                        "description": "Encyclopedia - If 'true', full career and season-by-season totals will be returned.\n   Notes:\n  The encyclopedia is valid for a single player only.  If playerId is omitted, 'enc=true' will be ignored.\n  Default - the current season"
+                    },
+                    {
+                        "name": "careerOnly",
+                        "in": "query",
+                        "description": "For a single player's career stats, only to be used in conjunction with 'enc=true'"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/players\/{playerId}\/events\/{eventId}": {
+            "get": {
+                "summary": "NHL - Player statistics for one game.",
+                "description": "",
+                "operationId": "NHLPlayersinglegamestatsStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/players\/{playerId}\/events\/": {
+            "get": {
+                "summary": "NHL - Player's individual game logs.",
+                "description": "",
+                "operationId": "NHLPlayergameByGamestatsStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/players\/{playerId}\/teams\/{teamId}": {
+            "get": {
+                "summary": "This is used when a player is on more than one tea...",
+                "description": "This is used when a player is on more than one team in a season and you want only the stats for that team.",
+                "operationId": "NHLPlayerstatswhileononeteamStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/players\/{playerId}\/": {
+            "get": {
+                "summary": "NHL - Player splits (breakdowns).",
+                "description": "",
+                "operationId": "NHLPlayersplitsStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "splitId",
+                        "in": "query",
+                        "description": "Enter the stat split to be returned.\n * If 'all' is used, then all the splits are returned.\n * If not used, only the official totals will be returned (default = -1).\n * Otherwise, the entered split is returned.\n -- A full list of the available splitId codes can be found using the \u00e2\u0080\u0098decodes\u00e2\u0080\u0099 resource."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "NHL - Team splits (breakdowns).",
+                "description": "",
+                "operationId": "NHLTeamsplitsStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "splitId",
+                        "in": "query",
+                        "description": "Enter the stat split to be returned.\n * If 'all' is used, then all the splits are returned.\n * If not used, only the official totals will be returned (default = -1).\n * Otherwise, the entered split is returned.\n -- A full list of the available splitId codes can be found using the \u00e2\u0080\u0098decodes\u00e2\u0080\u0099 resource."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/teams\/{teamId}\/events\/{eventId}": {
+            "get": {
+                "summary": "NHL - Team stats",
+                "description": "",
+                "operationId": "NHLTeamsinglegamestatsStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/teams\/{teamId}\/events\/": {
+            "get": {
+                "summary": "NHL - Team's individual game logs.",
+                "description": "",
+                "operationId": "NHLTeamgameByGamestatsStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/coaches\/{coachId}": {
+            "get": {
+                "summary": "NHL - Career stats for a single coach",
+                "description": "",
+                "operationId": "NHLCoachstatsCareerStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "coachId",
+                        "in": "path",
+                        "description": "Coach Id."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "enc",
+                        "in": "query",
+                        "description": "Encyclopedia - If 'true', full career and season-by-season totals will be returned.\n   Notes:\n  The encyclopedia is valid for a single player only.  If playerId is omitted, 'enc=true' will be ignored.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/coaches\/{coachId}\/teams\/{teamId}": {
+            "get": {
+                "summary": "This is used when a coach is on more than one team...",
+                "description": "This is used when a coach is on more than one team in a season and you want only the stats for that team.",
+                "operationId": "NHLCoachstatswhileononeteamStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "coachId",
+                        "in": "path",
+                        "description": "Coach Id."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/stats\/coaches\/teams\/{teamId}": {
+            "get": {
+                "summary": "This will return all stats for all coaches on a te...",
+                "description": "This will return all stats for all coaches on a team in a given season.",
+                "operationId": "NHLAllcoachstatsforoneteamYearToDateStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/transactions\/": {
+            "get": {
+                "summary": "NHL - Get all transactions",
+                "description": "",
+                "operationId": "NHLTransactionsTransactions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/transactions\/players\/{playerId}": {
+            "get": {
+                "summary": "NHL - Player transactions",
+                "description": "",
+                "operationId": "NHLTransactionsbyplayerTransactions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/transactions\/players\/{playerId}\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "NHL - Player transactions",
+                "description": "",
+                "operationId": "NHLTransactionsbyplayeronaspecificteamTransactions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/transactions\/teams\/{teamId}": {
+            "get": {
+                "summary": "NHL - Team transactions",
+                "description": "",
+                "operationId": "NHLTransactionsbyteamTransactions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/injuries\/": {
+            "get": {
+                "summary": "NHL - Get all Injuries",
+                "description": "",
+                "operationId": "NHLInjuriesInjuries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "healed",
+                        "in": "query",
+                        "description": "Include injuries that have healed (ended)?\n  Default - false:"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/injuries\/players\/{playerId}": {
+            "get": {
+                "summary": "NHL - Player Injuries",
+                "description": "",
+                "operationId": "NHLInjuriesbyplayerInjuries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "healed",
+                        "in": "query",
+                        "description": "Include injuries that have healed (ended)?\n  Default - false:"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/injuries\/players\/{playerId}\/teams\/{teamId}": {
+            "get": {
+                "summary": "By default, results include all injuries for a pla...",
+                "description": "By default, results include all injuries for a player (a) during the time period selected, (b) if the injury has not healed and (c) for all the teams the player was on during the time period.\n To return only those injuries while a player is on a specific team, you must include \/teams\/:teamId in the URI.",
+                "operationId": "NHLInjuriesbyplayeronaspecificteamInjuries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "healed",
+                        "in": "query",
+                        "description": "Include injuries that have healed (ended)?\n  Default - false:"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/injuries\/teams\/{teamId}": {
+            "get": {
+                "summary": "NHL - Team Injuries",
+                "description": "",
+                "operationId": "NHLInjuriesbyteamInjuries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "healed",
+                        "in": "query",
+                        "description": "Include injuries that have healed (ended)?\n  Default - false:"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/injuryDetails\/": {
+            "get": {
+                "summary": "NHL - Get all injury details",
+                "description": "",
+                "operationId": "NHLInjuryDetailsInjuryDetails",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "lastUpdatedStartDate",
+                        "in": "query",
+                        "description": "If used, lastUpdatedStartDate and lastUpdatedEndDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "lastUpdatedEndDate",
+                        "in": "query",
+                        "description": "If used, lastUpdatedStartDate and lastUpdatedEndDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/injuryDetails\/players\/{playerId}": {
+            "get": {
+                "summary": "NHL - Injury Details for one player",
+                "description": "",
+                "operationId": "NHLInjuryDetailsbyplayerInjuryDetails",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "lastUpdatedStartDate",
+                        "in": "query",
+                        "description": "If used, lastUpdatedStartDate and lastUpdatedEndDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "lastUpdatedEndDate",
+                        "in": "query",
+                        "description": "If used, lastUpdatedStartDate and lastUpdatedEndDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/injuryDetails\/teams\/{teamId}": {
+            "get": {
+                "summary": "NHL - Team injury details",
+                "description": "",
+                "operationId": "NHLInjuryDetailsbyteamInjuryDetails",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "lastUpdatedStartDate",
+                        "in": "query",
+                        "description": "If used, lastUpdatedStartDate and lastUpdatedEndDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "lastUpdatedEndDate",
+                        "in": "query",
+                        "description": "If used, lastUpdatedStartDate and lastUpdatedEndDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/playerNews\/": {
+            "get": {
+                "summary": "NHL - Get all player news",
+                "description": "",
+                "operationId": "NHLPlayernewsPlayerNews",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/playerNews\/players\/{playerId}": {
+            "get": {
+                "summary": "NHL - Player news for one player",
+                "description": "",
+                "operationId": "NHLPlayernewsbyplayerPlayerNews",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/playerNews\/players\/{playerId}\/teams\/{teamId}": {
+            "get": {
+                "summary": "NHL - Player news for one player",
+                "description": "",
+                "operationId": "NHLPlayernewsbyplayeronaspecificteamPlayerNews",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/playerNews\/teams\/{teamId}": {
+            "get": {
+                "summary": "NHL - Team player news",
+                "description": "",
+                "operationId": "NHLPlayernewsbyteamPlayerNews",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/leaders\/": {
+            "get": {
+                "summary": "NHL - Leaders",
+                "description": "",
+                "operationId": "NHLLeadersLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  (The decodes resource provides a list of available codes.)\n  Default - Goals Scored"
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players."
+                    },
+                    {
+                        "name": "sortType",
+                        "in": "query",
+                        "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Trailers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get data for players on one team only, enter the teamId.\n  Default - all players"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/dailyLeaders\/": {
+            "get": {
+                "summary": "NHL - Daily Leaders",
+                "description": "",
+                "operationId": "NHLDailyLeadersLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  (The decodes resource provides a list of available codes.)\n  Default - Goals Scored"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players."
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "Leaders among specified conference only.\n  Default - all NHL"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 2 (Postseason) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get data for players on one team only, enter the teamId.\n  Default - all players"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/teamLeaders\/": {
+            "get": {
+                "summary": "NHL - Team Leaders",
+                "description": "",
+                "operationId": "NHLTeamLeadersLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  (The decodes resource provides a list of available codes.)\n  Default - Goals Scored"
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players."
+                    },
+                    {
+                        "name": "sortType",
+                        "in": "query",
+                        "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Trailers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned."
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "Leaders among specified conference only.\n  Default - all NHL"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 2 (Postseason) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/depthCharts\/": {
+            "get": {
+                "summary": "NHL - Depth Charts for all teams",
+                "description": "",
+                "operationId": "NHLDepthChartsforallteamsNHLDepthCharts",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "positionId",
+                        "in": "query",
+                        "description": "Limit results to a single position.\n Default - all positions"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/depthCharts\/teams\/{teamId}": {
+            "get": {
+                "summary": "NHL - Depth Charts for a single team",
+                "description": "",
+                "operationId": "NHLDepthChartsforasingleteamNHLDepthCharts",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "positionId",
+                        "in": "query",
+                        "description": "Limit results to a single position.\n Default - all positions"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/coaches\/": {
+            "get": {
+                "summary": "NHL - Coaches",
+                "description": "",
+                "operationId": "NHLCoachesNHLCoaches",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "coachId",
+                        "in": "query",
+                        "description": "To get results for single coach, enter coach ID.\n  Default - If no ID is entered, all current NHL coaches will be returned."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/coaches\/teams\/{teamId}": {
+            "get": {
+                "summary": "NHL - Coaches for a single team",
+                "description": "",
+                "operationId": "NHLCoachesforasingleteamNHLCoaches",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/salaries\/": {
+            "get": {
+                "summary": "NHL - Salaries for all players",
+                "description": "",
+                "operationId": "NHLSalariesforallplayersNHLSalaries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/salaries\/players\/{playerId}": {
+            "get": {
+                "summary": "NHL - Salaries for a single player",
+                "description": "",
+                "operationId": "NHLSalariesforasingleplayerNHLSalaries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/odds\/": {
+            "get": {
+                "summary": "NHL - Odds",
+                "description": "",
+                "operationId": "NHLOddsOdds",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 2 (Postseason) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/odds\/{eventId}": {
+            "get": {
+                "summary": "NHL - Odds",
+                "description": "",
+                "operationId": "NHLOddsforonegameonlyOdds",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/odds\/teams\/{teamId}": {
+            "get": {
+                "summary": "NHL - Odds",
+                "description": "",
+                "operationId": "NHLOddsforoneteamonlyOdds",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n   Note: Seasons that span years like NHL 2013-2014 would be entered as 2013. \n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n  Ignored if eventId is used.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 2 (Postseason) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/stories\/headlines\/": {
+            "get": {
+                "summary": "List of headlines.",
+                "description": "",
+                "operationId": "NHLHeadlinesNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/articles\/headlines\/": {
+            "get": {
+                "summary": "List of headlines.",
+                "description": "",
+                "operationId": "NHLHeadlinesArticlesNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/stories\/recent\/": {
+            "get": {
+                "summary": "Recent stories for the selected league.",
+                "description": "",
+                "operationId": "NHLRecentstoriesNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/articles\/recent\/": {
+            "get": {
+                "summary": "Recent stories for the selected league.",
+                "description": "",
+                "operationId": "NHLRecentArticlesNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/stories\/recent\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "Recent stories for the selected league\/team.",
+                "description": "",
+                "operationId": "NHLRecentstoriesbyteamNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/articles\/recent\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "Recent stories for the selected league\/team.",
+                "description": "",
+                "operationId": "NHLRecentarticlesbyteamNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/stories\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full story for a storyId found in headline...",
+                "description": "Get the full story for a storyId found in headlines or stories.",
+                "operationId": "NHLFullstoryNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/articles\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full story for a storyId found in headline...",
+                "description": "Get the full story for a storyId found in headlines or stories.",
+                "operationId": "NHLFullArticleNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/stories\/previews\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Preview for one specific event, must identify leag...",
+                "description": "Preview for one specific event, must identify league, and eventId",
+                "operationId": "NHLPreviewsAvailableforoneeventNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/stories\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sport,...",
+                "description": "Recap for one specific event, must identify sport, league, and eventId",
+                "operationId": "NHLRecapsAvailableforoneeventNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/articles\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sport,...",
+                "description": "Recap for one specific event, must identify sport, league, and eventId",
+                "operationId": "NHLRecapsArticlesAvailableforoneeventNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/images\/list\/": {
+            "get": {
+                "summary": "List of available images.",
+                "description": "",
+                "operationId": "NHLListofavailableimagesNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/photos\/list\/": {
+            "get": {
+                "summary": "List of available photos.",
+                "description": "",
+                "operationId": "NHLListofavailablephotosNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/images\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "RetrieveimageNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/hockey\/nhl\/photos\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "RetrievePhotoNHLStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/bullets\/": {
+            "get": {
+                "summary": "NHL - Bullets for a single day",
+                "description": "",
+                "operationId": "NHLBulletsBydayNHLBullets",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/bullets\/events\/{eventId}\/": {
+            "get": {
+                "summary": "NHL - Bullets for a single day",
+                "description": "",
+                "operationId": "NHLBulletsBygameNHLBullets",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/fantasyProjections\/{eventId}": {
+            "get": {
+                "summary": "NHL - Fantasy projections for the required event",
+                "description": "",
+                "operationId": "NHLFantasyProjectionsBygameNHLFantasyProjections",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/matchupgaming\/": {
+            "get": {
+                "summary": "NHL - Matchup Gaming for a single day",
+                "description": "",
+                "operationId": "NHLMatchupGamingBydayNHLMatchupGaming",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, games from the current date will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/hockey\/nhl\/matchupgaming\/{eventId}": {
+            "get": {
+                "summary": "NHL - Single Game",
+                "description": "",
+                "operationId": "NHLMatchupGamingforonegameonlyNHLMatchupGaming",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box or pbp requests.\n   Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/decode\/hockey\/nhl\/{decodeType}\/": {
+            "get": {
+                "summary": "NHL - Decodes",
+                "description": "",
+                "operationId": "NHLDecodesDecodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "decodeType",
+                        "in": "path",
+                        "description": "The data type to be decoded."
+                    },
+                    {
+                        "name": "allSeasons",
+                        "in": "query",
+                        "description": "For seasonStructure only. To get complete history of league, select allSeasons=TRUE. Only those permissioned for all historic data will be able to utilize the 'allSeasons' option.\n  Default - false"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
