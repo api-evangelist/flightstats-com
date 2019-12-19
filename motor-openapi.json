@@ -1,0 +1,782 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Motor",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. Motor",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/motor\/leagues\/": {
+            "get": {
+                "summary": "The motor leagues endpoint serves as a decode for ...",
+                "description": "The motor leagues endpoint serves as a decode for the available sub leagues (NASCAR, F1, etc.).",
+                "operationId": "MotorLeaguesMotorLeagues",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/motor\/{subLeagueAbbreviation}\/events\/{eventId}": {
+            "get": {
+                "summary": "The events endpoint provides schedules, live resul...",
+                "description": "The events endpoint provides schedules, live results, entrants, and boxscores.  Results & boxscores are not available by full season.",
+                "operationId": "MotorSchedules,liveresults,entrants,andboxscoresMotorSchedules,liveresults,entrants,andboxscores",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns box score infomation.  Will be ignored if all events for a full season are returned.\n  Default - false: box scores will not be returned"
+                    },
+                    {
+                        "name": "qualifyingRuns",
+                        "in": "query",
+                        "description": "Returns qualifying runs where available. Must be used conjunction with 'box=true'.\n  Default - false: qualifying runs will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return event(s) from a specific date. This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current event(s)"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Boxscores cannot be returned when the season parameter is used, unless it is in conjunction with a specific raceId.\n Default - current season"
+                    },
+                    {
+                        "name": "raceId",
+                        "in": "query",
+                        "description": "To get events for a particular race, enter the raceId. See races decode endpoint for full list of race IDs.\n Default - all races"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/motor\/{subLeagueAbbreviation}\/standings\/": {
+            "get": {
+                "summary": "The standings endpoint will provide the league sta...",
+                "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+                "operationId": "MotorStandingsMotorStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Boxscores cannot be returned when the season parameter is used, unless it is in conjunction with a specific raceId.\n Default - current season"
+                    },
+                    {
+                        "name": "standingsTypeId",
+                        "in": "query",
+                        "description": "Select ID to change standings type: driver, team, owner, manufacturer, or head-to-head\n Note: Not all standing types are available.\n Default - the driver standings"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/motor\/{subLeagueAbbreviation}\/participants\/{playerId}": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for drivers and can be used to return information on a single driver, or all drivers within the subLeague. When no specific playerId is selected, all drivers that have participated in a race for the given subLeague within the last two years are returned.",
+                "operationId": "MotorParticipantsMotorParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific driver, enter his\/her ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/motor\/{subLeagueAbbreviation}\/stats\/players\/{playerId}": {
+            "get": {
+                "summary": "Motor - Single season or career stats for one driv...",
+                "description": "Motor - Single season or career stats for one driver",
+                "operationId": "MotorDriverstatisticsMotorStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific driver, enter his\/her ID."
+                    },
+                    {
+                        "name": "allPlayers",
+                        "in": "query",
+                        "description": "When true, all players with stats in the given season are returned.\n  Default - false, all players not returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Boxscores cannot be returned when the season parameter is used, unless it is in conjunction with a specific raceId.\n Default - current season"
+                    },
+                    {
+                        "name": "enc",
+                        "in": "query",
+                        "description": "The encyclopedia returns full career and season-by-season totals.\n Notes:\n  The encyclopedia is valid for a single player only.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/motor\/{subLeagueAbbreviation}\/stats\/players\/{playerId}\/events\/{eventId}": {
+            "get": {
+                "summary": "Motor - Single race stats for a specific driver",
+                "description": "",
+                "operationId": "MotorDriversingleracestatsMotorStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific driver, enter his\/her ID."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/motor\/{subLeagueAbbreviation}\/stats\/players\/{playerId}\/events\/": {
+            "get": {
+                "summary": "Motor - Race-by-Race statistics for a single drive...",
+                "description": "Motor - Race-by-Race statistics for a single driver.",
+                "operationId": "MotorDriverlogsMotorStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific driver, enter his\/her ID."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Boxscores cannot be returned when the season parameter is used, unless it is in conjunction with a specific raceId.\n Default - current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/motor\/{subLeagueAbbreviation}\/teams\/{teamId}": {
+            "get": {
+                "summary": "You can get information about a single team by inc...",
+                "description": "You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the sub league.",
+                "operationId": "MotorTeamsMotorTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Boxscores cannot be returned when the season parameter is used, unless it is in conjunction with a specific raceId.\n Default - current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/motor\/{subLeagueAbbreviation}\/owners\/{ownerId}": {
+            "get": {
+                "summary": "You can get information about a single owner by in...",
+                "description": "You can get information about a single owner by including the ownerId.  If you do not include a ownerId, you will get all the owners for the sub league.",
+                "operationId": "MotorOwnersMotorOwners",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "ownerId",
+                        "in": "path",
+                        "description": "Provide owner ID to return information for one owner."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/decode\/motor\/{subLeagueAbbreviation}\/{decodeType}\/": {
+            "get": {
+                "summary": "Motor - Decodes",
+                "description": "",
+                "operationId": "MotorDecodesMotorDecodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "decodeType",
+                        "in": "path",
+                        "description": "The data type to be decoded."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/headlines\/": {
+            "get": {
+                "summary": "List of headlines.",
+                "description": "",
+                "operationId": "MotorHeadlinesMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/headlines\/": {
+            "get": {
+                "summary": "List of headlines.",
+                "description": "",
+                "operationId": "MotorHeadlinesArticlesMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/recent\/": {
+            "get": {
+                "summary": "Recent stories for motorsports.",
+                "description": "",
+                "operationId": "MotorRecentStoriesMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/recent\/": {
+            "get": {
+                "summary": "Recent articles for motorsports.",
+                "description": "",
+                "operationId": "MotorRecentArticlesMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full story for a storyId found in headline...",
+                "description": "Get the full story for a storyId found in headlines or stories.",
+                "operationId": "MotorFullstoryMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full article for a storyId found in headli...",
+                "description": "Get the full article for a storyId found in headlines or articles.",
+                "operationId": "MotorFullArticleMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/images\/list\/": {
+            "get": {
+                "summary": "Recent stories for motorsports.",
+                "description": "",
+                "operationId": "MotorListofavailableimagesMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/photos\/list\/": {
+            "get": {
+                "summary": "List of photos for motorsports.",
+                "description": "",
+                "operationId": "MotorListofavailablephotosMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/previews\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Preview for one specific event, must identify sub-...",
+                "description": "Preview for one specific event, must identify sub-league and eventId",
+                "operationId": "MotorPreviewsAvailableforoneeventMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sub-le...",
+                "description": "Recap for one specific event, must identify sub-league and eventId",
+                "operationId": "MotorRecapsAvailableforoneeventMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sub-le...",
+                "description": "Recap for one specific event, must identify sub-league and eventId",
+                "operationId": "MotorRecapsArticlesAvailableforoneeventMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/images\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "MotorRetrieveimageMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/motor\/{subLeagueAbbreviation}\/photos\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "MotorRetrievePhotoMotorStories,Headlines,Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
