@@ -1,0 +1,447 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Lacrosse",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. Lacrosse",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/lacrosse\/nll\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "Team information.",
+                "description": "",
+                "operationId": "LacrosseTeamsLacrosseTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "Returns information for given conference only."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/lacrosse\/nll\/box\/{eventId}\/": {
+            "get": {
+                "summary": "Schedules, scores, and box scores",
+                "description": "",
+                "operationId": "LacrosseSchedules,scores,andboxscoresIfpermissionedforthe\/boxendpointLacrosseSchedules,scores,and",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for games included in the specified eventType.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for games included in the specified eventRound. Must be used in conjunction with eventTypeId = 2 (Postseason).\n  Default - All event rounds"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/lacrosse\/nll\/scores\/{eventId}\/": {
+            "get": {
+                "summary": "Schedules and scores",
+                "description": "",
+                "operationId": "LacrosseSchedulesandscoresIfpermissionedforthe\/scoresendpointLacrosseSchedules,scores,andboxscore",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box request.\n Default - basic score data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all events from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific game isn't requested, all games from the current date will be returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for games included in the specified eventType.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for games included in the specified eventRound. Must be used in conjunction with eventTypeId = 2 (Postseason).\n  Default - All event rounds"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/lacrosse\/nll\/standings\/": {
+            "get": {
+                "summary": "The standings endpoint will provide the league sta...",
+                "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+                "operationId": "LacrosseStandingsLacrosseStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team.\n Default - false"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/lacrosse\/nll\/participants\/": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for riders and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
+                "operationId": "LacrosseParticipantsLacrosseParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sinceYearLast",
+                        "in": "query",
+                        "description": "Anyone who last played since the requested year.  Enter year as YYYY.\n  Default - current rosters"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/lacrosse\/nll\/participants\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "Including a team ID will limit rosters returned to...",
+                "description": "Including a team ID will limit rosters returned to the selected team only.",
+                "operationId": "LacrosseAllparticipantsonasingleteamLacrosseParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/lacrosse\/nll\/participants\/{playerId}\/": {
+            "get": {
+                "summary": "Including a player ID will limit data returned to ...",
+                "description": "Including a player ID will limit data returned to the selected player only.",
+                "operationId": "LacrosseSingleplayerLacrosseParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/lacrosse\/nll\/stats\/players\/{playerId}": {
+            "get": {
+                "summary": "Lacrosse - Season stats for a single player",
+                "description": "",
+                "operationId": "LacrossePlayerstatsYearToDateLacrosseStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for games included in the specified eventType.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for games included in the specified eventRound. Must be used in conjunction with eventTypeId = 2 (Postseason).\n  Default - All event rounds"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/lacrosse\/nll\/stats\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "Lacrosse - Team stats",
+                "description": "",
+                "operationId": "LacrosseTeamstatsLacrosseStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "A teamId returns information for that team only.  If entered, then the conferenceId is ignored."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for games included in the specified eventType.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for games included in the specified eventRound. Must be used in conjunction with eventTypeId = 2 (Postseason).\n  Default - All event rounds"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/lacrosse\/nll\/leaders\/": {
+            "get": {
+                "summary": "Lacrosse - Leaders",
+                "description": "",
+                "operationId": "LacrosseLeadersLacrosseLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - Blank (returns goals)."
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Events will be returned for games included in the specified eventType.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Events will be returned for games included in the specified eventRound. Must be used in conjunction with eventTypeId = 2 (Postseason).\n  Default - All event rounds"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NBA 2013-2014 would be entered as 2013.\n  Default - the current season"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get data for players on one team only, enter the teamId.\n  Default - all players"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/decode\/lacrosse\/nll\/{decodeType}": {
+            "get": {
+                "summary": "Lacrosse - Decodes",
+                "description": "",
+                "operationId": "LacrosseDecodesLacrosseDecodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "decodeType",
+                        "in": "path",
+                        "description": "The data type to be decoded."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
