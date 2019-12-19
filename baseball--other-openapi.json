@@ -1,0 +1,1272 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Baseball - Other",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. Baseball - Other",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/baseball\/leagues\/": {
+            "get": {
+                "summary": "The baseball leagues endpoint serves as a decode f...",
+                "description": "The baseball leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
+                "operationId": "BaseballLeaguesBaseballLeagues",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/teams\/{teamId}": {
+            "get": {
+                "summary": "The teams endpoint will be your source for team na...",
+                "description": "The teams endpoint will be your source for team names, locations, abbreviations, and IDs.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the league",
+                "operationId": "BaseballTeamsBaseballTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/events\/{eventId}": {
+            "get": {
+                "summary": "Access to this events endpoint will provide you wi...",
+                "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, play-by-play, and pitch type\/velocity\/location (tvl) information, where available.  The first 4 parameters (eventId, box, pbp, and tvl) are only applicable for a specific game.\n Events will also provide you with schedule data.",
+                "operationId": "BaseballIfpermissionedforalleventinformationBaseballSchedules,scores,boxscores,playByPlay,tvl",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "MinBB Conferences: This is only for MinBB.  If you select MinBB in leaguePath dropdown above, you must select a conference unless you enter eventId or Date."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp (play-by-play) and tvl parameters.\n Default - Basic score & schedule data for the data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "pbp",
+                        "in": "query",
+                        "description": "Returns the play-by-play for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'pbp=true'.\n  Default - pbp data will not be returned"
+                    },
+                    {
+                        "name": "tvl",
+                        "in": "query",
+                        "description": "Returns the play-by-play along with pitch type, velocity, & location for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'tvl=true'.\n Default - tvl data will not be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - Blank - All the games for the current week."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/events\/teams\/{teamId}": {
+            "get": {
+                "summary": "This endpoint allows you to select schedule and sc...",
+                "description": "This endpoint allows you to select schedule and score information for just one team.  Getting information for a single team returns only schedule and score information.  If you want detailed event information (box, pbp, tvl), refer to the endpoint example with the eventId.",
+                "operationId": "BaseballIfpermissionedforalleventinformationForoneteamonlyBaseballSchedules,scores,boxscores,play",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "MinBB Conferences: This is only for MinBB.  If you select MinBB in leaguePath dropdown above, you must select a conference unless you enter eventId or Date."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - Blank - All the games for the current week."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/box\/{eventId}": {
+            "get": {
+                "summary": "The box\/ resource provides scores\/schedules and bo...",
+                "description": "The box\/ resource provides scores\/schedules and box score information for baseball events.  (Play-by-play is not an option.)",
+                "operationId": "BaseballIfpermissionedforjustschedules,scoresandboxscoresBaseballSchedules,scores,boxscores,playB",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "MinBB Conferences: This is only for MinBB.  If you select MinBB in leaguePath dropdown above, you must select a conference unless you enter eventId or Date."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp (play-by-play) and tvl parameters.\n Default - Basic score & schedule data for the data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "box",
+                        "in": "query",
+                        "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - Blank - All the games for the current week."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/box\/teams\/{teamId}": {
+            "get": {
+                "summary": "This gets the event (schedule) information for jus...",
+                "description": "This gets the event (schedule) information for just one team.",
+                "operationId": "BaseballIfpermissionedforjustschedules,scoresandboxscoresForoneteamonlyBaseballSchedules,scores,b",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "MinBB Conferences: This is only for MinBB.  If you select MinBB in leaguePath dropdown above, you must select a conference unless you enter eventId or Date."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - Blank - All the games for the current week."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/scores\/{eventId}": {
+            "get": {
+                "summary": "The scores\/ resource provides score and schedule i...",
+                "description": "The scores\/ resource provides score and schedule information for baseball events. (Box and Play-by-play are not options.)",
+                "operationId": "BaseballIfpermissionedforjustschedulesandscoresBaseballSchedules,scores,boxscores,playByPlay,tvl",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "MinBB Conferences: This is only for MinBB.  If you select MinBB in leaguePath dropdown above, you must select a conference unless you enter eventId or Date."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp (play-by-play) and tvl parameters.\n Default - Basic score & schedule data for the data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - Blank - All the games for the current week."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/scores\/teams\/{teamId}": {
+            "get": {
+                "summary": "The scores\/ resource provides score and schedule i...",
+                "description": "The scores\/ resource provides score and schedule information for baseball events.",
+                "operationId": "BaseballIfpermissionedforjustschedulesandscoresForoneteamonlyBaseballSchedules,scores,boxscores,p",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "MinBB Conferences: This is only for MinBB.  If you select MinBB in leaguePath dropdown above, you must select a conference unless you enter eventId or Date."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "linescore",
+                        "in": "query",
+                        "description": "Linescores are only returned when requested and will be returned for all events in the results.\n  Default - false, line score data will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - Blank - All the games for the current week."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/standings\/": {
+            "get": {
+                "summary": "The standings endpoint will provide the league sta...",
+                "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+                "operationId": "BaseballStandingsBaseballStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team.\n Default - false"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/standings\/teams\/{teamId}": {
+            "get": {
+                "summary": "The standings endpoint will provide the league sta...",
+                "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+                "operationId": "BaseballStandingsforasingleteamBaseballStandings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "expanded",
+                        "in": "query",
+                        "description": "Expanded includes additional data points for each team.\n Default - false"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/participants\/": {
+            "get": {
+                "summary": "This will return anyone who has played since the b...",
+                "description": "This will return anyone who has played since the beginning of the entered year.",
+                "operationId": "BaseballAllplayerssinceseasonYYYYBaseballParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "MinBB Conferences: This is only for MinBB.  If you select MinBB in leaguePath dropdown above, you must select a conference unless you enter eventId or Date."
+                    },
+                    {
+                        "name": "sinceYearLast",
+                        "in": "query",
+                        "description": "Anyone who last played since the requested year.  Enter year as YYYY.\n  Default - Active players"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/participants\/teams\/{teamId}": {
+            "get": {
+                "summary": "This will return a single team's current roster.",
+                "description": "",
+                "operationId": "BaseballAllplayersonasingleteamBaseballParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "MinBB Conferences: This is only for MinBB.  If you select MinBB in leaguePath dropdown above, you must select a conference unless you enter eventId or Date."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/participants\/{playerId}": {
+            "get": {
+                "summary": "This will return biographical information for a si...",
+                "description": "This will return biographical information for a single player.",
+                "operationId": "BaseballSingleplayerBaseballParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "MinBB Conferences: This is only for MinBB.  If you select MinBB in leaguePath dropdown above, you must select a conference unless you enter eventId or Date."
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/stats\/players\/{playerId}": {
+            "get": {
+                "summary": "Baseball - Career stats for a single player",
+                "description": "",
+                "operationId": "BaseballPlayerstatsCareerBaseballStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Statistics among games in the specified eventRound only. Rounds are only valid in conjunction with postseason event types. See eventRounds decode endpoint for rounds specific to the selected league.\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "enc",
+                        "in": "query",
+                        "description": "The encyclopedia returns full career and season-by-season totals.\n Notes: The encyclopedia is valid for a single player only.  If playerId is omitted, 'enc=true' will be ignored.\n  If 'enc=true', the seasonId will be ignored if included.\n  Default - the current season"
+                    },
+                    {
+                        "name": "careerOnly",
+                        "in": "query",
+                        "description": "For a single player's career stats, only to be used in conjunction with 'enc=true'"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/stats\/players\/{playerId}\/events\/{eventId}": {
+            "get": {
+                "summary": "Baseball - Single game stats for a single player",
+                "description": "",
+                "operationId": "BaseballPlayersinglegamestatsBaseballStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp (play-by-play) and tvl parameters.\n Default - Basic score & schedule data for the data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/stats\/players\/{playerId}\/events\/": {
+            "get": {
+                "summary": "Baseball - Player game logs.",
+                "description": "",
+                "operationId": "BaseballPlayergameByGamestatsBaseballStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Statistics among games in the specified eventRound only. Rounds are only valid in conjunction with postseason event types. See eventRounds decode endpoint for rounds specific to the selected league.\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/stats\/players\/{playerId}\/teams\/{teamId}": {
+            "get": {
+                "summary": "This is used when a player is on more than one tea...",
+                "description": "This is used when a player is on more than one team in a season and you want only stats for one specific team.",
+                "operationId": "BaseballPlayerstatswhileononeteamBaseballStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Statistics among games in the specified eventRound only. Rounds are only valid in conjunction with postseason event types. See eventRounds decode endpoint for rounds specific to the selected league.\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/stats\/players\/{playerId}\/": {
+            "get": {
+                "summary": "Baseball - Player splits (breakdowns).",
+                "description": "",
+                "operationId": "BaseballPlayersplitsBaseballStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter their ID."
+                    },
+                    {
+                        "name": "splitId",
+                        "in": "query",
+                        "description": "Enter the stat split to be returned. (The decodes resource provides a list of available codes.)\n  1. If omitted, only official total stats (splitId = -1) will be returned.\n  2. If 'all', all the splits are returned.\n  3. Otherwise, the entered split is returned."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Statistics among games in the specified eventRound only. Rounds are only valid in conjunction with postseason event types. See eventRounds decode endpoint for rounds specific to the selected league.\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/stats\/teams\/{teamId}\/": {
+            "get": {
+                "summary": "Baseball - Team splits (breakdowns).",
+                "description": "",
+                "operationId": "BaseballTeamsplitsBaseballStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "splitId",
+                        "in": "query",
+                        "description": "Enter the stat split to be returned. (The decodes resource provides a list of available codes.)\n  1. If omitted, only official total stats (splitId = -1) will be returned.\n  2. If 'all', all the splits are returned.\n  3. Otherwise, the entered split is returned."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Statistics among games in the specified eventRound only. Rounds are only valid in conjunction with postseason event types. See eventRounds decode endpoint for rounds specific to the selected league.\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/stats\/teams\/{teamId}\/events\/{eventId}": {
+            "get": {
+                "summary": "Baseball - Single game stats for a team",
+                "description": "",
+                "operationId": "BaseballTeamsinglegamestatsBaseballStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp (play-by-play) and tvl parameters.\n Default - Basic score & schedule data for the data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/stats\/teams\/{teamId}\/events\/": {
+            "get": {
+                "summary": "Baseball - Team game logs.",
+                "description": "",
+                "operationId": "BaseballTeamgameByGamestatsBaseballStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams)."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Statistics among games in the specified eventRound only. Rounds are only valid in conjunction with postseason event types. See eventRounds decode endpoint for rounds specific to the selected league.\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/leaders\/": {
+            "get": {
+                "summary": "Baseball - Leaders",
+                "description": "",
+                "operationId": "BaseballLeadersBaseballLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - returns batting average (1)."
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players."
+                    },
+                    {
+                        "name": "nonQualifiers",
+                        "in": "query",
+                        "description": "Should non-qualifiers be returned?\n  Default - false"
+                    },
+                    {
+                        "name": "sortType",
+                        "in": "query",
+                        "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Trailers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Statistics among games in the specified eventRound only. Rounds are only valid in conjunction with postseason event types. See eventRounds decode endpoint for rounds specific to the selected league.\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get data for players on one team only, enter the teamId.\n  Default - all players"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/dailyLeaders\/": {
+            "get": {
+                "summary": "Baseball - Daily Leaders",
+                "description": "",
+                "operationId": "BaseballDailyLeadersBaseballDailyLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - returns batting average (1)."
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - Blank - All the games for the current week."
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players."
+                    },
+                    {
+                        "name": "conferenceId",
+                        "in": "query",
+                        "description": "MinBB Conferences: This is only for MinBB.  If you select MinBB in leaguePath dropdown above, you must select a conference unless you enter eventId or Date."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Statistics among games in the specified eventRound only. Rounds are only valid in conjunction with postseason event types. See eventRounds decode endpoint for rounds specific to the selected league.\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "teamId",
+                        "in": "query",
+                        "description": "To get data for players on one team only, enter the teamId.\n  Default - all players"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/baseball\/{leaguePath}\/probables\/{eventId}\/": {
+            "get": {
+                "summary": "Baseball - Probable Pitchers",
+                "description": "",
+                "operationId": "BaseballProbablePitchersBaseballProbablePitchers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "leaguePath",
+                        "in": "path",
+                        "description": "Enter league uriPath - full list available in the baseball\/leagues endpoint"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp (play-by-play) and tvl parameters.\n Default - Basic score & schedule data for the data will be returned using date or season, if entered, else the current days events will be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return all games from a specific date.\n This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - Blank - All the games for the current week."
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Schedule will be returned for games included in the specified eventType. See eventTypes decode endpoint for event types specific to the selected league.\n  Default - All game types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Statistics among games in the specified eventRound only. Rounds are only valid in conjunction with postseason event types. See eventRounds decode endpoint for rounds specific to the selected league.\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get team lists for a different season, enter the year as YYYY.\n Default - the current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
