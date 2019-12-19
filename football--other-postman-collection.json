@@ -1,0 +1,1876 @@
+{
+    "id": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+    "name": "Football - Other",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "c6da98d5c13e2f657f17e9279210064a",
+            "name": "The football leagues endpoint serves as a decode f...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/leagues\/",
+            "description": "The football leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "af210f0640a55ce269f87ccb26482b89",
+            "name": "The teams endpoint will be your source for team na...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/teams\/{teamId}",
+            "description": "The teams endpoint will be your source for team names, locations, abbreviations, and IDs.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the league.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "27c91167cf64199071de4ed9d388a926",
+            "name": "Access to this events endpoint will provide you wi...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/events\/{eventId}",
+            "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, play-by-plays, and drive charts. The box, pbp, & driveCharts parameters are only available when a single game is selected.\n Simple schedules are also available via the events endpoint.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp or driveCharts parameters.\n Default - basic schedule and score information is returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "box",
+                    "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pbp",
+                    "description": "Returns the play-by-play for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'pbp=true'.\n  Default - pbp data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "driveCharts",
+                    "description": "Returns the drive charts for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'driveCharts=true'.\n  Default - drive chart data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "A full line score can be requested with any combination of parameters.\n  Default - line score data will not be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startDate",
+                    "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "endDate",
+                    "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific date isn't requested, all games from the current week will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "week",
+                    "description": "To get all the games for the selected week.\n Default - the current week",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "b25299327c587a433193828ab452b363",
+            "name": "Access to this events endpoint will provide you wi...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/events\/teams\/{teamId}",
+            "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, play-by-plays, and drive charts. However box scores, play-by-play, and drive charts are available for a single game only, and so acnnot be accessed here when all events for a single team are returned. This endpoint should be used for team schedules & scores only.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "A full line score can be requested with any combination of parameters.\n  Default - line score data will not be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startDate",
+                    "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "endDate",
+                    "description": "If used, startDate and endDate must both be entered.  All items between the two dates (inclusive) will be returned.\n  Format: YYYYMMDD or YYYY-MM-DD.\n  Default - If not used, the last 7 days items will be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific date isn't requested, all games from the current week will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "week",
+                    "description": "To get all the games for the selected week.\n Default - the current week",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "2f3b8a4357b5ee52ae09782037f46846",
+            "name": "The box\/ resource provides scores\/schedules and bo...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/box\/{eventId}",
+            "description": "The box\/ resource provides scores\/schedules and box score information for football events. (Play-by-play and Drive Charts are not available in the box endpoint.)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp or driveCharts parameters.\n Default - basic schedule and score information is returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "box",
+                    "description": "Returns the box score for a specific in-progress or concluded event.  An eventId must also be entered in conjunction with 'box=true'.\n  Default - box score data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "A full line score can be requested with any combination of parameters.\n  Default - line score data will not be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific date isn't requested, all games from the current week will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "week",
+                    "description": "To get all the games for the selected week.\n Default - the current week",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "46b47c493b75b1ad6d829aebbd869158",
+            "name": "The box\/ resource provides scores\/schedules and bo...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/box\/teams\/{teamId}",
+            "description": "The box\/ resource provides scores\/schedules and box score information for football events. However, box scores are available for a single game only, and so cannot be accessed here when all events for a single team are returned. This endpoint should be used for team schedules & scores only.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "A full line score can be requested with any combination of parameters.\n  Default - line score data will not be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific date isn't requested, all games from the current week will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "week",
+                    "description": "To get all the games for the selected week.\n Default - the current week",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "147b626c2a4bed2635a943bec205ceea",
+            "name": "The scores\/ resource provides score and schedule i...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/scores\/{eventId}",
+            "description": "The scores\/ resource provides score and schedule information for football events. (Boxscores, Play-by-play, and Drive Charts are not available in the scores endpoint.)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp or driveCharts parameters.\n Default - basic schedule and score information is returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "A full line score can be requested with any combination of parameters.\n  Default - line score data will not be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific date isn't requested, all games from the current week will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "week",
+                    "description": "To get all the games for the selected week.\n Default - the current week",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "92c2656f45e692d3d04b858bbd4e3753",
+            "name": "The scores\/ resource provides score and schedule i...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/scores\/teams\/{teamId}",
+            "description": "The scores\/ resource provides score and schedule information for football events.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "linescore",
+                    "description": "A full line score can be requested with any combination of parameters.\n  Default - line score data will not be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return all games from a specific date.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - if a specific date isn't requested, all games from the current week will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "week",
+                    "description": "To get all the games for the selected week.\n Default - the current week",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "b5fd66b19f4c9554e1d8ff61eac142bf",
+            "name": "The standings endpoint will provide the league sta...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/standings\/",
+            "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "expanded",
+                    "description": "Expanded includes additional data points for each team.\n Default - false",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "f09238b767acc1b7d6d3ee78f0f2aabd",
+            "name": "The standings endpoint will provide the league sta...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/standings\/teams\/{teamId}",
+            "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "expanded",
+                    "description": "Expanded includes additional data points for each team.\n Default - false",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "0e1bcc4bc1dd7ddfc115f722ccc00670",
+            "name": "The participants endpoint provides biographical in...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/participants\/teams\/{teamId}",
+            "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "4d62ff34bf3fff708499adfd2854c748",
+            "name": "The participants endpoint provides biographical in...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/participants\/{playerId}",
+            "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter their ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "a1e553165ef1940b57b0c532b543b049",
+            "name": "Football - Season & Career stats for a single play...",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/players\/{playerId}",
+            "description": "Football - Season & Career stats for a single player",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter their ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "enc",
+                    "description": "The 'enc'yclopedia returns full career and season-by-season totals.\n Notes:\n  The encyclopedia is valid for a single player only.  If playerId is omitted, 'enc=true' will be ignored.\n  If 'enc=true', the seasonId will be ignored if included.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "careerOnly",
+                    "description": "For a single player's career stats, only to be used in conjunction with 'enc=true'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "f7d71b150ac6a7e69bcf8616f6d09109",
+            "name": "Football - Single game stats for a single player",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/players\/{playerId}\/events\/{eventId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter their ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp or driveCharts parameters.\n Default - basic schedule and score information is returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "5312277766b953332b25733f912fe368",
+            "name": "Football - Game logs for a single player.",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/players\/{playerId}\/events\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter their ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "db5de5b55360990202129435849d8806",
+            "name": "Football - Player splits (breakdowns).",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/players\/{playerId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter their ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "splitId",
+                    "description": "Enter the stat split to be returned.\n * If 'all' is used, then all the splits are returned.\n * If not used, only the official totals will be returned (default = -1).\n * Otherwise, the entered split is returned.\n -- A full list of the available splitId codes can be found using the \u00e2\u0080\u0098decodes\u00e2\u0080\u0099 resource.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "bfcba7d0960b9e6d683350425b366ed7",
+            "name": "Football - Team splits (breakdowns).",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/teams\/{teamId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "splitId",
+                    "description": "Enter the stat split to be returned.\n * If 'all' is used, then all the splits are returned.\n * If not used, only the official totals will be returned (default = -1).\n * Otherwise, the entered split is returned.\n -- A full list of the available splitId codes can be found using the \u00e2\u0080\u0098decodes\u00e2\u0080\u0099 resource.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "9c09ef804c5a5d43b9634db5a7079088",
+            "name": "Football - A team's stats for one game.",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/teams\/{teamId}\/events\/{eventId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp or driveCharts parameters.\n Default - basic schedule and score information is returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "2f4e972e4f594075422e9ebf451c352e",
+            "name": "Football - Game logs for a single team.",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/teams\/{teamId}\/events\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "73d2988376975a9489441c3d52f5aa8b",
+            "name": "Football - Leaders",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/leaders\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "leaderCategoryId",
+                    "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - Blank (returns Passing Yards).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "topCount",
+                    "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "nonQualifiers",
+                    "description": "Should non-qualifiers be returned?\n  Default - false",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortType",
+                    "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Trailers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "To get data for players on one team only, enter the teamId.\n  Default - all players",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "517400423173082d9d42f2a1dc284388",
+            "name": "Football - Team Leaders",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/teamLeaders\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "leaderCategoryId",
+                    "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - Blank (returns Passing Yards).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "topCount",
+                    "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortType",
+                    "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Trailers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "2037196620fb9d31307321c6d601df40",
+            "name": "Football - Leaders by Week",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/weeklyLeaders\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "week",
+                    "description": "To get all the games for the selected week.\n Default - the current week",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "leaderCategoryId",
+                    "description": "Only one category per query.  The decodes resource provides a list of available codes. \n  Default - Blank (returns Passing Yards).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "topCount",
+                    "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties), utilizing ranked players only if nonQualifiers is false\/null; else will utilize ordered players.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "To get data for players on one team only, enter the teamId.\n  Default - all players",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "05c5b9173cad06959663efddacfdd2c7",
+            "name": "Football - Odds",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/odds\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "week",
+                    "description": "To get all the games for the selected week.\n Default - the current week",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventRoundId",
+                    "description": "Valid only when event type is Postseason.\n Default - All rounds combined",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "822f3406650dfa70cdbb63564a90ec7c",
+            "name": "Football - Odds",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/odds\/{eventId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single game.  Must be populated to use the box, pbp or driveCharts parameters.\n Default - basic schedule and score information is returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "6582a76843a5bd98b3d916c3ea5c4941",
+            "name": "Football - Odds",
+            "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/odds\/teams\/{teamId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.\n Default - Blank (returns all teams).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "week",
+                    "description": "To get all the games for the selected week.\n Default - the current week",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get team lists for a different season, enter the year as YYYY.\n Note: Seasons that span years like NFL 2013-2014 would be entered as 2013.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - All event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventRoundId",
+                    "description": "Valid only when event type is Postseason.\n Default - All rounds combined",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        },
+        {
+            "id": "7e83b3b6808752be570d004a4137697c",
+            "name": "Football - Decodes",
+            "url": "http:\/\/api.stats.com\/\/decode\/football\/{leaguePath}\/{decodeType}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "leaguePath",
+                    "description": "Enter league uriPath - full list available in the football\/leagues endpoint",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "decodeType",
+                    "description": "The data type to be decoded.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of team & venue names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "rawModeData": ""
+        }
+    ]
+}
