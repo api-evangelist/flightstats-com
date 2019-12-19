@@ -1,0 +1,1153 @@
+{
+    "id": "7fa0f868840cad430bbedc0119a1b05e",
+    "name": "Motor",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "27c4dace9f24f056dc49208eb1cc3986",
+            "name": "The motor leagues endpoint serves as a decode for ...",
+            "url": "http:\/\/api.stats.com\/\/stats\/motor\/leagues\/",
+            "description": "The motor leagues endpoint serves as a decode for the available sub leagues (NASCAR, F1, etc.).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "47b1a5cb60e6143fb76f43a0db675dea",
+            "name": "The events endpoint provides schedules, live resul...",
+            "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/events\/{eventId}",
+            "description": "The events endpoint provides schedules, live results, entrants, and boxscores.  Results & boxscores are not available by full season.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "box",
+                    "description": "Returns box score infomation.  Will be ignored if all events for a full season are returned.\n  Default - false: box scores will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "qualifyingRuns",
+                    "description": "Returns qualifying runs where available. Must be used conjunction with 'box=true'.\n  Default - false: qualifying runs will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return event(s) from a specific date. This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current event(s)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Boxscores cannot be returned when the season parameter is used, unless it is in conjunction with a specific raceId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "raceId",
+                    "description": "To get events for a particular race, enter the raceId. See races decode endpoint for full list of race IDs.\n Default - all races",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "65afa3e603bd8dec91a29dc04617ab94",
+            "name": "The standings endpoint will provide the league sta...",
+            "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/standings\/",
+            "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Boxscores cannot be returned when the season parameter is used, unless it is in conjunction with a specific raceId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "standingsTypeId",
+                    "description": "Select ID to change standings type: driver, team, owner, manufacturer, or head-to-head\n Note: Not all standing types are available.\n Default - the driver standings",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "09cc9c6028a192677138ff0edc4ff19c",
+            "name": "The participants endpoint provides biographical in...",
+            "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/participants\/{playerId}",
+            "description": "The participants endpoint provides biographical information for drivers and can be used to return information on a single driver, or all drivers within the subLeague. When no specific playerId is selected, all drivers that have participated in a race for the given subLeague within the last two years are returned.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific driver, enter his\/her ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "e45a2df59a60c20b15c1123f453eb80b",
+            "name": "Motor - Single season or career stats for one driv...",
+            "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/stats\/players\/{playerId}",
+            "description": "Motor - Single season or career stats for one driver",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific driver, enter his\/her ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "allPlayers",
+                    "description": "When true, all players with stats in the given season are returned.\n  Default - false, all players not returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Boxscores cannot be returned when the season parameter is used, unless it is in conjunction with a specific raceId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "enc",
+                    "description": "The encyclopedia returns full career and season-by-season totals.\n Notes:\n  The encyclopedia is valid for a single player only.\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "be61681d2d32201068c42680582d8674",
+            "name": "Motor - Single race stats for a specific driver",
+            "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/stats\/players\/{playerId}\/events\/{eventId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific driver, enter his\/her ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "68b17ca84a86e70744054be46a496df1",
+            "name": "Motor - Race-by-Race statistics for a single drive...",
+            "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/stats\/players\/{playerId}\/events\/",
+            "description": "Motor - Race-by-Race statistics for a single driver.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific driver, enter his\/her ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Boxscores cannot be returned when the season parameter is used, unless it is in conjunction with a specific raceId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "984d82b2dc5edc606b6441305a30010e",
+            "name": "You can get information about a single team by inc...",
+            "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/teams\/{teamId}",
+            "description": "You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the sub league.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a full season, enter the year as YYYY. Boxscores cannot be returned when the season parameter is used, unless it is in conjunction with a specific raceId.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of driver, team, and venues names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "d6052e36347b96d1745679013023e4e7",
+            "name": "You can get information about a single owner by in...",
+            "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/owners\/{ownerId}",
+            "description": "You can get information about a single owner by including the ownerId.  If you do not include a ownerId, you will get all the owners for the sub league.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ownerId",
+                    "description": "Provide owner ID to return information for one owner.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "32cef4dd6200cad5981c2a0edd46f51d",
+            "name": "Motor - Decodes",
+            "url": "http:\/\/api.stats.com\/\/decode\/motor\/{subLeagueAbbreviation}\/{decodeType}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "decodeType",
+                    "description": "The data type to be decoded.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "17412947fe233d919f799c24a09ceb37",
+            "name": "List of headlines.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/headlines\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "272752915be9ef30a6164d249a7cd5cd",
+            "name": "List of headlines.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/headlines\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "e060ff4bb95d71d1165cd1607d4f90ca",
+            "name": "Recent stories for motorsports.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/recent\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "21c7df312a2b94ed1c0e3fd422c889d3",
+            "name": "Recent articles for motorsports.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/recent\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "fe71c22226eff209ace86599bbd720c5",
+            "name": "Get the full story for a storyId found in headline...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/{storyId}\/",
+            "description": "Get the full story for a storyId found in headlines or stories.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "storyId",
+                    "description": "storyId",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "6888bb8c5bb81485a62a50291866c938",
+            "name": "Get the full article for a storyId found in headli...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/{storyId}\/",
+            "description": "Get the full article for a storyId found in headlines or articles.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "storyId",
+                    "description": "storyId",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "e0a0ad30df96a37a5a4e576b68f9c6e1",
+            "name": "Recent stories for motorsports.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/images\/list\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "originId",
+                    "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "4530bd44638f3c2dead9f55a95b98ecf",
+            "name": "List of photos for motorsports.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/photos\/list\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "originId",
+                    "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "0efbbdd6f6a6a07145329d7f1b4043c0",
+            "name": "Preview for one specific event, must identify sub-...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/previews\/events\/{eventId}\/",
+            "description": "Preview for one specific event, must identify sub-league and eventId",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "dcdc3dd8f72d2de0709a5c227cd845c6",
+            "name": "Recap for one specific event, must identify sub-le...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/recaps\/events\/{eventId}\/",
+            "description": "Recap for one specific event, must identify sub-league and eventId",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "239570bf75beb2ed02e4314bdc8c308c",
+            "name": "Recap for one specific event, must identify sub-le...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/recaps\/events\/{eventId}\/",
+            "description": "Recap for one specific event, must identify sub-league and eventId",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "4d949b71af56f63df7dae8854086853b",
+            "name": "",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/images\/{imageSize}\/{imageId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageSize",
+                    "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageId",
+                    "description": "Photo ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        },
+        {
+            "id": "0e53992d72c8d35a6fc937d20fcf6d38",
+            "name": "",
+            "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/photos\/{imageSize}\/{imageId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subLeagueAbbreviation",
+                    "description": "Select sub league",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageSize",
+                    "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageId",
+                    "description": "Photo ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "rawModeData": ""
+        }
+    ]
+}
