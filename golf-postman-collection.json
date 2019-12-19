@@ -1,0 +1,1164 @@
+{
+    "id": "3df69b3262698194c3e17feac7f405c3",
+    "name": "Golf",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "10c366d13474fb040e5e9e1fc771846a",
+            "name": "Access to this events endpoint will provide you wi...",
+            "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/events\/{eventId}",
+            "description": "Access to this events endpoint will provide you with the highest level of event data including live scores, and hole-by-hole information.  Results & hole-by-hole information are only applicable for a single event.\n Simple schedules are also availalbe via the events endpoint.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "results",
+                    "description": "Returns the scores & tee-times for a specific event.  An eventId must also be entered in conjunction with 'results=true'.\n  Default - results will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "holeByHole",
+                    "description": "Returns the hole-by-hole scores for a specific event.  An eventId must also be entered in conjunction with 'holeByHole=true'.\n  Default - hole-by-hole data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return events from a specific date.\n This parameter is ignored in an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current event(s)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a different season, enter the year as YYYY.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - all event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tournamentId",
+                    "description": "To get events for a particular tournament, enter the tournamentId. See tournaments decode endpoint for full list of tournament IDs.\n Default - all tournaments",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player, team, and tournament names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "2225d95515820470f0326543cd4f49b5",
+            "name": "The results\/ resource provides schedules & results...",
+            "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/results\/{eventId}",
+            "description": "The results\/ resource provides schedules & results for golf events. (hole-by-hole is not available in the results endpoint.)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "results",
+                    "description": "Returns the scores & tee-times for a specific event.  An eventId must also be entered in conjunction with 'results=true'.\n  Default - results will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Will return events from a specific date.\n This parameter is ignored in an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current event(s)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a different season, enter the year as YYYY.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventTypeId",
+                    "description": "Schedule will be returned for games included in the specified eventType.\n  Default - all event types",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tournamentId",
+                    "description": "To get events for a particular tournament, enter the tournamentId. See tournaments decode endpoint for full list of tournament IDs.\n Default - all tournaments",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player, team, and tournament names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "4541b707ffed468217f416bb965c0c2f",
+            "name": "The participants endpoint provides biographical in...",
+            "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/participants\/",
+            "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, or all players within the association.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sinceYearLast",
+                    "description": "Anyone who last played since the requested year.  Enter year as YYYY.\n  Default - current golfers",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player, team, and tournament names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "943d2088f3d82b9d9ba2ef23e3430ed8",
+            "name": "This returns only the selected player.",
+            "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/participants\/{playerId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter their ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player, team, and tournament names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "8029f2fb1c48ff1d34ea1251aca9cd8c",
+            "name": "GOLF - Single season or career stats for a single ...",
+            "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/stats\/players\/{playerId}",
+            "description": "GOLF - Single season or career stats for a single player",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter their ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "allPlayers",
+                    "description": "When true, all players with stats in the given season are returned.\n  Default - false, all players not returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a different season, enter the year as YYYY.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "enc",
+                    "description": "The encyclopedia returns full career and season-by-season totals.\n Notes:\n  Default - the current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "a6e9571ed2ad4ab92581f70939a1fd56",
+            "name": "GOLF - Player's individual event logs.",
+            "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/stats\/players\/{playerId}\/events\/{eventId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playerId",
+                    "description": "To get information on a specific player, enter their ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a different season, enter the year as YYYY.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "holeByHole",
+                    "description": "Returns the hole-by-hole scores for a specific event.  An eventId must also be entered in conjunction with 'holeByHole=true'.\n  Default - hole-by-hole data will not be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "542a6330959f57d5f71a23b3dabbb079",
+            "name": "GOLF - Leaders",
+            "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/leaders\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "leaderCategoryId",
+                    "description": "Only one category per query. The leaderCategories decode resource provides a full list of available codes.\n  Default -\n PGA 1961 - 2006: top 3 finishes\n PGA 2007 - now  : FedEx Cup Points\n LPGA: top 3 finishes\n CHMP 1999 - 2009: top 3 finishes\n CHMP 2010 - now : FedEx Cup Points\n WEB: top 3 finishes\n EURO: top 3 finishes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "topCount",
+                    "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortType",
+                    "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Traliers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "season",
+                    "description": "To get events for a different season, enter the year as YYYY.\n Default - current season",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "0a9483d4b097f1240676b06f9f3c1ad6",
+            "name": "For Cup play events that utilize teams, this endpo...",
+            "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/teams\/{teamId}",
+            "description": "For Cup play events that utilize teams, this endpoint will be your source for team names and IDs.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teamId",
+                    "description": "Provide team ID to return information for one team.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "languageId",
+                    "description": "Select ID to change language of player, team, and tournament names. Not all languages available for every name.\n  Default - English is returned when no ID is selected.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "70f1d15769817161f7df4c3a6ceb265c",
+            "name": "List of headlines.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/stories\/headlines\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "0227fe068547a59604645b1a68b7ae8e",
+            "name": "List of headlines.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/articles\/headlines\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "de54a7cb16750023fd591b14ed9b3d8b",
+            "name": "Recent stories for the selected league.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/stories\/recent\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "cc0bf83b87da8f4c35040a910828ed38",
+            "name": "Recent stories for the selected league.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/articles\/recent\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "543d55cc6c93c17fd85bb97415a067fa",
+            "name": "Get the full story for a storyId found in headline...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/stories\/{storyId}\/",
+            "description": "Get the full story for a storyId found in headlines or stories.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "storyId",
+                    "description": "storyId",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "12801ecd23c84018ca650140b39b752e",
+            "name": "Get the full article for a storyId found in headli...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/articles\/{storyId}\/",
+            "description": "Get the full article for a storyId found in headlines or articles.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "storyId",
+                    "description": "storyId",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "91ca11d36e126b5c207de18ac6a02a50",
+            "name": "Preview for one specific event, must identify leag...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/stories\/previews\/events\/{eventId}\/",
+            "description": "Preview for one specific event, must identify league, and eventId",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "6833b099ca107bf933574f3be6c8dc7f",
+            "name": "Recap for one specific event, must identify sport,...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/stories\/recaps\/events\/{eventId}\/",
+            "description": "Recap for one specific event, must identify sport, league, and eventId",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "67f9b75cbead72497ef44ff84e2dd471",
+            "name": "Recap for one specific event, must identify sport,...",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/articles\/recaps\/events\/{eventId}\/",
+            "description": "Recap for one specific event, must identify sport, league, and eventId",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "eventId",
+                    "description": "Provide a specific eventID when you want information on a single event.  Must be populated to use the results & hole-by-hole parameters.\n Default - Basic schedule data for the data will be returned using date or season, if entered, else the current event(s) will be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "28c92bd39715c251de75fa8af559d757",
+            "name": "List of available images.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/images\/list\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "originId",
+                    "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "7d570773062cf2030e15c387e454b333",
+            "name": "List of available photos.",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/photos\/list\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "originId",
+                    "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "f2c1aa8552192ab858d62ca3c07abcb9",
+            "name": "",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/images\/{imageSize}\/{imageId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageSize",
+                    "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageId",
+                    "description": "Photo ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "e48a7d8891c62f474c5c50c217042ee7",
+            "name": "",
+            "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/photos\/{imageSize}\/{imageId}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageSize",
+                    "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "imageId",
+                    "description": "Photo ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        },
+        {
+            "id": "ee9b3296fedd96cf4f9e3bd2bacaf7b4",
+            "name": "GOLF - Decodes",
+            "url": "http:\/\/api.stats.com\/\/decode\/golf\/{association}\/{decodeType}\/",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "association",
+                    "description": "Select association",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "decodeType",
+                    "description": "The data type to be decoded.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "accept",
+                    "description": "Preferred response type.\n  Default - json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "rawModeData": ""
+        }
+    ]
+}
