@@ -1,0 +1,802 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Tennis",
+        "description": "The API calls below can be used to test the Input and Output of our API endpoints.  You'll need an API key and an assigned secret to access the live data and so if you haven't contacted us yet, now is the time!  Our sales staff would be happy to set you up with trial access so you can begin to evaluate the product. Tennis",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.stats.com\/"
+    ],
+    "paths": {
+        "\/stats\/tennis\/leagues\/": {
+            "get": {
+                "summary": "The tennis leagues endpoint serves as a decode for...",
+                "description": "The tennis leagues endpoint serves as a decode for the available sub leagues (ATP, WTA, etc.).",
+                "operationId": "TennisLeaguesTennisLeagues",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/tennis\/{subLeagueAbbreviation}\/events\/{eventId}": {
+            "get": {
+                "summary": "The events endpoint provides schedules, live score...",
+                "description": "The events endpoint provides schedules, live scores, entrants (seeds), results, and match statistics.  Results & match statistics are not available by full season.",
+                "operationId": "TennisSchedules,results,entrants(seeds),andmatchstatsTennisSchedules,results,entrants(seeds),andma",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned"
+                    },
+                    {
+                        "name": "results",
+                        "in": "query",
+                        "description": "Returns match results.  Will be ignored if all events for a full season are returned.\n  Default - false: results will not be returned"
+                    },
+                    {
+                        "name": "matchStats",
+                        "in": "query",
+                        "description": "Returns more in depth match stats (aces, serve speed) for a specific event where available. Must be used conjunction with 'results=true'.\n  Default - false: matchStats data will not be returned"
+                    },
+                    {
+                        "name": "seeds",
+                        "in": "query",
+                        "description": "When true, returns a list of the seeded entrants for the tournament.\n  Default - false: seeds will not be returned"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return events from a specific date. This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current event(s)"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season"
+                    },
+                    {
+                        "name": "matchTypeId",
+                        "in": "query",
+                        "description": "Only the specified match type will be returned.\n  Default - all match types"
+                    },
+                    {
+                        "name": "tournamentId",
+                        "in": "query",
+                        "description": "To get events for a particular tournament, enter the tournamentId. See tournaments decode endpoint for full list of tournament IDs.\n Default - all tournaments"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/tennis\/{subLeagueAbbreviation}\/participants\/": {
+            "get": {
+                "summary": "The participants endpoint provides biographical in...",
+                "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, or all players within the subLeague. When no specific playerId is selected, all players that have participated in a tournament for the given subLeague within the last two years are returned.",
+                "operationId": "TennisPlayersTennisParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/tennis\/{subLeagueAbbreviation}\/participants\/{playerId}": {
+            "get": {
+                "summary": "This returns only one selected player.",
+                "description": "",
+                "operationId": "TennisSingleplayerTennisParticipants",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter his\/her ID."
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/tennis\/{subLeagueAbbreviation}\/stats\/players\/{playerId}": {
+            "get": {
+                "summary": "Tennis - Single season or career stats for a singl...",
+                "description": "Tennis - Single season or career stats for a single player",
+                "operationId": "TennisPlayerstatsYearToDateorCareerTennisStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "To get information on a specific player, enter his\/her ID."
+                    },
+                    {
+                        "name": "allPlayers",
+                        "in": "query",
+                        "description": "When true, all players with stats in the given season are returned.\n  Default - false, all players not returned"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season"
+                    },
+                    {
+                        "name": "enc",
+                        "in": "query",
+                        "description": "When true, the encyclopedia returns full career and season-by-season totals.\n  Default - false, full career data is not returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/tennis\/{subLeagueAbbreviation}\/leaders\/": {
+            "get": {
+                "summary": "Tennis - Leaders",
+                "description": "",
+                "operationId": "TennisLeadersTennisLeaders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "leaderCategoryId",
+                        "in": "query",
+                        "description": "Only one category per query. The leaderCategories decode resource provides a full list of available codes.\n  Default -  Official Player Rankings"
+                    },
+                    {
+                        "name": "topCount",
+                        "in": "query",
+                        "description": "This is the number of leaders to be returned.\n  You can return all leaders with the word 'all' instead of a number.\n  Default - Top 10 (plus ties)"
+                    },
+                    {
+                        "name": "sortType",
+                        "in": "query",
+                        "description": "To return 'worst' players (trailers) rather than 'best' players (leaders) in a category, select sortType = worst. Traliers are not available for every leaderCategoryId.\n  Default - If the sortType parameter is not used, leaders will be returned."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/tennis\/{subLeagueAbbreviation}\/odds\/": {
+            "get": {
+                "summary": "Tennis - Odds",
+                "description": "",
+                "operationId": "TennisOddsOdds",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Will return events from a specific date. This parameter is ignored if an eventId is used.\n Format: YYYYMMDD or YYYY-MM-DD.\n  Default - current event(s)"
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season"
+                    },
+                    {
+                        "name": "tournamentId",
+                        "in": "query",
+                        "description": "To get events for a particular tournament, enter the tournamentId. See tournaments decode endpoint for full list of tournament IDs.\n Default - all tournaments"
+                    },
+                    {
+                        "name": "eventTypeId",
+                        "in": "query",
+                        "description": "Result will return only games for the specific eventType.\n Default - All event types"
+                    },
+                    {
+                        "name": "eventRoundId",
+                        "in": "query",
+                        "description": "Returns games in the specified eventRound only. Rounds are only relevant when eventTypeId = 4 (Konckout) is selected\n  Default - all rounds combined"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/tennis\/{subLeagueAbbreviation}\/odds\/{eventId}": {
+            "get": {
+                "summary": "Tennis - Odds",
+                "description": "",
+                "operationId": "TennisOddsforonegameonlyOdds",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/general\/stories\/headlines\/": {
+            "get": {
+                "summary": "List of headlines.",
+                "description": "",
+                "operationId": "TennisHeadlinesTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/general\/articles\/headlines\/": {
+            "get": {
+                "summary": "List of headlines.",
+                "description": "",
+                "operationId": "TennisHeadlinesArticlesTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/recent\/": {
+            "get": {
+                "summary": "Recent stories for the selected league.",
+                "description": "",
+                "operationId": "TennisRecentstoriesTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/articles\/recent\/": {
+            "get": {
+                "summary": "Recent articles for the selected league.",
+                "description": "",
+                "operationId": "TennisRecentArticlesTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full story for a storyId found in headline...",
+                "description": "Get the full story for a storyId found in headlines or stories.",
+                "operationId": "TennisFullstoryTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/articles\/{storyId}\/": {
+            "get": {
+                "summary": "Get the full article for a storyId found in headli...",
+                "description": "Get the full article for a storyId found in headlines or articles.",
+                "operationId": "TennisFullarticleTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "storyId",
+                        "in": "path",
+                        "description": "storyId"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/previews\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Preview for one specific event, must identify leag...",
+                "description": "Preview for one specific event, must identify league, and eventId",
+                "operationId": "TennisPreviewsAvailableforoneeventTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sport,...",
+                "description": "Recap for one specific event, must identify sport, league, and eventId",
+                "operationId": "TennisRecapsAvailableforoneeventTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/articles\/recaps\/events\/{eventId}\/": {
+            "get": {
+                "summary": "Recap for one specific event, must identify sport,...",
+                "description": "Recap for one specific event, must identify sport, league, and eventId",
+                "operationId": "TennisRecapsArticlesAvailableforoneeventTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "description": "Provide a specific eventID when you want information on a single event.\n Default - When no eventId entered, current event(s) will be returned"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/images\/list\/": {
+            "get": {
+                "summary": "List of available images.",
+                "description": "",
+                "operationId": "TennisListofavailableimagesTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/photos\/list\/": {
+            "get": {
+                "summary": "List of available photos.",
+                "description": "",
+                "operationId": "TennisListofavailablephotosTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    },
+                    {
+                        "name": "originId",
+                        "in": "query",
+                        "description": "Origin of given images.\n  Default - All origins are returned when nothing is selected"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/images\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "TennisRetrieveimageTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/editorial\/tennis\/{subLeagueAbbreviation}\/photos\/{imageSize}\/{imageId}\/": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "TennisRetrievephotoTennisStories&Images",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "imageSize",
+                        "in": "path",
+                        "description": "Options are:\n  'p128', 'p256', 'p512', 'pMax'"
+                    },
+                    {
+                        "name": "imageId",
+                        "in": "path",
+                        "description": "Photo ID"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/decode\/tennis\/{subLeagueAbbreviation}\/{decodeType}\/": {
+            "get": {
+                "summary": "Tennis - Decodes",
+                "description": "",
+                "operationId": "TennisDecodesTennisDecodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subLeagueAbbreviation",
+                        "in": "path",
+                        "description": "Select sub league"
+                    },
+                    {
+                        "name": "decodeType",
+                        "in": "path",
+                        "description": "The data type to be decoded."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "\/stats\/tennis\/itf\/teams\/{teamId}": {
+            "get": {
+                "summary": "The teams endpoint for Tennis is available for the...",
+                "description": "The teams endpoint for Tennis is available for the International Tennis Federation (ITF) only.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the sub league.",
+                "operationId": "TennisTeamsTennisTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "Provide team ID to return information for one team."
+                    },
+                    {
+                        "name": "season",
+                        "in": "query",
+                        "description": "To get events for a full season, enter the year as YYYY. Results & match statistics cannot be returned when the season parameter is used, unless it is in conjunction with a specific tournamentId.\n Default - current season"
+                    },
+                    {
+                        "name": "languageId",
+                        "in": "query",
+                        "description": "Select ID to change language of player names and venues. Not all languages available for every name.\n  Default - English is returned when no ID is selected."
+                    },
+                    {
+                        "name": "accept",
+                        "in": "query",
+                        "description": "Preferred response type.\n  Default - json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
