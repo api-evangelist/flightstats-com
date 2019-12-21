@@ -1,5 +1,5 @@
 {
-    "id": "795d4cd76b283a06bcf2ecf44c04d81a",
+    "id": "f5429795e088092cf834d679609a2999",
     "name": "Volleyball",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "e59b93c4fb45a4603f82fa218ecd7259",
+            "id": "661e964a76e3856b553208c3f0a95c3e",
             "name": "The volleyball leagues endpoint serves as a decode...",
             "url": "http:\/\/api.stats.com\/\/stats\/volleyball\/leagues\/",
             "description": "The volleyball leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "795d4cd76b283a06bcf2ecf44c04d81a",
+            "collectionId": "f5429795e088092cf834d679609a2999",
             "rawModeData": ""
         },
         {
-            "id": "3847ffa87443e7c4d4de93027c7740e6",
+            "id": "c9fb72a8a8eb95e7b14b7823016e80ad",
             "name": "Team information.",
             "url": "http:\/\/api.stats.com\/\/stats\/volleyball\/{leaguePath}\/teams\/{teamId}\/",
             "description": "",
@@ -96,11 +96,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "795d4cd76b283a06bcf2ecf44c04d81a",
+            "collectionId": "f5429795e088092cf834d679609a2999",
             "rawModeData": ""
         },
         {
-            "id": "dcd9b8624f53fd6472d45d3856fa5d9d",
+            "id": "c690e90c7ddad4088cc175ae1bdbe588",
             "name": "Schedules and results",
             "url": "http:\/\/api.stats.com\/\/stats\/volleyball\/{leaguePath}\/events\/{eventId}\/",
             "description": "",
@@ -183,11 +183,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "795d4cd76b283a06bcf2ecf44c04d81a",
+            "collectionId": "f5429795e088092cf834d679609a2999",
             "rawModeData": ""
         },
         {
-            "id": "5d1d09d5268bf8ffdd4b31eec93db88f",
+            "id": "b98d12de24ac6742b97ae172f4149064",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/volleyball\/{leaguePath}\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -242,11 +242,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "795d4cd76b283a06bcf2ecf44c04d81a",
+            "collectionId": "f5429795e088092cf834d679609a2999",
             "rawModeData": ""
         },
         {
-            "id": "69dc0bf6589e339c5173452ab3fd374d",
+            "id": "95cac492be86203acd07d1a0b49ad0cc",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/volleyball\/{leaguePath}\/participants\/",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -294,11 +294,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "795d4cd76b283a06bcf2ecf44c04d81a",
+            "collectionId": "f5429795e088092cf834d679609a2999",
             "rawModeData": ""
         },
         {
-            "id": "6150c24734a5510c00569ab9cc86ba80",
+            "id": "35c98a6d167a89bc33fb71206041cc66",
             "name": "Including a team ID will limit rosters returned to...",
             "url": "http:\/\/api.stats.com\/\/stats\/volleyball\/{leaguePath}\/participants\/teams\/{teamId}\/",
             "description": "Including a team ID will limit rosters returned to the selected team only.",
@@ -346,11 +346,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "795d4cd76b283a06bcf2ecf44c04d81a",
+            "collectionId": "f5429795e088092cf834d679609a2999",
             "rawModeData": ""
         },
         {
-            "id": "6e4008b23c29b5099231f02ea6c0619b",
+            "id": "2e40933d289a9be478588ce901437d87",
             "name": "Including a player ID will limit data returned to ...",
             "url": "http:\/\/api.stats.com\/\/stats\/volleyball\/{leaguePath}\/participants\/{playerId}\/",
             "description": "Including a player ID will limit data returned to the selected player only.",
@@ -398,11 +398,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "795d4cd76b283a06bcf2ecf44c04d81a",
+            "collectionId": "f5429795e088092cf834d679609a2999",
             "rawModeData": ""
         },
         {
-            "id": "5c24d0ad54834f2b998ed3e1d2909700",
+            "id": "7b7782d31abb8cc999c149b64e977b69",
             "name": "Volleyball - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/volleyball\/{leaguePath}\/{decodeType}",
             "description": "",
@@ -450,7 +450,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "795d4cd76b283a06bcf2ecf44c04d81a",
+            "collectionId": "f5429795e088092cf834d679609a2999",
             "rawModeData": ""
         }
     ]
