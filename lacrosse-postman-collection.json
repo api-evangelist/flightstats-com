@@ -1,5 +1,5 @@
 {
-    "id": "1090af59fdaadd99fd110e04a0ae455e",
+    "id": "8128778c3ac89b813b2333818ad015e7",
     "name": "Lacrosse",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "630aefdbc4d90f46d0829b4d9f26f4af",
+            "id": "80235172a329514e0af8c19bb76d6d25",
             "name": "Team information.",
             "url": "http:\/\/api.stats.com\/\/stats\/lacrosse\/nll\/teams\/{teamId}\/",
             "description": "",
@@ -65,11 +65,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         },
         {
-            "id": "269492645fd064f6f3b3467982abeb37",
+            "id": "31ed0129a2fa5c8f4edb64eedd25725f",
             "name": "Schedules, scores, and box scores",
             "url": "http:\/\/api.stats.com\/\/stats\/lacrosse\/nll\/box\/{eventId}\/",
             "description": "",
@@ -152,11 +152,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         },
         {
-            "id": "e9225630285fab7a358732e33ff60046",
+            "id": "bb1e401c26096216bd26917880e5e6d1",
             "name": "Schedules and scores",
             "url": "http:\/\/api.stats.com\/\/stats\/lacrosse\/nll\/scores\/{eventId}\/",
             "description": "",
@@ -225,11 +225,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         },
         {
-            "id": "b1601392dfc60375780cbeb4ed910265",
+            "id": "f16e1a75d51749d20c2b2c1b7500fc5e",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/lacrosse\/nll\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -270,11 +270,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         },
         {
-            "id": "ffd2829ce70b8c595e3be10cd468299a",
+            "id": "05d13364dad3562580db34a44e54589b",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/lacrosse\/nll\/participants\/",
             "description": "The participants endpoint provides biographical information for riders and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -315,11 +315,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         },
         {
-            "id": "92d561baed76ccdc5cf56ca856a24203",
+            "id": "045d4ee897b27a590ad7bfc39738283d",
             "name": "Including a team ID will limit rosters returned to...",
             "url": "http:\/\/api.stats.com\/\/stats\/lacrosse\/nll\/participants\/teams\/{teamId}\/",
             "description": "Including a team ID will limit rosters returned to the selected team only.",
@@ -360,11 +360,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         },
         {
-            "id": "27a4ad321b138936e54c49b5956d2ea5",
+            "id": "25bc0dd9443b73802e6a74e737f9f152",
             "name": "Including a player ID will limit data returned to ...",
             "url": "http:\/\/api.stats.com\/\/stats\/lacrosse\/nll\/participants\/{playerId}\/",
             "description": "Including a player ID will limit data returned to the selected player only.",
@@ -405,11 +405,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         },
         {
-            "id": "448f495ca0bd0051a84ad0c8facf54ee",
+            "id": "bd23684631c0de9319fb38ee830eaaf6",
             "name": "Lacrosse - Season stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/lacrosse\/nll\/stats\/players\/{playerId}",
             "description": "",
@@ -464,11 +464,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         },
         {
-            "id": "bf308ee5f3e0378423c3e71c79cbc2e2",
+            "id": "a6adf82963579967e2ae71f6457f30d7",
             "name": "Lacrosse - Team stats",
             "url": "http:\/\/api.stats.com\/\/stats\/lacrosse\/nll\/stats\/teams\/{teamId}\/",
             "description": "",
@@ -523,11 +523,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         },
         {
-            "id": "b8fc7f01df6547c87aa64c5afdd2ac5c",
+            "id": "31f2d3800d050ccaa3e512ab18bd3718",
             "name": "Lacrosse - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/lacrosse\/nll\/leaders\/",
             "description": "",
@@ -596,11 +596,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         },
         {
-            "id": "2be9653bd6f98f73338481512a3c9a0d",
+            "id": "1063a4545f4ada5f5c22528cdaf2bd8c",
             "name": "Lacrosse - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/lacrosse\/nll\/{decodeType}",
             "description": "",
@@ -641,7 +641,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1090af59fdaadd99fd110e04a0ae455e",
+            "collectionId": "8128778c3ac89b813b2333818ad015e7",
             "rawModeData": ""
         }
     ]
