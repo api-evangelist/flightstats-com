@@ -1,5 +1,5 @@
 {
-    "id": "0f7fcdbe89196221d9f60a0925fafd75",
+    "id": "9c9a435f55e8c080be262911a97b197f",
     "name": "Olympics",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "06b45e8cf28c0a0da825bdb4c2e0b5c6",
+            "id": "abeab0eea6278976248bea6e3835f027",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/stats\/oly\/smr_oly\/{discipline}\/medals\/",
             "description": "",
@@ -72,11 +72,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "cf615c548d68008936449b7fb30d8f43",
+            "id": "cb1c86a016fedf82a49d3b9cb36eb456",
             "name": "Returns Olympic bios",
             "url": "http:\/\/api.stats.com\/\/editorial\/oly\/SMR_OLY\/bios\/{playerId}",
             "description": "",
@@ -110,11 +110,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "86668daab501d4ad124f9ba5fa83a7a4",
+            "id": "7a18c27317e5570d764456fa9b993344",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/oly\/smr_oly\/{discipline}\/participants\/",
             "description": "The participants endpoint provides biographical information for athletes and can be used to return information on an athlete.",
@@ -162,11 +162,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "f126a0340249f6d65ed1a33528f559dd",
+            "id": "b460f9da1251cf2140f576d2f358cb88",
             "name": "This returns only the selected team.",
             "url": "http:\/\/api.stats.com\/\/stats\/oly\/smr_oly\/{discipline}\/participants\/teams\/{teamId}\/",
             "description": "",
@@ -221,11 +221,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "d054797416076ac17bd1b83da56dd2e5",
+            "id": "b523b09469a4709065cde593b7700edc",
             "name": "Returns Olympic Teams",
             "url": "http:\/\/api.stats.com\/\/stats\/oly\/smr_oly\/{discipline}\/teams\/",
             "description": "",
@@ -280,11 +280,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "4048cb7521032bc024d1ee83c5de3da4",
+            "id": "e7fb3cc21a5405d407e2eb32b844f585",
             "name": "Live results",
             "url": "http:\/\/api.stats.com\/\/stats\/oly\/smr_oly\/{discipline}\/events\/",
             "description": "",
@@ -353,11 +353,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "b0199ba6a69c676a609e5cf713ad3f06",
+            "id": "6ee187401199d509dc205885fcd08469",
             "name": "Returns Olympics standings",
             "url": "http:\/\/api.stats.com\/\/stats\/oly\/smr_oly\/{discipline}\/standings\/",
             "description": "",
@@ -419,11 +419,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "ad223b865432f1905e472193035707da",
+            "id": "9fcfc0a893236d0fdd6a244ba151461c",
             "name": "Returns the olympic schedule",
             "url": "http:\/\/api.stats.com\/\/stats\/oly\/smr_oly\/{discipline}\/schedule\/",
             "description": "",
@@ -471,11 +471,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "f4c7976c4074639d79dc722d74bcca62",
+            "id": "60d1006a7166837cbb16496f0ebe872a",
             "name": "List of recent stories.",
             "url": "http:\/\/api.stats.com\/\/editorial\/oly\/smr_oly\/stories\/headlines\/",
             "description": "",
@@ -502,11 +502,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "1f6096dd941d14705f01c76a3c2c5b2c",
+            "id": "fa20741b8a5c8ee246d952dc135749a9",
             "name": "List of recent articles.",
             "url": "http:\/\/api.stats.com\/\/editorial\/oly\/smr_oly\/articles\/headlines\/",
             "description": "",
@@ -533,11 +533,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "597bee09b0703a129a6ca400e225fc56",
+            "id": "8644dbdf34a55df45f4670e7398aff9d",
             "name": "Get the full story for a storyId found in headline...",
             "url": "http:\/\/api.stats.com\/\/editorial\/oly\/smr_oly\/stories\/{storyId}\/",
             "description": "Get the full story for a storyId found in headlines or stories.",
@@ -571,11 +571,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "aafb277812de96381a73778e650c344c",
+            "id": "71a3745cc103cc1c598fef63e0a988a7",
             "name": "Get the full article for a storyId found in headli...",
             "url": "http:\/\/api.stats.com\/\/editorial\/oly\/smr_oly\/articles\/{storyId}\/",
             "description": "Get the full article for a storyId found in headlines or articles.",
@@ -609,11 +609,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "c634161389e340d24cec98a5d3225d96",
+            "id": "d0c44f2c8b0deb75b9edb6b54fdc183b",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/oly\/smr_oly\/images\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -654,11 +654,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "29255288bb613121142689ee7c2399ff",
+            "id": "3f02d8788dbb85b4bf74eda86ae96b45",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/oly\/smr_oly\/photos\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -699,11 +699,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         },
         {
-            "id": "6f132d984d3ded94f65ca4e7055550d1",
+            "id": "bd509ee5d48f706f152ce8ddb941ac14",
             "name": "Olympics - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/oly\/smr_oly\/{decodeType}\/",
             "description": "",
@@ -744,7 +744,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f7fcdbe89196221d9f60a0925fafd75",
+            "collectionId": "9c9a435f55e8c080be262911a97b197f",
             "rawModeData": ""
         }
     ]
