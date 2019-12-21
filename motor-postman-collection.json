@@ -1,5 +1,5 @@
 {
-    "id": "7fa0f868840cad430bbedc0119a1b05e",
+    "id": "6cfa7b6185bfce95487221c17c499111",
     "name": "Motor",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "27c4dace9f24f056dc49208eb1cc3986",
+            "id": "e431668eac64e42d878beb8b8dfaa30c",
             "name": "The motor leagues endpoint serves as a decode for ...",
             "url": "http:\/\/api.stats.com\/\/stats\/motor\/leagues\/",
             "description": "The motor leagues endpoint serves as a decode for the available sub leagues (NASCAR, F1, etc.).",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "47b1a5cb60e6143fb76f43a0db675dea",
+            "id": "1b1c9a5cbeda1b589a48659891c42a15",
             "name": "The events endpoint provides schedules, live resul...",
             "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/events\/{eventId}",
             "description": "The events endpoint provides schedules, live results, entrants, and boxscores.  Results & boxscores are not available by full season.",
@@ -124,11 +124,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "65afa3e603bd8dec91a29dc04617ab94",
+            "id": "a24d872d144846b5b24a8c19f943ea72",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -183,11 +183,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "09cc9c6028a192677138ff0edc4ff19c",
+            "id": "b51dfbe6d622b662cc2a3623a4851888",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/participants\/{playerId}",
             "description": "The participants endpoint provides biographical information for drivers and can be used to return information on a single driver, or all drivers within the subLeague. When no specific playerId is selected, all drivers that have participated in a race for the given subLeague within the last two years are returned.",
@@ -235,11 +235,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "e45a2df59a60c20b15c1123f453eb80b",
+            "id": "16553ca9e472ad31a8b58db1a4e619c4",
             "name": "Motor - Single season or career stats for one driv...",
             "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/stats\/players\/{playerId}",
             "description": "Motor - Single season or career stats for one driver",
@@ -308,11 +308,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "be61681d2d32201068c42680582d8674",
+            "id": "32312c76eba957b89e7f8c402af4e04f",
             "name": "Motor - Single race stats for a specific driver",
             "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "",
@@ -367,11 +367,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "68b17ca84a86e70744054be46a496df1",
+            "id": "ef900c24e0f3a443ebf9b4ba587a5220",
             "name": "Motor - Race-by-Race statistics for a single drive...",
             "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/stats\/players\/{playerId}\/events\/",
             "description": "Motor - Race-by-Race statistics for a single driver.",
@@ -426,11 +426,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "984d82b2dc5edc606b6441305a30010e",
+            "id": "321749184fd79f861e162c17e5f9445a",
             "name": "You can get information about a single team by inc...",
             "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/teams\/{teamId}",
             "description": "You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the sub league.",
@@ -485,11 +485,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "d6052e36347b96d1745679013023e4e7",
+            "id": "acc14e554c1890650bc7a8bfdf62eff1",
             "name": "You can get information about a single owner by in...",
             "url": "http:\/\/api.stats.com\/\/stats\/motor\/{subLeagueAbbreviation}\/owners\/{ownerId}",
             "description": "You can get information about a single owner by including the ownerId.  If you do not include a ownerId, you will get all the owners for the sub league.",
@@ -530,11 +530,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "32cef4dd6200cad5981c2a0edd46f51d",
+            "id": "153fdd79e311203a024464c060b9753d",
             "name": "Motor - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/motor\/{subLeagueAbbreviation}\/{decodeType}\/",
             "description": "",
@@ -575,11 +575,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "17412947fe233d919f799c24a09ceb37",
+            "id": "136582f72dd2013cb79a4175426cf36d",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/headlines\/",
             "description": "",
@@ -613,11 +613,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "272752915be9ef30a6164d249a7cd5cd",
+            "id": "e28126993d1a38736001d93ac400a2fb",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/headlines\/",
             "description": "",
@@ -651,11 +651,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "e060ff4bb95d71d1165cd1607d4f90ca",
+            "id": "dafd34c14d9ec29cd6379caba3de5126",
             "name": "Recent stories for motorsports.",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/recent\/",
             "description": "",
@@ -689,11 +689,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "21c7df312a2b94ed1c0e3fd422c889d3",
+            "id": "9422ff7484fb8a999abbbea9e8963f48",
             "name": "Recent articles for motorsports.",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/recent\/",
             "description": "",
@@ -727,11 +727,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "fe71c22226eff209ace86599bbd720c5",
+            "id": "010725ab735f5a4ea0cbd8b991f7e1b6",
             "name": "Get the full story for a storyId found in headline...",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/{storyId}\/",
             "description": "Get the full story for a storyId found in headlines or stories.",
@@ -772,11 +772,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "6888bb8c5bb81485a62a50291866c938",
+            "id": "02fd3c8cb533fe17727cf50405206e8b",
             "name": "Get the full article for a storyId found in headli...",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/{storyId}\/",
             "description": "Get the full article for a storyId found in headlines or articles.",
@@ -817,11 +817,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "e0a0ad30df96a37a5a4e576b68f9c6e1",
+            "id": "3878ca9e5665339f22e8a36898b3e3d7",
             "name": "Recent stories for motorsports.",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/images\/list\/",
             "description": "",
@@ -862,11 +862,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "4530bd44638f3c2dead9f55a95b98ecf",
+            "id": "7d9568d147a905200b7e88ffa7a1778f",
             "name": "List of photos for motorsports.",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/photos\/list\/",
             "description": "",
@@ -907,11 +907,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "0efbbdd6f6a6a07145329d7f1b4043c0",
+            "id": "3e5993752f3f2c78425e0a824fc4387a",
             "name": "Preview for one specific event, must identify sub-...",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/previews\/events\/{eventId}\/",
             "description": "Preview for one specific event, must identify sub-league and eventId",
@@ -952,11 +952,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "dcdc3dd8f72d2de0709a5c227cd845c6",
+            "id": "a3cd7feb620c2ca990a65c5052087061",
             "name": "Recap for one specific event, must identify sub-le...",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/stories\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sub-league and eventId",
@@ -997,11 +997,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "239570bf75beb2ed02e4314bdc8c308c",
+            "id": "b6e61ce6e6b17b4b54f2ffb6f4060232",
             "name": "Recap for one specific event, must identify sub-le...",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/articles\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sub-league and eventId",
@@ -1042,11 +1042,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "4d949b71af56f63df7dae8854086853b",
+            "id": "f633579516cd232f55b31c67ccd76234",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/images\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -1094,11 +1094,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         },
         {
-            "id": "0e53992d72c8d35a6fc937d20fcf6d38",
+            "id": "152a6278240a7ebfb63bf37b6ae779f7",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/motor\/{subLeagueAbbreviation}\/photos\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -1146,7 +1146,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7fa0f868840cad430bbedc0119a1b05e",
+            "collectionId": "6cfa7b6185bfce95487221c17c499111",
             "rawModeData": ""
         }
     ]
