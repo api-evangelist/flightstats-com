@@ -1,5 +1,5 @@
 {
-    "id": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+    "id": "979fff13db576884a0cf038c3103cad3",
     "name": "Football - Other",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "c6da98d5c13e2f657f17e9279210064a",
+            "id": "8edef432c6213ba6921e4596a4e6618d",
             "name": "The football leagues endpoint serves as a decode f...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/leagues\/",
             "description": "The football leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "af210f0640a55ce269f87ccb26482b89",
+            "id": "289b2044f3b4094dc41fdc177a9409fd",
             "name": "The teams endpoint will be your source for team na...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/teams\/{teamId}",
             "description": "The teams endpoint will be your source for team names, locations, abbreviations, and IDs.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the league.",
@@ -96,11 +96,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "27c91167cf64199071de4ed9d388a926",
+            "id": "62d9667a77669d8620dac4c5e100456b",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/events\/{eventId}",
             "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, play-by-plays, and drive charts. The box, pbp, & driveCharts parameters are only available when a single game is selected.\n Simple schedules are also available via the events endpoint.",
@@ -218,11 +218,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "b25299327c587a433193828ab452b363",
+            "id": "2ab723fce37ae9b5896688922e85b670",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/events\/teams\/{teamId}",
             "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, play-by-plays, and drive charts. However box scores, play-by-play, and drive charts are available for a single game only, and so acnnot be accessed here when all events for a single team are returned. This endpoint should be used for team schedules & scores only.",
@@ -319,11 +319,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "2f3b8a4357b5ee52ae09782037f46846",
+            "id": "167acea6820f6decabf712d072d4e795",
             "name": "The box\/ resource provides scores\/schedules and bo...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/box\/{eventId}",
             "description": "The box\/ resource provides scores\/schedules and box score information for football events. (Play-by-play and Drive Charts are not available in the box endpoint.)",
@@ -413,11 +413,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "46b47c493b75b1ad6d829aebbd869158",
+            "id": "52e00a81f1caab18065a2e16da6976ac",
             "name": "The box\/ resource provides scores\/schedules and bo...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/box\/teams\/{teamId}",
             "description": "The box\/ resource provides scores\/schedules and box score information for football events. However, box scores are available for a single game only, and so cannot be accessed here when all events for a single team are returned. This endpoint should be used for team schedules & scores only.",
@@ -500,11 +500,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "147b626c2a4bed2635a943bec205ceea",
+            "id": "7cd81a6554a3d0920545720f4a3adc2b",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/scores\/{eventId}",
             "description": "The scores\/ resource provides score and schedule information for football events. (Boxscores, Play-by-play, and Drive Charts are not available in the scores endpoint.)",
@@ -587,11 +587,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "92c2656f45e692d3d04b858bbd4e3753",
+            "id": "02fd0665dbc1bcf9b91c5fef112cc386",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/scores\/teams\/{teamId}",
             "description": "The scores\/ resource provides score and schedule information for football events.",
@@ -674,11 +674,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "b5fd66b19f4c9554e1d8ff61eac142bf",
+            "id": "0236620701855b9443561b528177b1a9",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -733,11 +733,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "f09238b767acc1b7d6d3ee78f0f2aabd",
+            "id": "dbaf4b75395207fb4568a52262cfdbdc",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/standings\/teams\/{teamId}",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -799,11 +799,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "0e1bcc4bc1dd7ddfc115f722ccc00670",
+            "id": "5a4870734ee60067f68dd44099f8b9ab",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/participants\/teams\/{teamId}",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -851,11 +851,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "4d62ff34bf3fff708499adfd2854c748",
+            "id": "6e69873d4e2c2a174851ae528bf1a5ee",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/participants\/{playerId}",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -903,11 +903,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "a1e553165ef1940b57b0c532b543b049",
+            "id": "ccd9490d3c91c1553b0aea824e73d0bc",
             "name": "Football - Season & Career stats for a single play...",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/players\/{playerId}",
             "description": "Football - Season & Career stats for a single player",
@@ -976,11 +976,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "f7d71b150ac6a7e69bcf8616f6d09109",
+            "id": "0aaddad7d0f93ff4c4346223b10ecc7e",
             "name": "Football - Single game stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "",
@@ -1035,11 +1035,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "5312277766b953332b25733f912fe368",
+            "id": "ac6951969557da989940c634da13eef0",
             "name": "Football - Game logs for a single player.",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/players\/{playerId}\/events\/",
             "description": "",
@@ -1101,11 +1101,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "db5de5b55360990202129435849d8806",
+            "id": "28f82a6905126d35707666f18129d4b4",
             "name": "Football - Player splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/players\/{playerId}\/",
             "description": "",
@@ -1174,11 +1174,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "bfcba7d0960b9e6d683350425b366ed7",
+            "id": "63d11e8fb649cebd0f3c15a9075cebdf",
             "name": "Football - Team splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/teams\/{teamId}\/",
             "description": "",
@@ -1247,11 +1247,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "9c09ef804c5a5d43b9634db5a7079088",
+            "id": "31e66320c47a399ef68e17d89c8b773c",
             "name": "Football - A team's stats for one game.",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/teams\/{teamId}\/events\/{eventId}",
             "description": "",
@@ -1306,11 +1306,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "2f4e972e4f594075422e9ebf451c352e",
+            "id": "0ca2af156682818c00d4d40d8ca34068",
             "name": "Football - Game logs for a single team.",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/stats\/teams\/{teamId}\/events\/",
             "description": "",
@@ -1372,11 +1372,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "73d2988376975a9489441c3d52f5aa8b",
+            "id": "0bd7304ed762dda02d6f18e8f95620c0",
             "name": "Football - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/leaders\/",
             "description": "",
@@ -1459,11 +1459,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "517400423173082d9d42f2a1dc284388",
+            "id": "4f3eacb783dcc4f2728087ab07ef2b1c",
             "name": "Football - Team Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/teamLeaders\/",
             "description": "",
@@ -1532,11 +1532,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "2037196620fb9d31307321c6d601df40",
+            "id": "466fcd5fd3b4669b4dd0c19557093bd5",
             "name": "Football - Leaders by Week",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/weeklyLeaders\/",
             "description": "",
@@ -1612,11 +1612,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "05c5b9173cad06959663efddacfdd2c7",
+            "id": "529c439049d5e6f84eb46951190e4fbf",
             "name": "Football - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/odds\/",
             "description": "",
@@ -1685,11 +1685,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "822f3406650dfa70cdbb63564a90ec7c",
+            "id": "d46f094c3ae1285a5e2a061ca96c49db",
             "name": "Football - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/odds\/{eventId}",
             "description": "",
@@ -1737,11 +1737,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "6582a76843a5bd98b3d916c3ea5c4941",
+            "id": "29111431751608d92fc8e1c1b19154a0",
             "name": "Football - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/{leaguePath}\/odds\/teams\/{teamId}",
             "description": "",
@@ -1817,11 +1817,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         },
         {
-            "id": "7e83b3b6808752be570d004a4137697c",
+            "id": "1ec7dcd4b2029c1a73f5c0e6f3b1ea40",
             "name": "Football - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/football\/{leaguePath}\/{decodeType}",
             "description": "",
@@ -1869,7 +1869,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0ac37ae087ed7b4dd8bcc74f1ee433c8",
+            "collectionId": "979fff13db576884a0cf038c3103cad3",
             "rawModeData": ""
         }
     ]
