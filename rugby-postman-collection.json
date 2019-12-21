@@ -1,5 +1,5 @@
 {
-    "id": "b08bab583e2e85c6e4c266eafbf720ff",
+    "id": "e2887f4d57568812fd07e123a3be6777",
     "name": "Rugby",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "3cf3c0501087263ccedd03904aabe2da",
+            "id": "8da5cc13a9f26008e37954c56495c67a",
             "name": "The rugby leagues endpoint serves as a decode for ...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/leagues\/",
             "description": "The rugby leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "b1ce476d637ad5cb351140a5ef9bd6e7",
+            "id": "5fd8ef7e3dbe8430f804577aa4945072",
             "name": "Team information.",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/teams\/{teamId}\/",
             "description": "",
@@ -96,11 +96,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "ff4ae09ffaf50d77b0057b88d12e6afe",
+            "id": "581b2027f07a9d1469a00668b0765dca",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/events\/{eventId}\/",
             "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, and commentary when applicable.  The 'eventId', 'box', and 'commentary' parameters below are only applicable for a specific game.\n Events will also provide you with schedule data.",
@@ -183,11 +183,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "d718024859f206ce7756a2a331ca363d",
+            "id": "a4299d2ef868c8952e8818fd0c1c3ef2",
             "name": "This gets the event (schedule) information for jus...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/events\/teams\/{teamId}\/",
             "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information).",
@@ -256,11 +256,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "f8bf7a03a629bb20599905f413a68124",
+            "id": "7b8298febfa3a531d6ec2e16a2121d31",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/box\/{eventId}\/",
             "description": "Access to this events endpoint will provide you with live scores and box scores when applicable.  The 'eventId' and 'box' parameters below are only applicable for a specific game.\n the rugby\box endpoint will also provide you with schedule data.",
@@ -336,11 +336,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "fa69e6e1503df7a4fae35d1aa8d07914",
+            "id": "8df81d37442205f2978f6e075d78c821",
             "name": "This gets the event (schedule) information for jus...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/box\/teams\/{teamId}\/",
             "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information).",
@@ -409,11 +409,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "f8e4eb1f37e704e2003eb072629d5c4f",
+            "id": "ad40e813e35644c59e195a252860a012",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/scores\/{eventId}\/",
             "description": "The scores\/ resource provides score and schedule information for events.",
@@ -482,11 +482,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "d53120bffabb7b62546d89599f17b454",
+            "id": "ef5162358a9b2a0e8c184e0b8b7a9a03",
             "name": "This gets the event (schedule) information for jus...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/scores\/teams\/{teamId}\/",
             "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information.",
@@ -555,11 +555,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "61da2e167ac2a0820fbdf5dc1e7f3fa7",
+            "id": "9aec8c94f8e3cef31685e354a1b10660",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -607,11 +607,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "0a4465e5e47f3b527b15910c653437b7",
+            "id": "855a807ee15db1334e21540a65e73ced",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/standings\/teams\/{teamId}\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -666,11 +666,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "dc3e05afd911799440edd7fb7377a135",
+            "id": "b4c7221373ffbc006b452fae46300775",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/participants\/",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -718,11 +718,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "4ef29c39b76ec21f1c0e347a34962f5c",
+            "id": "3aff9a1c510fc52c11acae5bb65cc58f",
             "name": "Including a team ID will limit rosters returned to...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/participants\/teams\/{teamId}\/",
             "description": "Including a team ID will limit rosters returned to the selected team only.",
@@ -770,11 +770,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "676630b41b6b059153bacea86712a9fb",
+            "id": "1d07a555f9708f3dedbaba4bfabab35d",
             "name": "Including a player ID will limit data returned to ...",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/participants\/{playerId}\/",
             "description": "Including a player ID will limit data returned to the selected player only.",
@@ -822,11 +822,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "9792dcdaa7c931e0c6aea9d96b6fae9d",
+            "id": "95c91fd0a2177d0c6be48e33f930d6a2",
             "name": "Rugby - Career stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/stats\/players\/{playerId}\/",
             "description": "",
@@ -881,11 +881,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "4e7e9854dc24abbfde74b7102a2ce556",
+            "id": "d73c1b4759c2ffe81c94db0ca57db633",
             "name": "Rugby - Single game stats for a player",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "",
@@ -933,11 +933,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "e805e6fbd4a53a4916f142a86453cece",
+            "id": "922965653357739ab3ad3a7191c6a4dc",
             "name": "Rugby - A player's stats, game-by-game.",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/stats\/players\/{playerId}\/events\/",
             "description": "",
@@ -992,11 +992,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "8a9f6e372cb534e63c4138fdfefa1bac",
+            "id": "eef04332365b75497ff294bbda2a0d1f",
             "name": "Rugby - Team stats",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/stats\/teams\/{teamId}\/",
             "description": "",
@@ -1051,11 +1051,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "5fae09b8bc49d12cc540cf90d7d302a1",
+            "id": "580040bfbd3a56d49765d81ce837d7e2",
             "name": "Rugby - A team's stats, game-by-game.",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/stats\/teams\/{teamId}\/events\/{eventId}",
             "description": "",
@@ -1103,11 +1103,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "bb32f5346ac72369f0b828475bf5a5b1",
+            "id": "e510c86aa4521b761b724028b3fcac27",
             "name": "Rugby - A team's stats, game-by-game.",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/stats\/teams\/{teamId}\/events\/",
             "description": "",
@@ -1162,11 +1162,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "8d4e8f2b6c4426d8c76b4f081220e37a",
+            "id": "43b8c5ec6398d300acdca7e4cb6228ee",
             "name": "Rugby - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/rugby\/{leaguePath}\/leaders\/",
             "description": "",
@@ -1242,11 +1242,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "b0a8d6bd33a34ba845680d87c8fe4c73",
+            "id": "e5bb3c3009c4f523d42394a7419638cf",
             "name": "List of available images.",
             "url": "http:\/\/api.stats.com\/\/editorial\/rugby\/{leaguePath}\/images\/list\/",
             "description": "",
@@ -1287,11 +1287,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "6693a85be492a17af00e828526db496e",
+            "id": "3e71cf9a788ceb9b2dcfe7a2a1a082b8",
             "name": "List of available photos.",
             "url": "http:\/\/api.stats.com\/\/editorial\/rugby\/{leaguePath}\/photos\/list\/",
             "description": "",
@@ -1332,11 +1332,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "3662126a6bfeb1ee982b70cbdc188ea6",
+            "id": "dc5ffce8f3d596f32887cd0a45381f2e",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/rugby\/{leaguePath}\/images\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -1384,11 +1384,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "61b816bc4a0486f425450964a18ca71a",
+            "id": "b856e4e4d84300f9875ba27a73bbe336",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/rugby\/{leaguePath}\/photos\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -1436,11 +1436,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         },
         {
-            "id": "24252d6f0d19be8fb8521fe867972ee3",
+            "id": "84ce3e91188598dc0df98a0e972bce3b",
             "name": "Rugby - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/rugby\/{leaguePath}\/{decodeType}",
             "description": "",
@@ -1488,7 +1488,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b08bab583e2e85c6e4c266eafbf720ff",
+            "collectionId": "e2887f4d57568812fd07e123a3be6777",
             "rawModeData": ""
         }
     ]
