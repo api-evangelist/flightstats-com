@@ -1,5 +1,5 @@
 {
-    "id": "7f43758a3ba13121581b34c1cdf47004",
+    "id": "e4dddb27e40805993ff2414963915f1b",
     "name": "Tennis",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "7cc4f74e354c38a647dad945b0231a74",
+            "id": "97e8c052bf0b747e9a2814e8a04395c9",
             "name": "The tennis leagues endpoint serves as a decode for...",
             "url": "http:\/\/api.stats.com\/\/stats\/tennis\/leagues\/",
             "description": "The tennis leagues endpoint serves as a decode for the available sub leagues (ATP, WTA, etc.).",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "7eff5a649c7f8e87994048e5806e7604",
+            "id": "ab204b75af1aa3a5a628af75b75c6906",
             "name": "The events endpoint provides schedules, live score...",
             "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/events\/{eventId}",
             "description": "The events endpoint provides schedules, live scores, entrants (seeds), results, and match statistics.  Results & match statistics are not available by full season.",
@@ -138,11 +138,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "9c03caca2972273d57437ef7602fc394",
+            "id": "af7aa19e717fa196b779bd4595a7d737",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/participants\/",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, or all players within the subLeague. When no specific playerId is selected, all players that have participated in a tournament for the given subLeague within the last two years are returned.",
@@ -183,11 +183,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "180e8a0f51e14600f748e8ef085e2e3d",
+            "id": "95f57f9e812f13b7119e3e8695c58a58",
             "name": "This returns only one selected player.",
             "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/participants\/{playerId}",
             "description": "",
@@ -235,11 +235,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "59d308638bf2f7f1dc83f9c5d09ac0f0",
+            "id": "79e1923ea1132ab34fe9fcb29136a818",
             "name": "Tennis - Single season or career stats for a singl...",
             "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/stats\/players\/{playerId}",
             "description": "Tennis - Single season or career stats for a single player",
@@ -308,11 +308,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "fd5a68ef4f5a3ff4e62424092f11f56d",
+            "id": "86aa36c794058b4fd2f18d5959566019",
             "name": "Tennis - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/leaders\/",
             "description": "",
@@ -374,11 +374,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "3214271dd0ff5bfc820e95b5952eead1",
+            "id": "982e9236ef0c88907fb32cb3b84523a4",
             "name": "Tennis - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/odds\/",
             "description": "",
@@ -454,11 +454,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "06d77c918573a3ec81163d0934c55450",
+            "id": "85860d742b30d379c2fa97927316143e",
             "name": "Tennis - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/tennis\/{subLeagueAbbreviation}\/odds\/{eventId}",
             "description": "",
@@ -506,11 +506,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "b98d18dba057af583c7d1a04a8d6eae4",
+            "id": "c3f09bc17570e72eccf27b4ced16b0e6",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/general\/stories\/headlines\/",
             "description": "",
@@ -537,11 +537,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "9c9940b2d63c602dcee4b006247549dd",
+            "id": "a3601d22009e5f5275b661bf8b01fba2",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/general\/articles\/headlines\/",
             "description": "",
@@ -568,11 +568,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "9abcced1c79d7e4ac1ff4da76ec80073",
+            "id": "1828e1502011a4a44e91fa2d9dc6a432",
             "name": "Recent stories for the selected league.",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/recent\/",
             "description": "",
@@ -606,11 +606,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "980b89420d81130869d53eafbaa1b864",
+            "id": "87872b115a6aae702b7c756ea53ff3ee",
             "name": "Recent articles for the selected league.",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/articles\/recent\/",
             "description": "",
@@ -644,11 +644,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "757f577baba7195436b87dbd7ee7e7a6",
+            "id": "ff22711c9235f7d1c3f76971f2c2f35e",
             "name": "Get the full story for a storyId found in headline...",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/{storyId}\/",
             "description": "Get the full story for a storyId found in headlines or stories.",
@@ -689,11 +689,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "d5e627d22f0d9365babef394ac2978c7",
+            "id": "457a77ad9b84118a091f235f2bb25132",
             "name": "Get the full article for a storyId found in headli...",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/articles\/{storyId}\/",
             "description": "Get the full article for a storyId found in headlines or articles.",
@@ -734,11 +734,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "56d01c1f6faa9dbad17212f9b2cb58f0",
+            "id": "c7e573235835b7b4cece2a8e14216ff1",
             "name": "Preview for one specific event, must identify leag...",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/previews\/events\/{eventId}\/",
             "description": "Preview for one specific event, must identify league, and eventId",
@@ -779,11 +779,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "ed6f1e110f73d7f06cc576a58486412e",
+            "id": "e4ffe58b0765cc0710981bc2e7772f67",
             "name": "Recap for one specific event, must identify sport,...",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/stories\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sport, league, and eventId",
@@ -824,11 +824,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "b3d8c64aea7e1dec0b90e105c7dfbdb4",
+            "id": "6af5a6ff534b0d91d66a04401bbf50f7",
             "name": "Recap for one specific event, must identify sport,...",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/articles\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sport, league, and eventId",
@@ -869,11 +869,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "6b137a4e2eda14a947073bdd75de1d20",
+            "id": "d3ab22c3c9a7227d6bc2ce8bfca2e2e6",
             "name": "List of available images.",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/images\/list\/",
             "description": "",
@@ -914,11 +914,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "a07a8e44b7e8b99f046dd517749d526f",
+            "id": "b461019c5c7abd7c1e07053eddd27400",
             "name": "List of available photos.",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/photos\/list\/",
             "description": "",
@@ -959,11 +959,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "eb2435193b9f81c42dcbb7edcc02cc4d",
+            "id": "3f0a4229a8c2ce06dd530377238e04fe",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/images\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -1011,11 +1011,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "566f7b148c24711b012fe3a148356b58",
+            "id": "5ef6be050257c8647fd207a492eb5507",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/tennis\/{subLeagueAbbreviation}\/photos\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -1063,11 +1063,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "83bc5d89855cb69f1e2d8f46cf608e09",
+            "id": "523b241523725143ce4ff7e4cc340f62",
             "name": "Tennis - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/tennis\/{subLeagueAbbreviation}\/{decodeType}\/",
             "description": "",
@@ -1122,11 +1122,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         },
         {
-            "id": "7d907d0ee617ab21bbf7dc96d0d0e6f2",
+            "id": "f396359b9de299dc186787e124119665",
             "name": "The teams endpoint for Tennis is available for the...",
             "url": "http:\/\/api.stats.com\/\/stats\/tennis\/itf\/teams\/{teamId}",
             "description": "The teams endpoint for Tennis is available for the International Tennis Federation (ITF) only.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the sub league.",
@@ -1174,7 +1174,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f43758a3ba13121581b34c1cdf47004",
+            "collectionId": "e4dddb27e40805993ff2414963915f1b",
             "rawModeData": ""
         }
     ]
