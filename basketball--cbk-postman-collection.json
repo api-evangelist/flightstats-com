@@ -1,5 +1,5 @@
 {
-    "id": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+    "id": "4404826b8f6c18e2c0ddc5dc78d656a4",
     "name": "Basketball - CBK",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "ac77ddca36db910a2ac1472e28ab2420",
+            "id": "d5f900c296c045efa17840b437b26e12",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/teams\/{teamId}",
             "description": "",
@@ -72,11 +72,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "b4d3cf7cea9c706b12548e4c16543133",
+            "id": "5b692f49f1f444edc4c55b905cf439ba",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/events\/{eventId}",
             "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, play-by-play, and shot charts.  The box, pbp, & shotChart parameters are only available when a single game is selected.\n Simple schedules are also available via the events endpoint.",
@@ -201,11 +201,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "bf3d11f76197c9de6e85f86d4cf1a0b7",
+            "id": "d9c1042928eae537024eafc20d1548d6",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/events\/teams\/{teamId}",
             "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, play-by-play, and shot charts. However box scores, play-by-play, and shot charts are available for a single game only, and so cannot be accessed here when all events for a single team are returned. This endpoint should be used for team schedules & scores only.",
@@ -302,11 +302,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "0f09070a0564e9176afeeba9dfb1023a",
+            "id": "2e27fadc2cdb210d39873dc120c1b953",
             "name": "The box\/ resource provides scores\/schedules and bo...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/box\/{eventId}",
             "description": "The box\/ resource provides scores\/schedules and box score information for CBK events.  (Play-by-play & Shot Charts are not available in the box endpoint.)",
@@ -403,11 +403,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "54b5a7a5bcd9af2ca5b4bf113d12c409",
+            "id": "4c20156bfaf7309584cd6fc88805b717",
             "name": "The box\/ resource provides scores\/schedules and bo...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/box\/teams\/{teamId}",
             "description": "The box\/ resource provides scores\/schedules and box score information for CBK events. However, box scores are available for a single game only, and so cannot be acessed here when all events for a single team are returned. This endpoint should be used for team schedules & scores only.",
@@ -490,11 +490,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "3129e94e4807473251f5d1faca642f42",
+            "id": "167421f74b67ed276648f4dd9584c96a",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/scores\/{eventId}",
             "description": "The scores\/ resource provides score and schedule information for CBK events.  (Box scores, Play-by-play, and Shot Charts are not available in the scores endpoint.)",
@@ -577,11 +577,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "c9b2f68d00f3f725598664b6f3329a8c",
+            "id": "5d1f254f2d17b40380723753b33bd8eb",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/scores\/teams\/{teamId}",
             "description": "The scores\/ resource provides score and schedule information for CBK events.  (Box scores, Play-by-play, and Shot Charts are not available in the scores endpoint.)",
@@ -664,11 +664,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "e30fa1daa70bfd6cdb4312134511e830",
+            "id": "927457f6befbcd674f685b9cbf08377d",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -723,11 +723,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "9ac4fbaf29e798b4cc0bd892ad4cbdab",
+            "id": "a939d7a94f206fedab8589aa61b16be8",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/standings\/teams\/{teamId}",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -782,11 +782,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "2033383fc38c4e1a9e233f7e311f3838",
+            "id": "790a620139d6c212b69dd61c0a8ef12a",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/participants\/",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, all teams rosters within the league, or all free agents.",
@@ -827,11 +827,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "d0cf2ff8b9c921e26870f35b32b1221d",
+            "id": "c2d5b6913dd6528f8f44045df0fa6ac7",
             "name": "Historical rosters provide biographical informatio...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/participants\/teams\/{teamId}",
             "description": "Historical rosters provide biographical information for players that played for a team in a single specified season.",
@@ -879,11 +879,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "e706492de98c4f49d649a08439a3f6a6",
+            "id": "72ea74602f083b7b203a8ae2e35afd73",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/participants\/{playerId}",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, all teams rosters within the league, or all free agents.",
@@ -924,11 +924,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "aab926ceae19a6331c7487c42f029c98",
+            "id": "336c23c3cad83281a0221bdf1d369d3d",
             "name": "College Basketball polls",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/polls\/",
             "description": "",
@@ -983,11 +983,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "168b20af9e6773e5e40d891542c20f90",
+            "id": "175cdecf9c560fe2804d1fafea990c90",
             "name": "College Basketball polls",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/polls\/teams\/{teamId}",
             "description": "",
@@ -1042,11 +1042,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "ab965dd46f4cde26eba57ff168cace54",
+            "id": "95bfe0526817b4685e083630f11a2ac3",
             "name": "CBK - Season stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/stats\/players\/{playerId}",
             "description": "",
@@ -1108,11 +1108,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "9efd9aa590e9c2f97561fed43b6183c7",
+            "id": "1f4dbe668a473c7ce48facfd6e18406d",
             "name": "CBK - Season stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "",
@@ -1160,11 +1160,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "ae8d098f9e142ac89bb9ac8fbdf5410d",
+            "id": "168d9e0ce2707dece0b35b8f8b3eadb3",
             "name": "CBK - A player's stats, game-by-game.",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/stats\/players\/{playerId}\/events\/",
             "description": "",
@@ -1219,11 +1219,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "94133f7d5bb0b7be96a8d4e42633c001",
+            "id": "d503390c5a8e086bc8379fc958b51d2e",
             "name": "CBK - Player splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/stats\/players\/{playerId}\/",
             "description": "",
@@ -1285,11 +1285,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "42f8417bc0c85280ac98fe6b2d0bfa6f",
+            "id": "c01bb9cd221723a9ef2dc04fe7efe670",
             "name": "CBK - Team splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/stats\/teams\/{teamId}\/",
             "description": "",
@@ -1351,11 +1351,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "f179071c18cac6ddc26e038b473a14f6",
+            "id": "a2331993d8d24a188070bbb799da8692",
             "name": "CBK - A team's stats, game-by-game.",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/stats\/teams\/{teamId}\/events\/{eventId}",
             "description": "",
@@ -1403,11 +1403,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "71f32f30bf68375258ce38dc7815f1de",
+            "id": "75549bd07668595cfb01550b72f47a55",
             "name": "CBK - A team's stats, game-by-game.",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/stats\/teams\/{teamId}\/events\/",
             "description": "",
@@ -1462,11 +1462,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "2bc5647d9c5d4aa1fe45d12bff4179ba",
+            "id": "5798c88b59b65eaa235327a807a0a68e",
             "name": "CBK - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/leaders\/",
             "description": "",
@@ -1549,11 +1549,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "dbf7c0791394dec8c2c2c820fb9590c4",
+            "id": "d27330e730ab6b02ae831af0c48e594b",
             "name": "CBK - Team Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/teamLeaders\/",
             "description": "",
@@ -1622,11 +1622,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "daf6f22b52afcf23ae37839ce5a4f875",
+            "id": "528bc2b7256937e62f935e0518090f86",
             "name": "CBK - Daily Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/dailyLeaders\/",
             "description": "",
@@ -1709,11 +1709,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "08af8a60d902669bc44d83040fa7bb08",
+            "id": "1de302cd8ebbd25ae766a1b775c080e5",
             "name": "CBK - Coaches",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/coaches\/",
             "description": "",
@@ -1747,11 +1747,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "f0cb323f22f9651248045bd3c88be369",
+            "id": "d90fa06b8a4041dd532b6c5aedfc8432",
             "name": "CBK - Coaches for a single team",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/coaches\/teams\/{teamId}",
             "description": "",
@@ -1785,11 +1785,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "cc3a59056122435679cf95f4a08ec098",
+            "id": "4e5fa3fe33a965640105f32582d961c9",
             "name": "CBK - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/odds\/",
             "description": "",
@@ -1837,11 +1837,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "9710425c6373616ce2d5f2f4cf78c9fa",
+            "id": "12c63fc08ee99680a86a07425165a682",
             "name": "CBK - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/odds\/{eventId}",
             "description": "",
@@ -1882,11 +1882,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "c32878b789d53ab8f9403a1e7cef2e65",
+            "id": "caad53e5f5bdd22ccb66bbbc3c19e7a5",
             "name": "CBK - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/odds\/teams\/{teamId}",
             "description": "",
@@ -1941,11 +1941,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "10f05f54567fdd101b0174e79cbfb77a",
+            "id": "c462e56e12f0ff1607304b5d5336219a",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/stories\/headlines\/",
             "description": "",
@@ -1972,11 +1972,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "2745687363f1b22fc157c308a864d7a3",
+            "id": "71c23c0bdc62440fd4e27cd447a9fe0e",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/articles\/headlines\/",
             "description": "",
@@ -2003,11 +2003,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "c751adbeed27539132746f9bb025a5b1",
+            "id": "2dec0acfe4d855cba0d5630e8e579324",
             "name": "Recent stories for the selected league.",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/stories\/recent\/",
             "description": "",
@@ -2034,11 +2034,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "b6be8a3f0694ae359fca026653185288",
+            "id": "64ed62469340ab28acdadbf13fa68041",
             "name": "Recent articles for the selected league.",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/articles\/recent\/",
             "description": "",
@@ -2065,11 +2065,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "0fb6b85dac809de9d45293d190abdc4c",
+            "id": "85c4c9f779017eaa035c9c8f289a5554",
             "name": "Recent stories for the selected league\/team.",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/stories\/recent\/teams\/{teamId}\/",
             "description": "",
@@ -2103,11 +2103,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "40261f27d89cc048060a69dc4642ca2d",
+            "id": "eb72d28c26a74fc453981981a067e030",
             "name": "Recent articles for the selected league\/team.",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/articles\/recent\/teams\/{teamId}\/",
             "description": "",
@@ -2141,11 +2141,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "6f7e9d84beabc9986bb43eb35c90c9c9",
+            "id": "484675a321befff7c37a02cdd686aebc",
             "name": "Get the full story for a storyId found in headline...",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/stories\/{storyId}\/",
             "description": "Get the full story for a storyId found in headlines or stories.",
@@ -2179,11 +2179,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "f882f88e417d7a12c0d235d4efbf18ac",
+            "id": "551e656f37b672ee5c142ab8c828ca47",
             "name": "Get the full article for a storyId found in headli...",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/articles\/{storyId}\/",
             "description": "Get the full article for a storyId found in headlines or articles.",
@@ -2217,11 +2217,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "8ee869b7a0cd7a07f73bcbd21d33eae3",
+            "id": "6ad34a91842321a599beb93feb54c27a",
             "name": "Preview for one specific event, must identify leag...",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/stories\/previews\/events\/{eventId}\/",
             "description": "Preview for one specific event, must identify league, and eventId",
@@ -2255,11 +2255,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "d236e2aca2e6ec435687724d266f6729",
+            "id": "71070bc2e090dd664f48fead9940a7eb",
             "name": "Recap for one specific event, must identify sport,...",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/stories\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sport, league, and eventId",
@@ -2293,11 +2293,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "92269727123289a58d15143ca76e5bbe",
+            "id": "1a3e15b8abb3f9be85ad327bf16c1471",
             "name": "Recap for one specific event, must identify sport,...",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/articles\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sport, league, and eventId",
@@ -2331,11 +2331,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "34106c0b68a28a14b7d7581da0fd7a78",
+            "id": "e0b01898609cc5618dc6fed86244b91b",
             "name": "List of available images.",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/images\/list\/",
             "description": "",
@@ -2369,11 +2369,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "27270c47d713e49349fb17b53d951cc3",
+            "id": "77e5dc0b97a164965af29ecdad7e6596",
             "name": "List of available photos.",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/photos\/list\/",
             "description": "",
@@ -2407,11 +2407,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "f7b87ecb531ddadff08e41d6011a79e3",
+            "id": "490b2d3423c98d007fcffcc5daee7554",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/images\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -2452,11 +2452,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "c71e1ce5fa25ad15316ad9cf01c416b3",
+            "id": "4a4e5fec40c80885fad86682e06455b0",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/basketball\/cbk\/photos\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -2497,11 +2497,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "8bfc409a895412aa8419743e7469c411",
+            "id": "5c8b22113394e0c83bb8b6637aaaa445",
             "name": "CBK - Bullets for a single day",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/bullets\/",
             "description": "",
@@ -2535,11 +2535,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "e58f00c7d529b3dcf71cc176cbda5616",
+            "id": "8e524ea0fe829cddfbf5d2a36af7458c",
             "name": "CBK - Bullets for a single day",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/bullets\/teams\/{teamId}",
             "description": "",
@@ -2580,11 +2580,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "23cf0c7a1879364f387b4a4b5fa93c57",
+            "id": "85e8c4898c6259d9e1d9fca6aef1332c",
             "name": "CBK - Team Ratings for each NCAA tournament round",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/teamRatings\/",
             "description": "",
@@ -2632,11 +2632,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "7c19cc988ea3c0b7d7813dfc7c2b118e",
+            "id": "526930f70eefb102243bc79f5a43a3f7",
             "name": "CBK - Probability of each team reaching the specif...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/tourneyWinProbability\/",
             "description": "CBK - Probability of each team reaching the specified round of the NCAA Tournament",
@@ -2684,11 +2684,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "ca44c35e4ecd2deaa25fa2fb09914a34",
+            "id": "1f308f32b6c651786894ce7a4893f6ba",
             "name": "CBK - Win Probability for each team for all the ev...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/winProbability\/",
             "description": "CBK - Win Probability for each team for all the events on the specified date",
@@ -2722,11 +2722,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "ccb02e35ee125094ae87dbe45ab26274",
+            "id": "17cf406eeca18db02dc5ca80ee56fca9",
             "name": "CBK - Win Probability for each team for the specif...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/winProbability\/{eventId}",
             "description": "CBK - Win Probability for each team for the specified event",
@@ -2760,11 +2760,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "62311b4076c35a26f2fb699485496994",
+            "id": "43af445263786238f6ef5607c5e13234",
             "name": "CBK - Matchup Gaming for a single day",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/matchupgaming\/",
             "description": "",
@@ -2798,11 +2798,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "a48b6ea48dc74da6199b04e247aaccf9",
+            "id": "3185584182450c3264d82514347407dd",
             "name": "CBK - Single Game",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/cbk\/matchupgaming\/{eventId}",
             "description": "",
@@ -2836,11 +2836,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "1214d9bf5424863db17c28765aee7a82",
+            "id": "554d33ca3daea0517287b02994898946",
             "name": "CBK - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/basketball\/cbk\/{decodeType}",
             "description": "",
@@ -2895,11 +2895,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "b43576422cbc95c37af568615b4beb4c",
+            "id": "e38ec82415dd4c4708008634b8c3dc94",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/optical\/basketball\/cbk\/events\/{eventId}",
             "description": "Access to this events endpoint will provide you with the highest level of optical game data including live scores, box scores, play-by-play, shot\/pass\/touch\/possession breakdowns, and more. An eventId is always required for optical event endpoints.",
@@ -3038,11 +3038,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "741cc55ad84a514d096014098414401e",
+            "id": "8f42dcd7c9443fe83ebff0c6b7786e5e",
             "name": "Access to this stats endpoint will provide you wit...",
             "url": "http:\/\/api.stats.com\/\/optical\/basketball\/cbk\/stats\/players\/{playerId}",
             "description": "Access to this stats endpoint will provide you with the highest level of optical player stats data including distance run, average speed, touches, passes, assists, rebounds, and fouls. A playerId is always required when requesting this endpoint.",
@@ -3146,11 +3146,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "149830d3352543db2b568c545b43fede",
+            "id": "8f23567c2e93d7979d44a6d339a311cc",
             "name": "Access to this stats endpoint will provide you wit...",
             "url": "http:\/\/api.stats.com\/\/optical\/basketball\/cbk\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "Access to this stats endpoint will provide you with the highest level of optical player stats data for a single player from a specific event including distance run, average speed, touches, passes, assists, rebounds, and fouls. A playerId is always required when requesting this endpoint.",
@@ -3233,11 +3233,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "638ff3119dc15c2ab2bd8e1bb1c15af8",
+            "id": "8eee089121d3a878908b11cddd4ae429",
             "name": "Access to this stats endpoint will provide you wit...",
             "url": "http:\/\/api.stats.com\/\/optical\/basketball\/cbk\/stats\/players\/{playerId}\/events\/",
             "description": "Access to this stats endpoint will provide you with the highest level of optical player stats data for a single player from a all events for the given season including distance run, average speed, touches, passes, assists, rebounds, and fouls. A playerId is always required when requesting this endpoint.",
@@ -3313,11 +3313,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "ea72a2c466d93fec79d6532cacd4cee5",
+            "id": "d14d31e83de4d55d822b3ff0c59a702a",
             "name": "This is used when a player is on more than one tea...",
             "url": "http:\/\/api.stats.com\/\/v1\/optical\/basketball\/cbk\/stats\/players\/{playerId}\/teams\/{teamId}",
             "description": "This is used when a player is on more than one team in a season and you want only the stats for that team.",
@@ -3400,11 +3400,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         },
         {
-            "id": "2b49aaccf30e01622249ef63c3710e47",
+            "id": "eaba7ea1baa3335759ed8d2340e72687",
             "name": "Access to this stats endpoint will provide you wit...",
             "url": "http:\/\/api.stats.com\/\/optical\/basketball\/cbk\/stats\/players\/events\/{eventId}",
             "description": "Access to this stats endpoint will provide you with the highest level of optical player stats data for a specific event including distance run, average speed, touches, passes, assists, rebounds, and fouls. An eventId is always required when requesting this endpoint.",
@@ -3473,7 +3473,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7ba90acd01fbcb08ac04cf5fd637c2bc",
+            "collectionId": "4404826b8f6c18e2c0ddc5dc78d656a4",
             "rawModeData": ""
         }
     ]
