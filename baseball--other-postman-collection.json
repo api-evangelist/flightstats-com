@@ -1,5 +1,5 @@
 {
-    "id": "26735cec6ba79397ff3eea465fd8117a",
+    "id": "9bf5fd005a1cec98aae010ec8df8bd85",
     "name": "Baseball - Other",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "ce4bba0ac7e15798acebe89a93acc2f1",
+            "id": "17b4939d51e2f1b9a9a6bf2adaac7023",
             "name": "The baseball leagues endpoint serves as a decode f...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/leagues\/",
             "description": "The baseball leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "6d933b933657fb600225dda57f30cdad",
+            "id": "ca2ed8f47a2aa1a2227fb3cef09e4a33",
             "name": "The teams endpoint will be your source for team na...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/teams\/{teamId}",
             "description": "The teams endpoint will be your source for team names, locations, abbreviations, and IDs.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the league",
@@ -96,11 +96,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "e486751eee9c51c73a98951f18f2b2d5",
+            "id": "524fb92972c6c725dec5aeff6181c992",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/events\/{eventId}",
             "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, play-by-play, and pitch type\/velocity\/location (tvl) information, where available.  The first 4 parameters (eventId, box, pbp, and tvl) are only applicable for a specific game.\n Events will also provide you with schedule data.",
@@ -218,11 +218,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "20da64dd12370e49d5776aa4c0c6eac7",
+            "id": "fe3924f8dff72cc0bc52dfb497507ba1",
             "name": "This endpoint allows you to select schedule and sc...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/events\/teams\/{teamId}",
             "description": "This endpoint allows you to select schedule and score information for just one team.  Getting information for a single team returns only schedule and score information.  If you want detailed event information (box, pbp, tvl), refer to the endpoint example with the eventId.",
@@ -319,11 +319,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "1dc88a58b4b4d2137ca80070adf05701",
+            "id": "bbeb548dc38e781866d370be0a119946",
             "name": "The box\/ resource provides scores\/schedules and bo...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/box\/{eventId}",
             "description": "The box\/ resource provides scores\/schedules and box score information for baseball events.  (Play-by-play is not an option.)",
@@ -413,11 +413,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "0378c219b24944085a836b1d7bcc2193",
+            "id": "1fa929ca33b8ad10b1d6271c596035c2",
             "name": "This gets the event (schedule) information for jus...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/box\/teams\/{teamId}",
             "description": "This gets the event (schedule) information for just one team.",
@@ -500,11 +500,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "9f22857794f12335f696cf53ab7c31ed",
+            "id": "4d57e74435a2c20ef00b70fefc1fa9d8",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/scores\/{eventId}",
             "description": "The scores\/ resource provides score and schedule information for baseball events. (Box and Play-by-play are not options.)",
@@ -587,11 +587,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "cadb810a97a841c1220cbc038349ca82",
+            "id": "cce2fcd0f20985902a74b4050013fcae",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/scores\/teams\/{teamId}",
             "description": "The scores\/ resource provides score and schedule information for baseball events.",
@@ -674,11 +674,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "bd196713f3664868edb4092cb69708cb",
+            "id": "2d72f666ee5820191fbbc2960912c4db",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -733,11 +733,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "403e2dc769eace09217469b86fe23e5f",
+            "id": "2afc044d315fae01770364d5620cfdb6",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/standings\/teams\/{teamId}",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -799,11 +799,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "03ec0105e02e4408f2bd0e57272aa773",
+            "id": "c907274a008cb474a7a0897668116c86",
             "name": "This will return anyone who has played since the b...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/participants\/",
             "description": "This will return anyone who has played since the beginning of the entered year.",
@@ -858,11 +858,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "494f256ba2995c031d70f6bbfe4ea12c",
+            "id": "38d1ca58918faed8bc93df7e775ba9e9",
             "name": "This will return a single team's current roster.",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/participants\/teams\/{teamId}",
             "description": "",
@@ -917,11 +917,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "9402b9f90fcad7242dd1fb56141816ee",
+            "id": "2b63efc0806dda0d767d9ddc28ddb8ae",
             "name": "This will return biographical information for a si...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/participants\/{playerId}",
             "description": "This will return biographical information for a single player.",
@@ -976,11 +976,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "70aeea61ec85bd717b3b86f1c6deae44",
+            "id": "cc76ef4d65dd88824e7b2b677572a192",
             "name": "Baseball - Career stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/stats\/players\/{playerId}",
             "description": "",
@@ -1056,11 +1056,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "74c18843f3db3b9b87aab9d66a171192",
+            "id": "98b1addfe4109a19fdae202b2db2d1b7",
             "name": "Baseball - Single game stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "",
@@ -1115,11 +1115,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "75e433b6b3c9cf515e1bbbe9f392e5a3",
+            "id": "cac20595759a4135dec626a7cd6d866d",
             "name": "Baseball - Player game logs.",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/stats\/players\/{playerId}\/events\/",
             "description": "",
@@ -1188,11 +1188,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "e6c6c27847bb966dd2d8610a0e2d09e5",
+            "id": "c6c3bc3568bbc3150e789a554d656b1a",
             "name": "This is used when a player is on more than one tea...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/stats\/players\/{playerId}\/teams\/{teamId}",
             "description": "This is used when a player is on more than one team in a season and you want only stats for one specific team.",
@@ -1268,11 +1268,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "94b2a40000eb4087bf500374bd05934c",
+            "id": "921e373baffb52e25ff1f46160ac05f8",
             "name": "Baseball - Player splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/stats\/players\/{playerId}\/",
             "description": "",
@@ -1348,11 +1348,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "8af75bb0f444e0bb2da135d3d0894328",
+            "id": "36da6ad216dbce713d637ed9ed1d0f8a",
             "name": "Baseball - Team splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/stats\/teams\/{teamId}\/",
             "description": "",
@@ -1428,11 +1428,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "b0f98893270b905e7d395aaa7ee90f58",
+            "id": "2451e55144392b474c54fe753f1c776e",
             "name": "Baseball - Single game stats for a team",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/stats\/teams\/{teamId}\/events\/{eventId}",
             "description": "",
@@ -1487,11 +1487,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "54d9cfd9560202b0ca4be917c5f3e253",
+            "id": "fc0031cda6dabd28d462efb653d5aba6",
             "name": "Baseball - Team game logs.",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/stats\/teams\/{teamId}\/events\/",
             "description": "",
@@ -1560,11 +1560,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "837e50c28097ac97a3b4cde47f814e12",
+            "id": "7ed97bb1dbb45dc3d095a6b18bc0f85e",
             "name": "Baseball - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/leaders\/",
             "description": "",
@@ -1661,11 +1661,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "644b50c242c225a2b4244c77f3861dc8",
+            "id": "a102d94d6d17ed34ed99d55fa9403224",
             "name": "Baseball - Daily Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/dailyLeaders\/",
             "description": "",
@@ -1755,11 +1755,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         },
         {
-            "id": "70ff7ab1f8783536aa1a17199ea70ace",
+            "id": "01a62d2beeb10532b41eb0be8b59400d",
             "name": "Baseball - Probable Pitchers",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/{leaguePath}\/probables\/{eventId}\/",
             "description": "",
@@ -1835,7 +1835,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "26735cec6ba79397ff3eea465fd8117a",
+            "collectionId": "9bf5fd005a1cec98aae010ec8df8bd85",
             "rawModeData": ""
         }
     ]
