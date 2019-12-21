@@ -1,5 +1,5 @@
 {
-    "id": "3d4247a6c2da102eb51c38fe9bbe0f42",
+    "id": "47c6a525bc2059353ba0a14ea5ffba83",
     "name": "Soccer",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "58141c5224e45423047555e4eedfbe33",
+            "id": "9104b1eb5da1aa60e69c0f423a653566",
             "name": "The soccer leagues endpoint serves as a decode for...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/leagues\/",
             "description": "The soccer leagues endpoint serves as a decode for the available leagues names, abbrevaitions, and URI paths.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "76f6651f7ad5de8ef2ed34d3ba7fb7a4",
+            "id": "34b8625ba7495d8b4ebcdaf96ced6df9",
             "name": "The teams endpoint will be your source for team na...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/teams\/{teamId}",
             "description": "The teams endpoint will be your source for team names, locations, abbreviations, and IDs.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the league",
@@ -124,11 +124,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "f4b440690733ef7002501c19426c4711",
+            "id": "a62c575734399db853a11ff66319848b",
             "name": "Access to the matches endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/matches\/{eventId}",
             "description": "Access to the matches endpoint will provide you with live scores, box scores, and play-by-plays.  The box, pbp, & touches parameters are only available when a single game is selected.\n Simple schedules are also available via the events endpoint.",
@@ -274,11 +274,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "58ed03ce62273438784813e487375464",
+            "id": "4d214fe9299cdb82b71130f04b0adc75",
             "name": "Access to the insights endpoint will provide you w...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/insights\/{eventId}",
             "description": "Access to the insights endpoint will provide you with the highest level of game data including live scores, box scores, play-by-play, manual commentary, and reporter insights.  The box, pbp, touches, commentary and insights parameters are only available when a single game is selected.\n Simple schedules are also available via the insights endpoint.",
@@ -424,11 +424,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "5e379f5bbed3cfdd380a4fb329a4e158",
+            "id": "234699ad4fd03a58d3d9a4974f3df4e8",
             "name": "Access to the comm endpoint will provide you with ...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/comm\/{eventId}",
             "description": "Access to the comm endpoint will provide you with the highest level of game data including live scores, box scores, play-by-play, and manual commentary.  The box, pbp, touches & commentary parameters are only available when a single game is selected.\n Simple schedules are also available via the comm endpoint.",
@@ -567,11 +567,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "55a0bbb1ce85d7917d1ff536185e0ed1",
+            "id": "e68c39d749cb8c83e405d5c694fafa4f",
             "name": "Access to the autoComm endpoint will provide you w...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/autoComm\/{eventId}",
             "description": "Access to the autoComm endpoint will provide you with live scores, box scores, play-by-play, and automated commentary.  The box, pbp, touches & commentary parameters are only available when a single game is selected.\n Simple schedules are also available via the autoComm endpoint.",
@@ -703,11 +703,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "57b64109f7111d7ef75ad47a7e94a1b4",
+            "id": "ac37b69ec359ff72f0d063d011a6e063",
             "name": "Access to the events endpoint will provide you wit...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/events\/{eventId}",
             "description": "Access to the events endpoint will provide you with live scores, box scores, and play-by-plays.  The box, pbp, & touches parameters are only available when a single game is selected.\n Simple schedules are also available via the events endpoint.",
@@ -853,11 +853,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "291767095dc0cf512ffde6d0b9d16406",
+            "id": "e0c3a668158fc5b6c5e38e64da4ecbe4",
             "name": "Access to the box endpoint will provide you with l...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/box\/{eventId}",
             "description": "Access to the box endpoint will provide you with live scores and box scores.  The box parameter is only available when a single game is selected.\n Simple schedules are also available via the box endpoint.",
@@ -968,11 +968,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "6edc5a98ffbe8ab50251ef0d6ba00fe7",
+            "id": "a5e1765b953ff19995ad3bce0ec5fbfc",
             "name": "Access to the scores endpoint will provide you wit...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/scores\/{eventId}",
             "description": "Access to the scores endpoint will provide you with schedules and live scores only.",
@@ -1076,11 +1076,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "a181dee14f69d384dc7bb228e6b8835c",
+            "id": "78ef19b088524c55a5648eeac4a3d361",
             "name": "The soccer projections endpoint provides pre-match...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/projections\/{eventId}",
             "description": "The soccer projections endpoint provides pre-match and live projections of a particular match.",
@@ -1128,11 +1128,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "e5ce42373afc4c5aee2af41659967362",
+            "id": "345e12d9bade14220d70d854f35b780a",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/participants\/",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -1180,11 +1180,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "e53517ea4c902e996601a6588aba7104",
+            "id": "2802a24763619204a7377f054d59a1f5",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/participants\/teams\/{teamId}",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -1232,11 +1232,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "652d08b7648a4751536cf7a69756bf41",
+            "id": "4120beadced33cb92477a0065de3af6b",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/participants\/{playerId}",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -1284,11 +1284,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "f57a90f2725f2162ed74703d361096f5",
+            "id": "18a21e3d521eb55849e26751072fc605",
             "name": "The referees endpoint provides biographical inform...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/referees\/",
             "description": "The referees endpoint provides biographical information for referees. Default call returns all active refs.",
@@ -1336,11 +1336,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "6a9646184a18cc8d6fbd999a519affd5",
+            "id": "0fc90927bb32f9889a1aaa66063cc969",
             "name": "The referees endpoint provides biographical inform...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/referees\/{refereeId}",
             "description": "The referees endpoint provides biographical information on a single referee.",
@@ -1388,11 +1388,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "6de2eaf5aca4a5baa94ffdc15bb838d2",
+            "id": "abe9b4165403f35b08868e0b8fa296d5",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -1482,11 +1482,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "6cd7632b95208a90dca8f0a21c2df183",
+            "id": "99de7688f0403b288a68cc9f21b22ad5",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/standings\/teams\/{teamId}",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -1583,11 +1583,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "c2e96b75d39d2b799b6e88a3ed649266",
+            "id": "af4f823ba05678d3fbd168ef895ce480",
             "name": "Soccer - Career stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/stats\/players\/{playerId}",
             "description": "",
@@ -1670,11 +1670,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "9cbce363e3e92d3da8d120c9745eb35e",
+            "id": "3de85c7a485ac815399a116a331eebcd",
             "name": "Soccer - Single game stats for one player",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "",
@@ -1736,11 +1736,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "a44689ac8be71adcc7c231f3b0cd4735",
+            "id": "b2054776696791ddd68e5d08d1c95d7e",
             "name": "Soccer - game-by-game statistics for a single play...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/stats\/players\/{playerId}\/events\/",
             "description": "Soccer - game-by-game statistics for a single player",
@@ -1823,11 +1823,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "4df03ffe3d89f8323f8d3f5a19aeb822",
+            "id": "a385874d3933719475ccccfaa1a6b79b",
             "name": "Soccer - Season stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/stats\/players\/{playerId}\/teams\/{teamId}",
             "description": "",
@@ -1917,11 +1917,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "6548029b5e37a9037dbd7a00c6622731",
+            "id": "b1d24cceda1ae8e81c0090e215c6a7c5",
             "name": "Soccer - Season stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/mls\/stats\/players\/{playerId}\/",
             "description": "",
@@ -1997,11 +1997,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "ebb6c2c1e4f0e59c6c154f2b65b54fa8",
+            "id": "ccc24b221b24249cc24d6f3338f38974",
             "name": "Soccer - Season stats for a single team",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/stats\/teams\/{teamId}",
             "description": "",
@@ -2084,11 +2084,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "54a9563cfb6e0b4a7931ee4cf5ecd879",
+            "id": "d3c2561ed929f58fc3ed60823acd306c",
             "name": "Soccer - Single game stats for one team",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/stats\/teams\/{teamId}\/events\/{eventId}",
             "description": "",
@@ -2150,11 +2150,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "0e6b3a8382b2894080546962f123a8c3",
+            "id": "68e91e6faf975f2656ce95b0bc6ac547",
             "name": "Soccer - game-by-game statistics for a single team...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/stats\/teams\/{teamId}\/events\/",
             "description": "Soccer - game-by-game statistics for a single team",
@@ -2237,11 +2237,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "6b29e6eb7d14e0a8cb12ecaff017a45a",
+            "id": "2d53c00b33de7b16f43207015530fb57",
             "name": "Soccer - Season stats for a single team",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/mls\/stats\/teams\/{teamId}\/",
             "description": "",
@@ -2324,11 +2324,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "b7a751cff24d0bd455566d527657e28d",
+            "id": "9db5d2eacc447b85708d689496ed8d00",
             "name": "Soccer - Season stats for all active referees, or ...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/stats\/referees\/{refereeId}",
             "description": "Soccer - Season stats for all active referees, or a single referee",
@@ -2404,11 +2404,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "8dff273a479352d3ac974a38a4cd47be",
+            "id": "63307e012676e7560889327263ba3dac",
             "name": "Soccer - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/leaders\/",
             "description": "",
@@ -2512,11 +2512,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "705181f3c434b49101b1cb74dd54b75a",
+            "id": "adb294b4676408f47a73dd2489e2b926",
             "name": "Soccer - Team Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/teamLeaders\/",
             "description": "",
@@ -2599,11 +2599,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "10b570a6db9c2616aa247128820438a7",
+            "id": "6117f24c25caeefb4005bb8f1db008c6",
             "name": "Soccer - Get all Injuries",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/injuries\/",
             "description": "",
@@ -2665,11 +2665,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "6026e58549d40e9b1fc27a3c99174f71",
+            "id": "dddf0d780401c1044bedd7c45b89350a",
             "name": "Soccer - Player Injuries",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/injuries\/players\/{playerId}",
             "description": "",
@@ -2738,11 +2738,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "c566b2a97c4cf9790e64888fc864d9be",
+            "id": "63638f9ec2443965371949178c805b38",
             "name": "By default, results include all injuries for a pla...",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/injuries\/players\/{playerId}\/teams\/{teamId}",
             "description": "By default, results include all injuries for a player (a) during the time period selected, (b) if the injury has not healed and (c) for all the teams the player was on during the time period.\n To return only those injuries while a player is on a specific team, you must include \/teams\/:teamId in the URI.",
@@ -2818,11 +2818,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "b7e317d1dfb6063a9e5d4cc5ba132d2c",
+            "id": "3dbd9f7c147ba766800c4fd452536885",
             "name": "NBA - Team Injuries",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/injuries\/teams\/{teamId}",
             "description": "",
@@ -2891,11 +2891,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "a1190ec902cd6e9624f5ceff3e8a4586",
+            "id": "97949785a046bd7e32dcac4db3a7c5fe",
             "name": "Soccer - Transfers",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/transfers\/{transactionId}",
             "description": "",
@@ -2985,11 +2985,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "5c32253ac690297a509653e26b35e54c",
+            "id": "9214725113ba790f6aa7184271333d43",
             "name": "Soccer - Transfers",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/transfers\/players\/{playerId}",
             "description": "",
@@ -3079,11 +3079,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "d367d7ae53f7cc97aa5215af1c34fe08",
+            "id": "c1909d0df0113c7f618edabae883f75f",
             "name": "Soccer - Suspensions",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/suspensions\/",
             "description": "",
@@ -3138,11 +3138,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "ad7dbc96280276ebbe9772c14b7befcc",
+            "id": "ed35547741ca5b11f91eeb9050e6677e",
             "name": "Soccer - Suspensions",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/suspensions\/players\/{playerId}",
             "description": "",
@@ -3204,11 +3204,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "1023fa20cf1dd7775f38668500efbb1b",
+            "id": "d59d228c6813a04a6a412def854b1f33",
             "name": "Soccer - Suspensions",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/suspensions\/teams\/{teamId}",
             "description": "",
@@ -3270,11 +3270,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "cd90f66cf9687a710ceabd9232d5520e",
+            "id": "f4682290e19f29a1a7a2a92509b42688",
             "name": "Soccer - Coaches",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/coaches\/",
             "description": "",
@@ -3315,11 +3315,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "c84b50e8cd1216e0c14d1c2a7954abf7",
+            "id": "7975ffe8fee8c4ea706e0ede81629520",
             "name": "Soccer - Coaches for a single team",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/coaches\/teams\/{teamId}",
             "description": "",
@@ -3360,11 +3360,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "aff617c1a3b6e357547119472a6eccbf",
+            "id": "8e497fbad42c6bac839c18e1753579d8",
             "name": "Soccer - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/odds\/",
             "description": "",
@@ -3433,11 +3433,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "ee63950a824bfc28d958ab990fbb711b",
+            "id": "04efbe2692c012c2fb56058c67cb940b",
             "name": "Soccer - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/odds\/{eventId}",
             "description": "",
@@ -3485,11 +3485,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "5af0e328d8082c56f216862031b91183",
+            "id": "1dea9e6e44f45b27a27035f3ba856184",
             "name": "Soccer - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/{leaguePath}\/odds\/teams\/{teamId}",
             "description": "",
@@ -3565,11 +3565,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "bb0403dee6c4119c51fceeb7ea028870",
+            "id": "a4b8b9e5f34ce79e519cf3b21cba6ea9",
             "name": "Soccer - Team Rankings",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/natl\/teamRankings\/",
             "description": "",
@@ -3610,11 +3610,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "98e7ec11820280156c6e98cdac1c7246",
+            "id": "f3a2efd1e6763ecdab594a3e861377d9",
             "name": "Soccer - Team Rankings",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/natl\/teamRankings\/teams\/{teamId}",
             "description": "",
@@ -3669,11 +3669,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "faebf5e4c6c984ceb0d83386eae2c0ce",
+            "id": "5340f4c9170f8c9ba5cd3bde21e55908",
             "name": "Soccer - Awards",
             "url": "http:\/\/api.stats.com\/\/stats\/soccer\/mls\/awards\/",
             "description": "",
@@ -3714,11 +3714,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "d441d23b0614e313c155d3968e0c86c0",
+            "id": "bd8b98542bb02fe7abc0462bcd1bc34f",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/stories\/headlines\/",
             "description": "",
@@ -3752,11 +3752,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "09e9c25792c33544ac76658d8f6d41a9",
+            "id": "18e9a1b5b90e99b08ca7aa8331f791f6",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/articles\/headlines\/",
             "description": "",
@@ -3790,11 +3790,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "a8516b1bacbef509bd4bdce8ab0f359a",
+            "id": "d54f65f823056d7ede42fbb5cb574d0e",
             "name": "All recent stories.",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/general\/stories\/recent\/",
             "description": "",
@@ -3821,11 +3821,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "8976835c454a831b80c29f8a832a4a10",
+            "id": "d10d3156264381c91a9db48b6162e76b",
             "name": "All recent articles.",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/general\/articles\/recent\/",
             "description": "",
@@ -3852,11 +3852,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "90bf8f829bf514d8423b3c8205b0144b",
+            "id": "a6191b5db7c1259f1a10fce6ada468a0",
             "name": "Recent stories for the selected league\/team.",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/stories\/recent\/teams\/{teamId}",
             "description": "",
@@ -3897,11 +3897,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "3b03ff88190c82dfe158954483d0a9ed",
+            "id": "377cd07e33502f9831bc347d671876b8",
             "name": "Recent stories for the selected league\/team.",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/articles\/recent\/teams\/{teamId}",
             "description": "",
@@ -3942,11 +3942,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "3b329698536a3b194d28c029f02dabb2",
+            "id": "88d3cd58ec348fb7870ff3dc196cdbd9",
             "name": "Get the full story for a storyId found in headline...",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/stories\/{storyId}\/",
             "description": "Get the full story for a storyId found in headlines or stories.",
@@ -3987,11 +3987,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "265dce27092890aa9c7af7834ec8ab33",
+            "id": "4782339b17aea6cdf6efe421245a3859",
             "name": "Get the full story for a storyId found in headline...",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/articles\/{storyId}\/",
             "description": "Get the full story for a storyId found in headlines or stories.",
@@ -4032,11 +4032,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "0541c10ce28885467cf9bc3d3e3f66eb",
+            "id": "6c98f94532b67c7583b85b87291be119",
             "name": "Preview for one specific event, must identify leag...",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/stories\/previews\/events\/{eventId}\/",
             "description": "Preview for one specific event, must identify league, and eventId",
@@ -4077,11 +4077,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "68e957946a0444d12af5763b08e9cf84",
+            "id": "6d6063a99fc45721d4aca27f3477e295",
             "name": "Recap for one specific event, must identify sport,...",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/stories\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sport, league, and eventId",
@@ -4122,11 +4122,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "304a0e8cd6e3f58393ec78c09997dc8b",
+            "id": "0cb2c57e1dad9d7e37f82ca7192c4806",
             "name": "Recap for one specific event, must identify sport,...",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/articles\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sport, league, and eventId",
@@ -4167,11 +4167,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "59a0f1b967ff96d639f5b8836eccae94",
+            "id": "d6aec1ee3988a02264c91a9169066929",
             "name": "List of available images.",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/images\/list",
             "description": "",
@@ -4212,11 +4212,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "655e1acdf5c057788f9903717fcf11a8",
+            "id": "f53ff831ec271f6368e8d323e3acbcce",
             "name": "List of available photos.",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/photos\/list",
             "description": "",
@@ -4257,11 +4257,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "d26a2ea5aeae479ec71b17ece2d278fb",
+            "id": "c1f57f36993562299c92ecf1bec068f6",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/images\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -4309,11 +4309,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "a50531d53f81c55c66951590ffefb94e",
+            "id": "02a397f46a3cfbfcefdfd74943f72d9d",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/soccer\/{leaguePath}\/photos\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -4361,11 +4361,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         },
         {
-            "id": "a04fb4ffa9b780f7bee2b83883c80ec5",
+            "id": "3e218e3ae6c5d55e9bee37fabc4654b7",
             "name": "Soccer - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/soccer\/{leaguePath}\/{decodeType}\/",
             "description": "",
@@ -4427,7 +4427,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3d4247a6c2da102eb51c38fe9bbe0f42",
+            "collectionId": "47c6a525bc2059353ba0a14ea5ffba83",
             "rawModeData": ""
         }
     ]
