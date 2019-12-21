@@ -1,5 +1,5 @@
 {
-    "id": "8eefa8e033f0d50c79a6fb4aefa00aef",
+    "id": "87d57896f72c53f071bb99778ce94855",
     "name": "Boxing",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "9442dc450b7cc6a543e69730585492f6",
+            "id": "f56da70f2cb600c24d6280f785069fe9",
             "name": "Schedules and results",
             "url": "http:\/\/api.stats.com\/\/stats\/boxing\/boxing\/events\/{eventId}\/",
             "description": "",
@@ -65,11 +65,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8eefa8e033f0d50c79a6fb4aefa00aef",
+            "collectionId": "87d57896f72c53f071bb99778ce94855",
             "rawModeData": ""
         },
         {
-            "id": "ca058aa99237b5fbbb740cb1dc2f0776",
+            "id": "57989e0cb0d8b13431467f6f82b652a5",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/boxing\/boxing\/participants\/",
             "description": "The participants endpoint provides biographical information for riders and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -110,11 +110,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8eefa8e033f0d50c79a6fb4aefa00aef",
+            "collectionId": "87d57896f72c53f071bb99778ce94855",
             "rawModeData": ""
         },
         {
-            "id": "33afe6c3494eb1a70cdcd5ed20c387fc",
+            "id": "acde017c3f0d2bd45f0b298bb211575e",
             "name": "Including a player ID will limit data returned to ...",
             "url": "http:\/\/api.stats.com\/\/stats\/boxing\/boxing\/participants\/{playerId}\/",
             "description": "Including a player ID will limit data returned to the selected player only.",
@@ -155,11 +155,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8eefa8e033f0d50c79a6fb4aefa00aef",
+            "collectionId": "87d57896f72c53f071bb99778ce94855",
             "rawModeData": ""
         },
         {
-            "id": "f5c58d1b9004a38b75a696705ae891a4",
+            "id": "d1cb86ee84def30586bb44f9fbdc01d5",
             "name": "Boxing Rankings",
             "url": "http:\/\/api.stats.com\/\/stats\/boxing\/boxing\/rankings\/",
             "description": "",
@@ -214,11 +214,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8eefa8e033f0d50c79a6fb4aefa00aef",
+            "collectionId": "87d57896f72c53f071bb99778ce94855",
             "rawModeData": ""
         },
         {
-            "id": "0b51cf060ab694298987e17bf90228ac",
+            "id": "2c45154cec843176c08ee2642c5c00d5",
             "name": "Boxing Rankings for one boxer",
             "url": "http:\/\/api.stats.com\/\/stats\/football\/cfb\/polls\/players\/{playerId}",
             "description": "",
@@ -280,11 +280,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8eefa8e033f0d50c79a6fb4aefa00aef",
+            "collectionId": "87d57896f72c53f071bb99778ce94855",
             "rawModeData": ""
         },
         {
-            "id": "41551b560753a76d2947aab86101c818",
+            "id": "337bab659636cf877d839893c8308641",
             "name": "Boxing - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/boxing\/boxing\/{decodeType}",
             "description": "",
@@ -339,7 +339,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8eefa8e033f0d50c79a6fb4aefa00aef",
+            "collectionId": "87d57896f72c53f071bb99778ce94855",
             "rawModeData": ""
         }
     ]
