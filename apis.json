@@ -9,8 +9,8 @@
         "have api",
         "have swagger"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -27,12 +27,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/golf.json"
                 },
                 {
-                    "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/golf-openapi.json"
-                },
-                {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/golf-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/golf-postman-collection.json"
                 }
             ]
         },
@@ -49,12 +45,8 @@
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/flightstats-com.json"
                 },
                 {
-                    "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/flightstats-com-openapi.json"
-                },
-                {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/flightstats-com-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/flightstats-com-postman-collection.json"
                 }
             ]
         },
@@ -68,15 +60,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/basketball--nba-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/basketball--nba.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/basketball--nba-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/basketball--nba-postman-collection.json"
                 }
             ]
         },
@@ -90,15 +78,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/soccer-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/soccer.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/soccer-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/soccer-postman-collection.json"
                 }
             ]
         },
@@ -112,15 +96,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/baseball--mlb-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/baseball--mlb.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/baseball--mlb-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/baseball--mlb-postman-collection.json"
                 }
             ]
         },
@@ -134,15 +114,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/hockey--nhl-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/hockey--nhl.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/hockey--nhl-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/hockey--nhl-postman-collection.json"
                 }
             ]
         },
@@ -156,15 +132,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/basketball--cbk-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/basketball--cbk.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/basketball--cbk-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/basketball--cbk-postman-collection.json"
                 }
             ]
         },
@@ -178,15 +150,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/cricket-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/cricket.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/cricket-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/cricket-postman-collection.json"
                 }
             ]
         },
@@ -200,15 +168,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/motor-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/motor.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/motor-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/motor-postman-collection.json"
                 }
             ]
         },
@@ -222,15 +186,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/rugby-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/rugby.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/rugby-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/rugby-postman-collection.json"
                 }
             ]
         },
@@ -244,15 +204,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/boxing-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/boxing.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/boxing-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/boxing-postman-collection.json"
                 }
             ]
         },
@@ -266,15 +222,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/cycling-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/cycling.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/cycling-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/cycling-postman-collection.json"
                 }
             ]
         },
@@ -288,15 +240,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/volleyball-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/volleyball.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/volleyball-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/volleyball-postman-collection.json"
                 }
             ]
         },
@@ -310,15 +258,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/hockey--other-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/hockey--other.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/hockey--other-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/hockey--other-postman-collection.json"
                 }
             ]
         },
@@ -332,15 +276,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/lacrosse-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/lacrosse.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/lacrosse-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/lacrosse-postman-collection.json"
                 }
             ]
         },
@@ -354,15 +294,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/basketball--other-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/basketball--other.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/basketball--other-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/basketball--other-postman-collection.json"
                 }
             ]
         },
@@ -376,15 +312,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/tennis-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/tennis.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/tennis-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/tennis-postman-collection.json"
                 }
             ]
         },
@@ -398,15 +330,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/olympics--summer-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/olympics--summer.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/olympics--summer-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/olympics--summer-postman-collection.json"
                 }
             ]
         },
@@ -420,15 +348,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/olympics--winter-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/olympics--winter.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/olympics--winter-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/olympics--winter-postman-collection.json"
                 }
             ]
         },
@@ -442,15 +366,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/olympics-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/olympics.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/olympics-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/olympics-postman-collection.json"
                 }
             ]
         },
@@ -464,15 +384,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/baseball--other-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/baseball--other.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/baseball--other-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/baseball--other-postman-collection.json"
                 }
             ]
         },
@@ -486,15 +402,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/basketball--wcbk-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/basketball--wcbk.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/basketball--wcbk-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/basketball--wcbk-postman-collection.json"
                 }
             ]
         },
@@ -508,15 +420,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/football--other-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/football--other.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/football--other-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/flightstats-com\/master\/football--other-postman-collection.json"
                 }
             ]
         }
@@ -526,6 +434,10 @@
         {
             "type": "API.json - Authoritative",
             "url": "http:\/\/apis.io\/apisdef\/flightstats.json"
+        },
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
         },
         {
             "type": "Base",
