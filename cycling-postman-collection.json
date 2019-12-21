@@ -1,5 +1,5 @@
 {
-    "id": "f8113403691edb906dc3f700e65ac2ca",
+    "id": "3fbbf277e74735a26b60c678217579a0",
     "name": "Cycling",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "900a6a450652553b8d0dc35729b4afad",
+            "id": "438b7d7a397d7df7449d9369e8483159",
             "name": "The cycling leagues endpoint serves as a decode fo...",
             "url": "http:\/\/api.stats.com\/\/stats\/cycling\/leagues\/",
             "description": "The cycling leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f8113403691edb906dc3f700e65ac2ca",
+            "collectionId": "3fbbf277e74735a26b60c678217579a0",
             "rawModeData": ""
         },
         {
-            "id": "bc3de80ab2d8decc6a67c6eaeace67d0",
+            "id": "14dfc283a45f641bb3d41b10ee356d72",
             "name": "Team information.",
             "url": "http:\/\/api.stats.com\/\/stats\/cycling\/{leaguePath}\/teams\/{teamId}\/",
             "description": "",
@@ -96,11 +96,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f8113403691edb906dc3f700e65ac2ca",
+            "collectionId": "3fbbf277e74735a26b60c678217579a0",
             "rawModeData": ""
         },
         {
-            "id": "54e7d608e3814e416f0a69f4311af080",
+            "id": "b766701d9ec447af829d7359ab7c20a7",
             "name": "Schedules and results",
             "url": "http:\/\/api.stats.com\/\/stats\/cycling\/{leaguePath}\/events\/{eventId}\/",
             "description": "",
@@ -169,11 +169,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f8113403691edb906dc3f700e65ac2ca",
+            "collectionId": "3fbbf277e74735a26b60c678217579a0",
             "rawModeData": ""
         },
         {
-            "id": "879ca8db542cfb5f3b7b446c328bfc8c",
+            "id": "63856ee8b8a1f671ca70a10f4fd70c69",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/cycling\/{leaguePath}\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -221,11 +221,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f8113403691edb906dc3f700e65ac2ca",
+            "collectionId": "3fbbf277e74735a26b60c678217579a0",
             "rawModeData": ""
         },
         {
-            "id": "6b638afac545a0eda26ce6dc8aac5026",
+            "id": "2783e1c48c73276b66c38621b0913eeb",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/cycling\/{leaguePath}\/participants\/",
             "description": "The participants endpoint provides biographical information for riders and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -273,11 +273,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f8113403691edb906dc3f700e65ac2ca",
+            "collectionId": "3fbbf277e74735a26b60c678217579a0",
             "rawModeData": ""
         },
         {
-            "id": "d0802c9b6987ebc41198d76cad4383c2",
+            "id": "18587c16cb895ca348c8fb70ff18f987",
             "name": "Including a team ID will limit rosters returned to...",
             "url": "http:\/\/api.stats.com\/\/stats\/cycling\/{leaguePath}\/participants\/teams\/{teamId}\/",
             "description": "Including a team ID will limit rosters returned to the selected team only.",
@@ -325,11 +325,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f8113403691edb906dc3f700e65ac2ca",
+            "collectionId": "3fbbf277e74735a26b60c678217579a0",
             "rawModeData": ""
         },
         {
-            "id": "b7fa44ae9d72293780700236c25671d4",
+            "id": "01301c17b1779e7efaa7ba3b3506faeb",
             "name": "Including a player ID will limit data returned to ...",
             "url": "http:\/\/api.stats.com\/\/stats\/cycling\/{leaguePath}\/participants\/{playerId}\/",
             "description": "Including a player ID will limit data returned to the selected player only.",
@@ -377,11 +377,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f8113403691edb906dc3f700e65ac2ca",
+            "collectionId": "3fbbf277e74735a26b60c678217579a0",
             "rawModeData": ""
         },
         {
-            "id": "7cf79b520f57fea88f226794e26cbf70",
+            "id": "4f9c066c96282e267fffbb5ad5bc639f",
             "name": "Cycling - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/cycling\/{leaguePath}\/{decodeType}",
             "description": "",
@@ -422,7 +422,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f8113403691edb906dc3f700e65ac2ca",
+            "collectionId": "3fbbf277e74735a26b60c678217579a0",
             "rawModeData": ""
         }
     ]
