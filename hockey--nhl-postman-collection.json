@@ -1,5 +1,5 @@
 {
-    "id": "e6979304b34751b05ef868d27e2b02da",
+    "id": "5ca545faa15e689953eeee7144d69d00",
     "name": "Hockey - NHL",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "9e078b3dd84596df7b93605c63681bfb",
+            "id": "d3df632df4fdd51a6ecfb49a64128028",
             "name": "The teams endpoint will be your source for team na...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/teams\/{teamId}",
             "description": "The teams endpoint will be your source for team names, locations, abbreviations, and IDs.",
@@ -58,11 +58,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "f2c9344fb9e2697add42d025183abe12",
+            "id": "342bed7b34f3e155da27e42c77c4005f",
             "name": "If you are permissioned for the \/events resource, ...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/events\/{eventId}",
             "description": "If you are permissioned for the \/events resource, you have access to the highest level of game data including live scores, box scores, and play-by-play.",
@@ -166,11 +166,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "ca8ae70216d4d33f2cc762fa6bb93982",
+            "id": "74e5b5b4636336c095ca5007d88e2fd2",
             "name": "This endpoint allows you to select schedule and sc...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/events\/teams\/{teamId}",
             "description": "This endpoint allows you to select schedule and score information for just one team.  Getting information for a single team returns only schedule and score information.  If you want detailed event information, you use the example about with the eventId.",
@@ -260,11 +260,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "c73bc31cf8dd258abda4829ca64c26d0",
+            "id": "d3b57cb6a729f6cc9783c1e455bb7880",
             "name": "The box\/ resource provides scores\/schedules and bo...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/box\/{eventId}",
             "description": "The box\/ resource provides scores\/schedules and box score information for NHL events.  (Play-by-play is not an option.)",
@@ -347,11 +347,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "55f89cc8343aff2c8916125f4579ef96",
+            "id": "28a2bc29de007dc4b4e81a2a41b65a37",
             "name": "The box\/ resource provides scores\/schedules and bo...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/box\/teams\/{teamId}",
             "description": "The box\/ resource provides scores\/schedules and box score information for NHL events.",
@@ -427,11 +427,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "aba7104e82ac07438e11ea6d1e091d64",
+            "id": "8dcd9a697b3d656de0885b40d42edf86",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/scores\/{eventId}",
             "description": "The scores\/ resource provides score and schedule information for NHL events.",
@@ -507,11 +507,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "e17671d4f045afaa6e1201b35eb80661",
+            "id": "52c976389bf7ef6a9d55ebc75a6e6da3",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/scores\/teams\/{teamId}",
             "description": "The scores\/ resource provides score and schedule information for NHL events.",
@@ -587,11 +587,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "13b9774801108f46a1d6310b80f5ed0b",
+            "id": "5f3a354da5254dc583bc75d298c1eb0a",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -646,11 +646,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "2f498609311a58c049c9692d35bf26af",
+            "id": "d79863917a062896653209583efcd6f3",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/standings\/teams\/{teamId}",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -712,11 +712,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "9003ae16d815e9d2692c0f1868871f2a",
+            "id": "4c47584bc7094f5c735ce457bc532054",
             "name": "This will return anyone who has played since the b...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/participants\/",
             "description": "This will return anyone who has played since the beginning of the entered year (season).",
@@ -757,11 +757,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "cdd5626da2d8e0b37cae2752299b3509",
+            "id": "9e068a1a4e5df471e40c14d976154325",
             "name": "Historical rosters provide biographical informatio...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/participants\/teams\/{teamId}",
             "description": "Historical rosters provide biographical information for players that played for a team in a single specified season.",
@@ -809,11 +809,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "3ccf2a8fe60d96781975cab761e13ffd",
+            "id": "7954c890e6886c16b26a630b7edc9537",
             "name": "This returns only the selected player.",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/participants\/{playerId}",
             "description": "",
@@ -854,11 +854,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "9164084c2a3144b0bb92c72d02be13c6",
+            "id": "1579daa963edd2e1e672a6d603d8e494",
             "name": "This will return anyone who has played in an NHL A...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/allStarParticipants\/",
             "description": "This will return anyone who has played in an NHL All-Star game.",
@@ -892,11 +892,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "74d2f9c8b931b09661fe736ab7fe0f34",
+            "id": "fb65f1b809b9af9b981f589c97206251",
             "name": "Enter only the playerId and 'enc=true' to get a pl...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/players\/{playerId}",
             "description": "Enter only the playerId and 'enc=true' to get a player's career stats.  Anything else is ignored when 'enc=true'.",
@@ -958,11 +958,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "06fe16e0f8920cf6327085baca727ec1",
+            "id": "38b12f4266bbfc4a18cf91ac8121c911",
             "name": "NHL - Player statistics for one game.",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "",
@@ -1010,11 +1010,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "c453bcf9f0374adc255fa9c8705b550d",
+            "id": "b7317f87ec131e379f938689035ddebc",
             "name": "NHL - Player's individual game logs.",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/players\/{playerId}\/events\/",
             "description": "",
@@ -1069,11 +1069,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "4c4002ee74ffba7527f07beaf5ca5eb6",
+            "id": "b8aec099d26bb48d30733801a1673372",
             "name": "This is used when a player is on more than one tea...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/players\/{playerId}\/teams\/{teamId}",
             "description": "This is used when a player is on more than one team in a season and you want only the stats for that team.",
@@ -1135,11 +1135,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "821d54d3ed7fd02b7ffe798d41672db3",
+            "id": "ec3cfe19caa3b19c71b017ba565d5263",
             "name": "NHL - Player splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/players\/{playerId}\/",
             "description": "",
@@ -1201,11 +1201,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "dcb11b6ba1f59df91ed8bb706cf1aa79",
+            "id": "2137e06a7a2757620aefe399ebe77e49",
             "name": "NHL - Team splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/teams\/{teamId}\/",
             "description": "",
@@ -1267,11 +1267,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "384ec5dca108688bdad2578f1c42154e",
+            "id": "b523efea2b6e4d67f08912e1a56b0649",
             "name": "NHL - Team stats",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/teams\/{teamId}\/events\/{eventId}",
             "description": "",
@@ -1319,11 +1319,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "e6857510126f56111aecb771651efb3b",
+            "id": "bff587c21062bfa1dd4bfefe198edaaf",
             "name": "NHL - Team's individual game logs.",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/teams\/{teamId}\/events\/",
             "description": "",
@@ -1378,11 +1378,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "70e7af0791505961ed51bc57eed079b9",
+            "id": "4e4ce8863f830bf96702b6c68a1dac98",
             "name": "NHL - Career stats for a single coach",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/coaches\/{coachId}",
             "description": "",
@@ -1437,11 +1437,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "785a0607fe33c680b6e76c52158928fa",
+            "id": "ae28a6c82269aa49fe59d6e5567235d9",
             "name": "This is used when a coach is on more than one team...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/coaches\/{coachId}\/teams\/{teamId}",
             "description": "This is used when a coach is on more than one team in a season and you want only the stats for that team.",
@@ -1503,11 +1503,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "fc4d539735f3d14141e80537696ab724",
+            "id": "018678169ba3ed773f55f0b4bec48b44",
             "name": "This will return all stats for all coaches on a te...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/stats\/coaches\/teams\/{teamId}",
             "description": "This will return all stats for all coaches on a team in a given season.",
@@ -1562,11 +1562,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "270caa7c3bf44fc691f953d78409728f",
+            "id": "076655bfe7666018cd9f6d4f8a2bdfbd",
             "name": "NHL - Get all transactions",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/transactions\/",
             "description": "",
@@ -1621,11 +1621,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "f0dc2be187c697566c5f61a076b7ca7d",
+            "id": "23ec75f57f77471ed3ad05678a32a72e",
             "name": "NHL - Player transactions",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/transactions\/players\/{playerId}",
             "description": "",
@@ -1687,11 +1687,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "9d193a2775c77660f8e494d6d0003285",
+            "id": "065b3d26ae179f74fa2fddeefa37fc58",
             "name": "NHL - Player transactions",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/transactions\/players\/{playerId}\/teams\/{teamId}\/",
             "description": "",
@@ -1760,11 +1760,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "8f87962f19f7a1335c65157db4053bfc",
+            "id": "3957349969ff0e12fdaba301d97512de",
             "name": "NHL - Team transactions",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/transactions\/teams\/{teamId}",
             "description": "",
@@ -1826,11 +1826,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "60ad951e9bd3799c2bed519233116d4b",
+            "id": "ef1c936ae09c6a82231b637e128354bd",
             "name": "NHL - Get all Injuries",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/injuries\/",
             "description": "",
@@ -1892,11 +1892,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "61d94cfb90eb61b2f67c7ddf498f72f8",
+            "id": "d17cbf6eb52c984d8169db12a508aa44",
             "name": "NHL - Player Injuries",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/injuries\/players\/{playerId}",
             "description": "",
@@ -1965,11 +1965,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "c910a90fc7fcbb28bf939e9bd884ba07",
+            "id": "539914f5c693e57b9bd690ce14257815",
             "name": "By default, results include all injuries for a pla...",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/injuries\/players\/{playerId}\/teams\/{teamId}",
             "description": "By default, results include all injuries for a player (a) during the time period selected, (b) if the injury has not healed and (c) for all the teams the player was on during the time period.\n To return only those injuries while a player is on a specific team, you must include \/teams\/:teamId in the URI.",
@@ -2045,11 +2045,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "56257d9fa655db6093b92eac2a7da724",
+            "id": "d99a47d38aca373334c3e2f21910fe2a",
             "name": "NHL - Team Injuries",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/injuries\/teams\/{teamId}",
             "description": "",
@@ -2118,11 +2118,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "729ba07a374dcaf80983c0108d083b3a",
+            "id": "2b1e88e08b57b1cc06cf7a8c4926b4ed",
             "name": "NHL - Get all injury details",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/injuryDetails\/",
             "description": "",
@@ -2170,11 +2170,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "877ff7dbec5f1f88d2ca84935edb8313",
+            "id": "b29e0ea89aaf8bde601fddffb608489f",
             "name": "NHL - Injury Details for one player",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/injuryDetails\/players\/{playerId}",
             "description": "",
@@ -2229,11 +2229,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "713d292a12f6e12ed1990d104fc452bf",
+            "id": "e9ca4658fc52c40a44cfa61b75ba4f83",
             "name": "NHL - Team injury details",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/injuryDetails\/teams\/{teamId}",
             "description": "",
@@ -2288,11 +2288,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "0a06e71b440132ee54ac2b1d117f5fd7",
+            "id": "fae89a32b3008020c9e55477bceab7d9",
             "name": "NHL - Get all player news",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/playerNews\/",
             "description": "",
@@ -2347,11 +2347,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "b84a6290ac6b26f34609db168e54ea6f",
+            "id": "b8030fe71a7c9387d91d4ed364ac960b",
             "name": "NHL - Player news for one player",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/playerNews\/players\/{playerId}",
             "description": "",
@@ -2413,11 +2413,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "26b26420234dc044c403ef61c5bd16b2",
+            "id": "cf6010714e4aa3129c294fe6ed2dc40d",
             "name": "NHL - Player news for one player",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/playerNews\/players\/{playerId}\/teams\/{teamId}",
             "description": "",
@@ -2486,11 +2486,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "b84eea508bf821088bd98ca439bf0fad",
+            "id": "cad99fa4767d2befd8d534cdf82580c6",
             "name": "NHL - Team player news",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/playerNews\/teams\/{teamId}",
             "description": "",
@@ -2552,11 +2552,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "44dcd3301bc32dbb7e28bd79a8273cfd",
+            "id": "073946dc6aa88043a9b59bc48ca4b113",
             "name": "NHL - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/leaders\/",
             "description": "",
@@ -2625,11 +2625,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "ef190075a6990b52d697744e1b932c39",
+            "id": "19f543fe59398ada6f142e950ca1ad5c",
             "name": "NHL - Daily Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/dailyLeaders\/",
             "description": "",
@@ -2712,11 +2712,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "5dc4bfa553b4561625234fb48db41e99",
+            "id": "1722922f0f091cf1da8985a8ce5f0a27",
             "name": "NHL - Team Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/teamLeaders\/",
             "description": "",
@@ -2799,11 +2799,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "caee955e6b3401f6bbf3f77e3fa6c0ee",
+            "id": "22d328757fffed294c98aa2a063962ac",
             "name": "NHL - Depth Charts for all teams",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/depthCharts\/",
             "description": "",
@@ -2844,11 +2844,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "e26d52f2b59b339c516efc853d858831",
+            "id": "0d29d5617f5e5f127669c20854d383ca",
             "name": "NHL - Depth Charts for a single team",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/depthCharts\/teams\/{teamId}",
             "description": "",
@@ -2896,11 +2896,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "34a78fd8199812446ccc105eeb8d178a",
+            "id": "c7fe456c69eba7480d49951a8692a525",
             "name": "NHL - Coaches",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/coaches\/",
             "description": "",
@@ -2934,11 +2934,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "3d4d454a69084761cb1eafd33746ead5",
+            "id": "2360845e64ae5bf4ba341f89c1212450",
             "name": "NHL - Coaches for a single team",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/coaches\/teams\/{teamId}",
             "description": "",
@@ -2972,11 +2972,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "0fc307d51754c7a668810c83aeb3c5af",
+            "id": "57d66517f2ed7eed67bb1584d227bc85",
             "name": "NHL - Salaries for all players",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/salaries\/",
             "description": "",
@@ -3010,11 +3010,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "15ab80a5076c9cb162cd8bd3c1eeaad9",
+            "id": "5fff671be16509840c3ae85513adf1f3",
             "name": "NHL - Salaries for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/salaries\/players\/{playerId}",
             "description": "",
@@ -3055,11 +3055,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "b49d674c0c85555948fcf2105f4d7459",
+            "id": "0a0109976cc4511e2ee2601ec06fa50d",
             "name": "NHL - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/odds\/",
             "description": "",
@@ -3121,11 +3121,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "f64cbf2743c8a7333ee02e7fd63628ef",
+            "id": "41ac2bfc4a8c632a4f322370e92b0cb4",
             "name": "NHL - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/odds\/{eventId}",
             "description": "",
@@ -3166,11 +3166,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "ff329cf167965d5005b89464584839c5",
+            "id": "b00e8d935296292bbbd499db0044ca49",
             "name": "NHL - Odds",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/odds\/teams\/{teamId}",
             "description": "",
@@ -3239,11 +3239,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "a982c0fff5ce8300011b9d17d5f66d11",
+            "id": "45623ce48021ab3e17311ebea98d2417",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/stories\/headlines\/",
             "description": "",
@@ -3270,11 +3270,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "5fa02892c42aeaba52def393b5fffba1",
+            "id": "8066f16fa7442a58ce8031fff35f0153",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/articles\/headlines\/",
             "description": "",
@@ -3301,11 +3301,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "e6263b9c5aa0e8db24bdc9d53bfb897c",
+            "id": "233a3d536fef35e6b269aa2eb43a97b8",
             "name": "Recent stories for the selected league.",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/stories\/recent\/",
             "description": "",
@@ -3332,11 +3332,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "4192ece71a378ee087eb6e0158a0dd08",
+            "id": "ee9495a61dd62e043a2432824d416ef1",
             "name": "Recent stories for the selected league.",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/articles\/recent\/",
             "description": "",
@@ -3363,11 +3363,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "b017ac0e07b044a939b920650c8c935e",
+            "id": "2ee418816c12c039911cf811aa7b895a",
             "name": "Recent stories for the selected league\/team.",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/stories\/recent\/teams\/{teamId}\/",
             "description": "",
@@ -3401,11 +3401,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "a5d6e420019d3077b8069cbc300d8db5",
+            "id": "57249142fa2af42d1a6936f2eef5e5d0",
             "name": "Recent stories for the selected league\/team.",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/articles\/recent\/teams\/{teamId}\/",
             "description": "",
@@ -3439,11 +3439,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "b5fb48061ab8309c875192231627cbf9",
+            "id": "98ce06fa695d53b4ccc4d99a8a98491d",
             "name": "Get the full story for a storyId found in headline...",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/stories\/{storyId}\/",
             "description": "Get the full story for a storyId found in headlines or stories.",
@@ -3477,11 +3477,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "443aee66e1e6d6e0f54ede5732d7ef2f",
+            "id": "b33b00e201b8b12e798b29e575508048",
             "name": "Get the full story for a storyId found in headline...",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/articles\/{storyId}\/",
             "description": "Get the full story for a storyId found in headlines or stories.",
@@ -3515,11 +3515,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "3f88081532bcf984133d3ad9819c28ac",
+            "id": "ca475f28f0832d87e6ff28d7b123c1d4",
             "name": "Preview for one specific event, must identify leag...",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/stories\/previews\/events\/{eventId}\/",
             "description": "Preview for one specific event, must identify league, and eventId",
@@ -3553,11 +3553,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "9d3209314b7eba23f696e443ec131c1d",
+            "id": "37e5398c1ac397b7d13cd1d29a0f2671",
             "name": "Recap for one specific event, must identify sport,...",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/stories\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sport, league, and eventId",
@@ -3591,11 +3591,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "c4c1ae3ce7d90725ba8b79a0013b4c86",
+            "id": "7d1278b4cc2263cdcd7be93d6e98dc47",
             "name": "Recap for one specific event, must identify sport,...",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/articles\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sport, league, and eventId",
@@ -3629,11 +3629,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "769aa3caf6c13fe64c7a881b8c0890b8",
+            "id": "508766069f0f13e384cdf30be636ed80",
             "name": "List of available images.",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/images\/list\/",
             "description": "",
@@ -3667,11 +3667,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "5633cd0811425dd5a7993afd35b3ea82",
+            "id": "b710e62bfa541bbbbeec3fd95bd944d1",
             "name": "List of available photos.",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/photos\/list\/",
             "description": "",
@@ -3705,11 +3705,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "0bf5135c4fb5ec44334ca44ebb89aeaf",
+            "id": "09e2e12aed135ad02ed27d5411c74847",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/images\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -3750,11 +3750,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "fe1f5a21e1bdc6fb73dea5e4cd17eb59",
+            "id": "62fb4084eaff1faea3315fb0d9be6b11",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/hockey\/nhl\/photos\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -3795,11 +3795,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "bb6649ea46a532d3e817dd1a485e7dc2",
+            "id": "56b66c0e1e031cf6f5ac11bc24bddb36",
             "name": "NHL - Bullets for a single day",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/bullets\/",
             "description": "",
@@ -3833,11 +3833,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "8ff1edb58685110abcccf7981085ed4a",
+            "id": "080a87ed2d8a58023b2af4304622fd55",
             "name": "NHL - Bullets for a single day",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/bullets\/events\/{eventId}\/",
             "description": "",
@@ -3871,11 +3871,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "d9c2170510256b8dac7a0a5d7a2e0c65",
+            "id": "b38f29a9ca946b45fe7ed308ea13af62",
             "name": "NHL - Fantasy projections for the required event",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/fantasyProjections\/{eventId}",
             "description": "",
@@ -3909,11 +3909,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "d82e1346dc80b9c8f2dda1be94491cd0",
+            "id": "72be3ce8b6a6721464d14c2e49fb5ba7",
             "name": "NHL - Matchup Gaming for a single day",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/matchupgaming\/",
             "description": "",
@@ -3947,11 +3947,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "753f4f56cb334bdfa06a0f1fc39f74b7",
+            "id": "e0aee4e6afa61b2f9b553691115a5670",
             "name": "NHL - Single Game",
             "url": "http:\/\/api.stats.com\/\/stats\/hockey\/nhl\/matchupgaming\/{eventId}",
             "description": "",
@@ -3985,11 +3985,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         },
         {
-            "id": "8d3c545880f539c923cdca0ec62f2965",
+            "id": "3c592fef57fcd1b7a1e61cbc5993e7f7",
             "name": "NHL - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/hockey\/nhl\/{decodeType}\/",
             "description": "",
@@ -4037,7 +4037,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e6979304b34751b05ef868d27e2b02da",
+            "collectionId": "5ca545faa15e689953eeee7144d69d00",
             "rawModeData": ""
         }
     ]
