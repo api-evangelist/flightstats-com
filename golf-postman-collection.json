@@ -1,5 +1,5 @@
 {
-    "id": "3df69b3262698194c3e17feac7f405c3",
+    "id": "0b009326016ba72cf185a02346122d02",
     "name": "Golf",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "10c366d13474fb040e5e9e1fc771846a",
+            "id": "9f887415daf14daa5ecb41d6da684a9f",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/events\/{eventId}",
             "description": "Access to this events endpoint will provide you with the highest level of event data including live scores, and hole-by-hole information.  Results & hole-by-hole information are only applicable for a single event.\n Simple schedules are also availalbe via the events endpoint.",
@@ -100,11 +100,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "2225d95515820470f0326543cd4f49b5",
+            "id": "fe168a12ecd11112a9f981ad61930a10",
             "name": "The results\/ resource provides schedules & results...",
             "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/results\/{eventId}",
             "description": "The results\/ resource provides schedules & results for golf events. (hole-by-hole is not available in the results endpoint.)",
@@ -187,11 +187,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "4541b707ffed468217f416bb965c0c2f",
+            "id": "6f196e347b1f48c71b970aa422b79a24",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/participants\/",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, or all players within the association.",
@@ -239,11 +239,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "943d2088f3d82b9d9ba2ef23e3430ed8",
+            "id": "526e1cc1b2ce477200defc6b229dd029",
             "name": "This returns only the selected player.",
             "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/participants\/{playerId}",
             "description": "",
@@ -291,11 +291,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "8029f2fb1c48ff1d34ea1251aca9cd8c",
+            "id": "2e79a73b22c6ed2e56bd98d6a4bdbae6",
             "name": "GOLF - Single season or career stats for a single ...",
             "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/stats\/players\/{playerId}",
             "description": "GOLF - Single season or career stats for a single player",
@@ -357,11 +357,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "a6e9571ed2ad4ab92581f70939a1fd56",
+            "id": "8ebf5c6ef90be7eb7149e6dfcc4bf2a8",
             "name": "GOLF - Player's individual event logs.",
             "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "",
@@ -423,11 +423,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "542a6330959f57d5f71a23b3dabbb079",
+            "id": "1a153ef6e7cb344d6f86d36fdfd7e84c",
             "name": "GOLF - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/leaders\/",
             "description": "",
@@ -489,11 +489,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "0a9483d4b097f1240676b06f9f3c1ad6",
+            "id": "e21325762ba7934277401ab787e86cdb",
             "name": "For Cup play events that utilize teams, this endpo...",
             "url": "http:\/\/api.stats.com\/\/stats\/golf\/{association}\/teams\/{teamId}",
             "description": "For Cup play events that utilize teams, this endpoint will be your source for team names and IDs.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams.",
@@ -541,11 +541,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "70f1d15769817161f7df4c3a6ceb265c",
+            "id": "d7aeebfbe8b22aaf39ae2c427b74f372",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/stories\/headlines\/",
             "description": "",
@@ -579,11 +579,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "0227fe068547a59604645b1a68b7ae8e",
+            "id": "7a7a5524500b88251863ae9118f76e84",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/articles\/headlines\/",
             "description": "",
@@ -617,11 +617,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "de54a7cb16750023fd591b14ed9b3d8b",
+            "id": "a865fe65c5562cdfaa2204da0d0becc0",
             "name": "Recent stories for the selected league.",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/stories\/recent\/",
             "description": "",
@@ -655,11 +655,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "cc0bf83b87da8f4c35040a910828ed38",
+            "id": "40827c10df8cf13a4ef76e07ba4ba409",
             "name": "Recent stories for the selected league.",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/articles\/recent\/",
             "description": "",
@@ -693,11 +693,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "543d55cc6c93c17fd85bb97415a067fa",
+            "id": "feee7688391af7c8b48709d45be95142",
             "name": "Get the full story for a storyId found in headline...",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/stories\/{storyId}\/",
             "description": "Get the full story for a storyId found in headlines or stories.",
@@ -738,11 +738,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "12801ecd23c84018ca650140b39b752e",
+            "id": "172b995999d1dfa626f1261abef567db",
             "name": "Get the full article for a storyId found in headli...",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/articles\/{storyId}\/",
             "description": "Get the full article for a storyId found in headlines or articles.",
@@ -783,11 +783,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "91ca11d36e126b5c207de18ac6a02a50",
+            "id": "a904e472507c6e53270f03e67965544e",
             "name": "Preview for one specific event, must identify leag...",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/stories\/previews\/events\/{eventId}\/",
             "description": "Preview for one specific event, must identify league, and eventId",
@@ -828,11 +828,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "6833b099ca107bf933574f3be6c8dc7f",
+            "id": "1cafe2bea504d5c5a11c02a62def293b",
             "name": "Recap for one specific event, must identify sport,...",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/stories\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sport, league, and eventId",
@@ -873,11 +873,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "67f9b75cbead72497ef44ff84e2dd471",
+            "id": "b2685469f2f02ed18cd20f5fb7052c63",
             "name": "Recap for one specific event, must identify sport,...",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/articles\/recaps\/events\/{eventId}\/",
             "description": "Recap for one specific event, must identify sport, league, and eventId",
@@ -918,11 +918,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "28c92bd39715c251de75fa8af559d757",
+            "id": "a71c3c7aa7f7e405804bb8550928b4ce",
             "name": "List of available images.",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/images\/list\/",
             "description": "",
@@ -963,11 +963,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "7d570773062cf2030e15c387e454b333",
+            "id": "0f8b0ccf8890a1a0dc29e775c4899a52",
             "name": "List of available photos.",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/photos\/list\/",
             "description": "",
@@ -1008,11 +1008,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "f2c1aa8552192ab858d62ca3c07abcb9",
+            "id": "ba9f4cc2364b48d385945a1d35b37212",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/images\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -1060,11 +1060,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "e48a7d8891c62f474c5c50c217042ee7",
+            "id": "8bda1f063ca78ff565c0db8e607346a8",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/golf\/{association}\/photos\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -1112,11 +1112,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         },
         {
-            "id": "ee9b3296fedd96cf4f9e3bd2bacaf7b4",
+            "id": "fd19faa0426fd7e97da8ea3ee987c4e1",
             "name": "GOLF - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/golf\/{association}\/{decodeType}\/",
             "description": "",
@@ -1157,7 +1157,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3df69b3262698194c3e17feac7f405c3",
+            "collectionId": "0b009326016ba72cf185a02346122d02",
             "rawModeData": ""
         }
     ]
