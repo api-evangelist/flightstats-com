@@ -1,5 +1,5 @@
 {
-    "id": "03328840a6c2a855f07a806a953e20ca",
+    "id": "3b8f5681f81d941813f4b70d8e66eef2",
     "name": "Basketball - Other",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "1ebc5ed3a1d3d4c7d51890c028f20f1b",
+            "id": "16dc6499c51cb94ce65f2ef407ba910b",
             "name": "The basketball leagues endpoint serves as a decode...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/leagues\/",
             "description": "The basketball leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "027a35654428c6140e958da204785c04",
+            "id": "bc4430d2f8ce07ba58bb5484afb600ea",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/teams\/{teamId}",
             "description": "",
@@ -96,11 +96,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "68d749cad92c2795af71427037627339",
+            "id": "05031d23fabba76a84f8da9465a25871",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/events\/{eventId}",
             "description": "Access to this events endpoint will provide you with the highest level of game data including live scores and box scores when applicable.  The 'eventId' and 'box' parameters below are only applicable for a specific game.\n Events will also provide you with schedule data.",
@@ -204,11 +204,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "ab1bd045bb36d6cea3b0f392c447b0a5",
+            "id": "074b230c705919b8abe3373c54e2c0ee",
             "name": "This gets the event (schedule) information for jus...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/events\/teams\/{teamId}",
             "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information).",
@@ -305,11 +305,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "13180168ced139f2244ec48325ceeee1",
+            "id": "933913290639b47d5ca5b527024a1498",
             "name": "The box\/ resource provides scores\/schedules and bo...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/box\/{eventId}",
             "description": "The box\/ resource provides scores\/schedules and box score information for NBA events.  (Play-by-play & Shot Charts are not available in the box endpoint.)",
@@ -399,11 +399,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "0382651efde2b73b174c73d0f5a5fa80",
+            "id": "7fdd6268c276b9f7d7841c309667f053",
             "name": "The box\/ resource provides scores\/schedules and bo...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/box\/teams\/{teamId}",
             "description": "The box\/ resource provides scores\/schedules and box score information for NBA events. However, box scores are available for a single game only, and so cannot be accessed here when all events for a single team are returned. This endpoint should be used for team schedules & scores only.",
@@ -486,11 +486,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "148fbb3706b3c60055c13354ac0e4a57",
+            "id": "7a2bccf9a856b983c8a9d9804dcf8e70",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/scores\/{eventId}",
             "description": "The scores\/ resource provides score and schedule information for events.",
@@ -573,11 +573,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "776780e13313184254e5ad74078040e5",
+            "id": "31264f21e1b1b90e4ec285c12a82f9ac",
             "name": "This gets the event (schedule) information for jus...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/scores\/teams\/{teamId}",
             "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information.",
@@ -660,11 +660,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "c6b86ebc92fba99976c9ae30374ebe1e",
+            "id": "90af10be1d6df8661fa94b23c2e38ec5",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -719,11 +719,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "9c7b568627453a4ea41ca0099b443be7",
+            "id": "518b0550247d900917eacbe2fde9da17",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/standings\/teams\/{teamId}",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -785,11 +785,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "a808532f3e4edf1d50c9bf5abe1b263f",
+            "id": "a3277b50c673f98e1db67a086d5a5952",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/participants\/",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -837,11 +837,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "aa1521139d0f120f56c4d8c31b3c2a53",
+            "id": "f35711c256100dd845f7b3ba0cc7379c",
             "name": "Including a team ID will limit rosters returned to...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/participants\/teams\/{teamId}",
             "description": "Including a team ID will limit rosters returned to the selected team only.",
@@ -889,11 +889,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "73e20fe367ed9038a31330907d389efc",
+            "id": "48f47b288dd628a205f24b54f006365d",
             "name": "Including a player ID will limit data returned to ...",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/participants\/{playerId}",
             "description": "Including a player ID will limit data returned to the selected player only.",
@@ -941,11 +941,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "d1900d8af45a1b6bc18fc8873cd6ba3e",
+            "id": "8e107df0fbc3f3e6347d532c128f0167",
             "name": "Basketball - Career stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/stats\/players\/{playerId}",
             "description": "",
@@ -1014,11 +1014,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "2b11d077959367c029403e3af0d2f176",
+            "id": "49e50b2e5150f0614825f6fababa9928",
             "name": "Basketball - Single game stats for a player",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "",
@@ -1073,11 +1073,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "1fd5922500181636e21dc8a2ee356290",
+            "id": "eafc294d71a14947397e82ca8877e016",
             "name": "Basketball - A player's stats, game-by-game.",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/stats\/players\/{playerId}\/events\/",
             "description": "",
@@ -1139,11 +1139,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "0c2b5cd6176ac5f2d5552e4e45de195e",
+            "id": "7a1c83343be494b97cd8a1e1d52d0ba9",
             "name": "Basketball - Player splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/stats\/players\/{playerId}\/",
             "description": "",
@@ -1212,11 +1212,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "85e036c90fb8bf31f3a589fc2d8b7473",
+            "id": "13f05671e3da5fc585dd9b6370a6b5cb",
             "name": "Basketball - Team splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/stats\/teams\/{teamId}\/",
             "description": "",
@@ -1285,11 +1285,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "8a07044b23e46505112045add4f1a3e8",
+            "id": "acf2cc86d9cd210195bcd696c4cb6d30",
             "name": "Basketball - A team's stats, game-by-game.",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/stats\/teams\/{teamId}\/events\/{eventId}",
             "description": "",
@@ -1344,11 +1344,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "7dc720a8a9d4a24463d5910c094b9232",
+            "id": "5ea59ac42195bc094817ce353d303a9a",
             "name": "Basketball - A team's stats, game-by-game.",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/stats\/teams\/{teamId}\/events\/",
             "description": "",
@@ -1410,11 +1410,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "ba81c203ea34d5a7ea520c0552f47761",
+            "id": "4d930d26d71f83e862ad9d2a8ba815e1",
             "name": "Basketball - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/leaders\/",
             "description": "",
@@ -1497,11 +1497,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "00eb431053694532eecd67df92260169",
+            "id": "5692b72c9894c6c03f6ed1d3543ad327",
             "name": "Basketball - Team Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/teamLeaders\/",
             "description": "",
@@ -1577,11 +1577,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "08b7a8377b5ce1dd1e87957cbadec79b",
+            "id": "9d9e263562817254489eba60e2a9a0a3",
             "name": "Basketball - Daily Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/basketball\/{leaguePath}\/dailyLeaders\/",
             "description": "",
@@ -1671,11 +1671,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         },
         {
-            "id": "3cd095127f1187f6ffa64567879968fd",
+            "id": "79c653790d1707e5678b8f2a38fd4921",
             "name": "Basketball - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/basketball\/{leaguePath}\/{decodeType}",
             "description": "",
@@ -1737,7 +1737,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "03328840a6c2a855f07a806a953e20ca",
+            "collectionId": "3b8f5681f81d941813f4b70d8e66eef2",
             "rawModeData": ""
         }
     ]
