@@ -1,5 +1,5 @@
 {
-    "id": "7b9d69470c43d3ab0faa79d34ff11537",
+    "id": "9aa272db8412ff8579eb33dbca34e37d",
     "name": "Cricket",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "dcafbf962bc1ddc000647a80ba911f82",
+            "id": "fe66b8a194f0a72a157a9ddda143fe23",
             "name": "The cricket leagues endpoint serves as a decode fo...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/leagues\/",
             "description": "The cricket leagues endpoint serves as a decode for the available leagues names, abbreviations, and URI paths.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "5d404daa8887ea275fb8700830a763b9",
+            "id": "4f465c4e25afb5e8ba7d9e7793c537fa",
             "name": "Team information.",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/teams\/{teamId}\/",
             "description": "",
@@ -96,11 +96,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "36c8711d6ccfe1608e2271547d0edef8",
+            "id": "40eb84d1313fcabfa12b84967286caff",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/events\/{eventId}\/",
             "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, and play-by-plays when applicable.  The 'eventId', 'box', and 'pbp' parameters below are only applicable for a specific game.\n Events will also provide you with schedule data.",
@@ -190,11 +190,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "37d95e10a923e770ce718ae1eb75e0ff",
+            "id": "9c142e526bdf7c4bd27319e5d4a87feb",
             "name": "This gets the event (schedule) information for jus...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/events\/teams\/{teamId}\/",
             "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information).",
@@ -270,11 +270,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "8f35fb6c300fc3dce205985c2321d0c7",
+            "id": "643f8a78bfe5f628414c94ce7aaae1d6",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/box\/{eventId}\/",
             "description": "Access to this events endpoint will provide you with live scores and box scores when applicable.  The 'eventId' and 'box' parameters below are only applicable for a specific game. The 'box' endpoint will also provide you with schedule data.",
@@ -357,11 +357,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "8d96e982d8f263ee91ab7bf5ed85f904",
+            "id": "53beddf0db7036d931af2ceb88b920ee",
             "name": "This gets the event (schedule) information for jus...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/box\/teams\/{teamId}\/",
             "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information).",
@@ -437,11 +437,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "569ea1f1f3077609fe9c674ff4ccc04f",
+            "id": "bde5207b5fd0bda8cd7e9cd43f64f894",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/scores\/{eventId}\/",
             "description": "The scores\/ resource provides score and schedule information for events.",
@@ -517,11 +517,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "b3783e3e6f3926c96ba2561718336248",
+            "id": "494d4c27a937c8f5212de915386f1850",
             "name": "This gets the event (schedule) information for jus...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/scores\/teams\/{teamId}\/",
             "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information).",
@@ -597,11 +597,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "c3c66d367e1e49a1f25dcf91b614878f",
+            "id": "24cdfcf9ad6bc6b8f966ecb718b1de8b",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -649,11 +649,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "5d38b5993db0d9d4eafd98a15fdfa4ef",
+            "id": "b5bf92db4ec1c8731b190544e6034796",
             "name": "Standings for a single team.",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/standings\/teams\/{teamId}\/",
             "description": "",
@@ -708,11 +708,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "52adffcf35f95473565f81a8ea18d692",
+            "id": "de7975e27cedb5f3633857f7483e5c59",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/participants\/",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, or all teams rosters within the league.",
@@ -760,11 +760,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "42559d94e979532dd71fe196e0c5807d",
+            "id": "a6862079536d221759fd087d6d695268",
             "name": "Including a team ID (required) will limit rosters ...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/participants\/teams\/{teamId}\/",
             "description": "Including a team ID (required) will limit rosters returned to the selected team only.",
@@ -812,11 +812,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "290489f4abcf56a1685ac8c394a4a4fa",
+            "id": "96c1c04e84d936b18acee013fa16a6ac",
             "name": "Including a player ID (required) will limit data r...",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/participants\/{playerId}\/",
             "description": "Including a player ID (required) will limit data returned to the selected player only.",
@@ -864,11 +864,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "03bfb4687ee21df4507577a9a50c760c",
+            "id": "c1fb148355b588432ba998b308622fe3",
             "name": "Cricket - Career stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/stats\/players\/{playerId}\/",
             "description": "",
@@ -937,11 +937,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "a7fc4ce29b8ef52dbcbbaa4ebf0785ae",
+            "id": "e5d1c49a7d9eeed72bffe687a27cb18e",
             "name": "Cricket - Team stats",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/stats\/teams\/{teamId}\/",
             "description": "",
@@ -1010,11 +1010,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "091926cc6f9850190c6855cd3ff9e347",
+            "id": "0b8264905208931ebc09346a36353ca7",
             "name": "Cricket - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/leaders\/",
             "description": "",
@@ -1097,11 +1097,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "85c3849e8f1cdcb5dc62259ada2b427c",
+            "id": "596571f8d75572e52936fac8f4663ae5",
             "name": "ICC Team World Rankings",
             "url": "http:\/\/api.stats.com\/\/stats\/cricket\/{leaguePath}\/worldRankings\/teams\/",
             "description": "",
@@ -1149,11 +1149,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "93d7a91290f0c235922097abcb5b6112",
+            "id": "98a177d381e82bac999cfd4af473073d",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/stories\/headlines\/",
             "description": "",
@@ -1180,11 +1180,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "9c2653272a460d9af2bc545da3a9abbb",
+            "id": "6768cb16a7d043d236466b07006e4fe4",
             "name": "List of headlines.",
             "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/articles\/headlines\/",
             "description": "",
@@ -1211,11 +1211,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "6043c409e84cf1067d33b2382e4a8010",
+            "id": "609a9fb464ce8a8f1cbea9b353484154",
             "name": "Recent stories for the selected league.",
             "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/stories\/recent\/",
             "description": "",
@@ -1242,11 +1242,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "ceb68a6caaf40578647cb5ae7e3e945d",
+            "id": "4769a65c6846dd93bf34ad0dad93306a",
             "name": "Recent stories for the selected league.",
             "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/articles\/recent\/",
             "description": "",
@@ -1273,11 +1273,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "e81c0fe832b6bfd4b3ab1127fad21721",
+            "id": "97b3fac2566377aa0e43595972f9812e",
             "name": "Get the full story for a storyId found in headline...",
             "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/stories\/{storyId}\/",
             "description": "Get the full story for a storyId found in headlines or stories.",
@@ -1311,11 +1311,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "cc1e7df868ee77956b1cf2baf4d76ff3",
+            "id": "ea95eaeef9be0d76586ed239f554819d",
             "name": "Get the full article for a storyId found in headli...",
             "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/articles\/{storyId}\/",
             "description": "Get the full article for a storyId found in headlines or articles.",
@@ -1349,11 +1349,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "821bc206bf82fbeda26a83c3d7879f43",
+            "id": "e2465ae6997a1273ff14a4c127c77028",
             "name": "List of available images.",
             "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/images\/list\/",
             "description": "",
@@ -1387,11 +1387,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "7ba83b8cbf56a9364570c9e50c4ed8da",
+            "id": "2c006ed1698354892d4c31326033ef4f",
             "name": "List of available photos.",
             "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/photos\/list\/",
             "description": "",
@@ -1425,11 +1425,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "3d4513242fb664c96c5edbcb13f59a45",
+            "id": "ee3ef329f9f7621846f9b780eb2ed54e",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/images\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -1470,11 +1470,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "016970c5bfa108cfb0eff23132f7be76",
+            "id": "1d10a241c7fad5268dd40b95fa7775d1",
             "name": "",
             "url": "http:\/\/api.stats.com\/\/editorial\/cricket\/icc\/photos\/{imageSize}\/{imageId}\/",
             "description": "",
@@ -1515,11 +1515,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         },
         {
-            "id": "469a6cfbc72bfcb75dfe0d256392dda8",
+            "id": "6041d73894c054e833d887464ebe697a",
             "name": "Cricket - Decodes",
             "url": "http:\/\/api.stats.com\/\/decode\/cricket\/{leaguePath}\/{decodeType}",
             "description": "",
@@ -1574,7 +1574,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7b9d69470c43d3ab0faa79d34ff11537",
+            "collectionId": "9aa272db8412ff8579eb33dbca34e37d",
             "rawModeData": ""
         }
     ]
