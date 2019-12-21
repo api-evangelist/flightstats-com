@@ -1,5 +1,5 @@
 {
-    "id": "38eba2fb45fca8845717db49884a566d",
+    "id": "7a3a9e358f376eb44f9b9db431ffc74d",
     "name": "Baseball - MLB",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "f0fafbcc2cae651ee104413bf9bc677b",
+            "id": "da033a8985b9967dd8e7844210368810",
             "name": "The teams endpoint will be your source for team na...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/teams\/{teamId}",
             "description": "The teams endpoint will be your source for team names, locations, abbreviations, and IDs.  You can get information about a single team by including the teamId.  If you do not include a teamId, you will get all the teams for the league",
@@ -58,11 +58,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "40e64332d5de267270f42341eca945ab",
+            "id": "bab0c3da4fec1b644203f7d117c07e0c",
             "name": "Access to this events endpoint will provide you wi...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/events\/{eventId}",
             "description": "Access to this events endpoint will provide you with the highest level of game data including live scores, box scores, play-by-play, and pitch type\/velocity\/location information.  The first 4 parameters (eventId, box, pbp, and tvl) are only applicable for a specific game.\n Events will also provide you with schedule data.",
@@ -166,11 +166,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "e4a75d36daab707fb69ecbcefc75d770",
+            "id": "d9d303391f928b1945a108809892de1f",
             "name": "This endpoint allows you to select schedule and sc...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/events\/teams\/{teamId}",
             "description": "This endpoint allows you to select schedule and score information for just one team.  Getting information for a single team returns only schedule and score information.  If you want detailed event information (box, pbp, tvl), refer to the endpoint example with the eventId.",
@@ -253,11 +253,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "da747fcb4187f5cd626865efb1fcd6c7",
+            "id": "28f51c21b4e2550560362e0ec26cc77d",
             "name": "The box\/ resource provides scores\/schedules and bo...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/box\/{eventId}",
             "description": "The box\/ resource provides scores\/schedules and box score information for MLB events.  (Play-by-play is not an option.)",
@@ -333,11 +333,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "1dbef9c9e52499fef26282fcc93b88c8",
+            "id": "13fcbdfa69e06dfa55ac28d2cb05b882",
             "name": "This gets the event (schedule) information for jus...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/box\/teams\/{teamId}",
             "description": "This gets the event (schedule) information for just one team.  (Use the example above to return detailed event information.",
@@ -406,11 +406,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "de02d8ded416d015f62301686596e0bf",
+            "id": "f55a344cf83833221dd8a08f61a338a8",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/scores\/{eventId}",
             "description": "The scores\/ resource provides score and schedule information for MLB events. (Box and Play-by-play are not options.)",
@@ -479,11 +479,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "86e5275ba6c263b0f46c910c114a1706",
+            "id": "4f0e4e94033aeeb961302b20d77104e5",
             "name": "The scores\/ resource provides score and schedule i...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/scores\/teams\/{teamId}",
             "description": "The scores\/ resource provides score and schedule information for MLB events.",
@@ -552,11 +552,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "10874989abb7395a1366d0f78e253056",
+            "id": "e926655407fc6830ce7abfeeba8f5bf6",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/standings\/",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -611,11 +611,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "c8a24f566b8c7b2891efb813558c6148",
+            "id": "124ca11db9602dd28a6e8083a4f22d64",
             "name": "The standings endpoint will provide the league sta...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/standings\/teams\/{teamId}",
             "description": "The standings endpoint will provide the league standings, including all team data relevant to standings.",
@@ -677,11 +677,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "adb8094c815156a78613ee138035779c",
+            "id": "37ec357b60f32ddf08778b8ec76d2645",
             "name": "This will return anyone who has played since the b...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/participants\/",
             "description": "This will return anyone who has played since the beginning of the entered year.",
@@ -722,11 +722,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "b87698916aad8ead3283ab6fc7bd4ba7",
+            "id": "6f4df1f50bd466da42e9e4e87e36a083",
             "name": "Historical rosters provide biographical informatio...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/participants\/teams\/{teamId}",
             "description": "Historical rosters provide biographical information for players that played for a team in a single specified season.",
@@ -774,11 +774,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "c1ea2617a648c00b222a56a1c3ad2615",
+            "id": "f368f85ee51c3f5bf101445dc5429723",
             "name": "The participants endpoint provides biographical in...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/participants\/{playerId}",
             "description": "The participants endpoint provides biographical information for players and can be used to return information on a single player, a single teams roster, all teams rosters within the league, or all free agents.",
@@ -833,11 +833,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "75fca3cc188c2481fd0bbb0f8b5e3070",
+            "id": "3f242dfd941514fe8879b10f0fc158b3",
             "name": "This will return anyone who has played in an MLB A...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/allStarParticipants\/",
             "description": "This will return anyone who has played in an MLB All-Star Game.",
@@ -878,11 +878,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "99c773d9555c501db018bab1e6adcf5c",
+            "id": "881c2d4c7ba7c52ba5711024ad7b682c",
             "name": "The umpires endpoint provides biographical informa...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/umpires\/",
             "description": "The umpires endpoint provides biographical information for umpires.",
@@ -923,11 +923,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "0cf42807b90898c54da6c13c42e22e47",
+            "id": "0b185a6d17493e094c9b5d4da0c8f1ad",
             "name": "The umpires endpoint provides biographical informa...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/umpires\/{umpireId}",
             "description": "The umpires endpoint provides biographical information on a single umpire.",
@@ -968,11 +968,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "bcf79ebeb6f41ec7a3fc8b3cf63eeec1",
+            "id": "cd591d175e4a8c88ab1c6ca65c813b9b",
             "name": "This will return anyone who has played since the b...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/mlbid\/",
             "description": "This will return anyone who has played since the beginning of the entered year.",
@@ -1006,11 +1006,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "e3023fb209db9930fee0ce14d40fb2cb",
+            "id": "8764792b0b2c02068bb26588fc590037",
             "name": "Historical rosters provide MLB ids for players tha...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/mlbid\/teams\/{teamId}",
             "description": "Historical rosters provide MLB ids for players that played for a team in a single specified season.",
@@ -1051,11 +1051,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "668a0a63d5cc348917e2f0e1d96ed300",
+            "id": "ccebb65ba6720501f4fa34e24b17fd4b",
             "name": "The mlbid endpoint provides MLB ids for players. I...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/mlbid\/{playerId}",
             "description": "The mlbid endpoint provides MLB ids for players. It can be used to return MLB ids on a single player, a single teams roster, all teams rosters within the league, or all free agents.",
@@ -1103,11 +1103,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "55bdd3945d9e9d3fb296fde7ad8c0b19",
+            "id": "511619bc374f08b05aaab662f7a96210",
             "name": "MLB - Career stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/players\/{playerId}",
             "description": "",
@@ -1176,11 +1176,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "9193c9426204168a5aecc0f3812156cc",
+            "id": "424b16d1a82ee6858f253f8d7da4372e",
             "name": "MLB - Single game stats for a single player",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/players\/{playerId}\/events\/{eventId}",
             "description": "",
@@ -1228,11 +1228,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "066fc07ce118e9900bda780a47706d25",
+            "id": "41bd31f546fcb5e84e19fb678130e732",
             "name": "MLB - Player game logs.",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/players\/{playerId}\/events\/",
             "description": "",
@@ -1294,11 +1294,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "7a12c26b0db0963ae2b90aba3b3d74af",
+            "id": "7192679fbbdd539a7f9d0fed0e9c400e",
             "name": "This is used when a player is on more than one tea...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/players\/{playerId}\/teams\/{teamId}",
             "description": "This is used when a player is on more than one team in a season and you want only stats for one specific team.",
@@ -1367,11 +1367,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "41bbf9db73644fc90bc3c0eca03f0852",
+            "id": "908a1062e95ab7566d95228046ea036e",
             "name": "MLB - Player splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/players\/{playerId}\/",
             "description": "",
@@ -1440,11 +1440,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "c10ca49069a2a8f25b278070824cbe6b",
+            "id": "87eed05e3213e123ac2dbdb74c04417e",
             "name": "MLB - Team splits (breakdowns).",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/teams\/{teamId}\/",
             "description": "",
@@ -1513,11 +1513,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "28d2edc2ec72796d9821378d67b013f0",
+            "id": "399fd480b2d19bedf542d4f680cfe7b6",
             "name": "MLB - Single game stats for a team",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/teams\/{teamId}\/events\/{eventId}",
             "description": "",
@@ -1565,11 +1565,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "4eab045a6336412cc69feb3fdeea3216",
+            "id": "ae44744f8ae649876d385ed2c8af4fdf",
             "name": "MLB - Team game logs.",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/teams\/{teamId}\/events\/",
             "description": "",
@@ -1631,11 +1631,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "1572c91ce4f7816dae0b12bbbc75ea23",
+            "id": "91455d98054f20485b30d033327364a5",
             "name": "MLB - Career stats for a single coach",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/coaches\/{coachId}",
             "description": "",
@@ -1704,11 +1704,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "b308fe98e5d18fe1aba6cd2d51940c26",
+            "id": "42c8e8a360ae21634e32286054ad351d",
             "name": "This is used when a coach is on more than one team...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/coaches\/{coachId}\/teams\/{teamId}",
             "description": "This is used when a coach is on more than one team in a season and you want only the stats for that team.",
@@ -1784,11 +1784,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "a90aa5b877fdc8efc16e1d4adc0cc673",
+            "id": "d4f053869f7e08002fd952823cb45f07",
             "name": "This will return all stats for all coaches on a te...",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/coaches\/teams\/{teamId}",
             "description": "This will return all stats for all coaches on a team in a given season.",
@@ -1857,11 +1857,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "2586220eb74d393c9158811fa31bf73a",
+            "id": "2cddeb5e30467f01f87c8d9060019382",
             "name": "MLB - Season stats for a single umpire",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/stats\/umpires\/{umpireId}",
             "description": "",
@@ -1923,11 +1923,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "c0364471c61cc631028f651ac7461829",
+            "id": "916323092f1782b021e03a18e5605c86",
             "name": "MLB - Get all transactions",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/transactions\/",
             "description": "",
@@ -1975,11 +1975,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "4418f3ec8c21825418afd74f2b8bf10a",
+            "id": "44c9ce8e2720d22a730fa7ffb3723912",
             "name": "MLB - Player transactions",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/transactions\/players\/{playerId}\/",
             "description": "",
@@ -2034,11 +2034,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "364c24e51d0512814b555fba3f6750b1",
+            "id": "8778ed2c529f97a571f496dd66ffdb9f",
             "name": "MLB - Player transactions",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/transactions\/players\/{playerId}\/teams\/{teamId}\/",
             "description": "",
@@ -2100,11 +2100,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "a30d7294dbb46c88c50ea18dd3bfbd2c",
+            "id": "e22296d9eccce8352d9acae8d63b69f6",
             "name": "MLB - Team transactions",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/transactions\/teams\/{teamId}",
             "description": "",
@@ -2159,11 +2159,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "a33477de14301a9cd1ab2ad90c023ac6",
+            "id": "c8df491778d90b4c6c3a0bc62478c87f",
             "name": "MLB - Get all injuries",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/injuries\/",
             "description": "",
@@ -2211,11 +2211,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "bc81cb71838a0accac35640f0d12bef8",
+            "id": "7d6cb227a66c240752345d0ffb073fe7",
             "name": "MLB - Player Injuries",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/injuries\/players\/{playerId}\/",
             "description": "",
@@ -2270,11 +2270,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "69e1dbb35400deeeee2033cef0c13bc0",
+            "id": "eb9db579097f66bb6dae0ea44af45afd",
             "name": "MLB - Player Injuries",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/injuries\/players\/{playerId}\/teams\/{teamId}\/",
             "description": "",
@@ -2336,11 +2336,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "9aa16ece6f3b7ab9e2be42434bc30a45",
+            "id": "7ba61ab9b0b241a61288616929cf81fd",
             "name": "MLB - Team injuries",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/injuries\/teams\/{teamId}",
             "description": "",
@@ -2395,11 +2395,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "d537e8357893d396ad40f1c71c049115",
+            "id": "246422459040304aea71ef91cb7f8053",
             "name": "MLB - Get all injury details",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/injuryDetails\/",
             "description": "",
@@ -2447,11 +2447,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "2e7bc482eea016b6775af35f54d1d241",
+            "id": "e2ca8ecabfc34bdd2e64babf136c3f95",
             "name": "MLB - Injury Details for one player",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/injuryDetails\/players\/{playerId}",
             "description": "",
@@ -2506,11 +2506,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "fcc9e89f3f871b8f3c04da33e7cc0308",
+            "id": "2cb2d6e4aab81864340215bea351f225",
             "name": "MLB - Team injury details",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/injuryDetails\/teams\/{teamId}",
             "description": "",
@@ -2565,11 +2565,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "e6e69d57b9ecac9241c90fc5e075c063",
+            "id": "90cc2920276849b5f3f6b849511407a2",
             "name": "MLB - Get all player news",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/playerNews\/",
             "description": "",
@@ -2624,11 +2624,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "2f59cee00a1deef6432c8a4e50c4bf7e",
+            "id": "c5bef776723bee3cf64045d6ea8bbf3c",
             "name": "MLB - Player news for one player",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/playerNews\/players\/{playerId}",
             "description": "",
@@ -2690,11 +2690,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "8db716580d82d5d84df57d090d20cf1d",
+            "id": "212365d92d14ccab3832c57e20adc3b0",
             "name": "MLB - Player news for one player",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/playerNews\/players\/{playerId}\/teams\/{teamId}\/",
             "description": "",
@@ -2763,11 +2763,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "73a59b27d6d9da3d2bb820c28e0027eb",
+            "id": "96780e54d9d9e35dd25242461ad0833b",
             "name": "MLB - Team player news",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/playerNews\/teams\/{teamId}",
             "description": "",
@@ -2829,11 +2829,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "bf7b071abc109f0e6ecc41cf336c3c70",
+            "id": "54240c9f608a8bed2d509a38d48357c8",
             "name": "MLB - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/leaders\/",
             "description": "",
@@ -2930,11 +2930,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "491e3de4a9967c01479eb0f666703f8f",
+            "id": "d5b09d0089265d7d2f23a4db0e3dc46f",
             "name": "MLB - Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/dailyLeaders\/",
             "description": "",
@@ -3017,11 +3017,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "42cfd418242226f8d9d68926b8a2b71b",
+            "id": "e6da86e4b966b9b9a64282d0b1d1f50e",
             "name": "MLB - Team Leaders",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/teamLeaders\/",
             "description": "",
@@ -3104,11 +3104,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "7ffeb1de8457e5a0270e3fc1ee28c618",
+            "id": "a1953f0d76e4634f969c1d9529f8d227",
             "name": "MLB - Depth Charts for all teams",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/depthCharts\/",
             "description": "",
@@ -3149,11 +3149,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "9233d20335f1f388762c3ef626df1543",
+            "id": "eaa5364a26a533b5e1cbb7d89c421038",
             "name": "MLB - Depth Charts for a single team",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/depthCharts\/teams\/{teamId}",
             "description": "",
@@ -3201,11 +3201,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         },
         {
-            "id": "0773865eb1fcc8634a7e10250af0e5d1",
+            "id": "c7555b0e33d233c2697f906cfd318445",
             "name": "MLB - Pitching Probables",
             "url": "http:\/\/api.stats.com\/\/stats\/baseball\/mlb\/probables\/{eventId}\/",
             "description": "",
@@ -3274,7 +3274,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38eba2fb45fca8845717db49884a566d",
+            "collectionId": "7a3a9e358f376eb44f9b9db431ffc74d",
             "rawModeData": ""
         }
     ]
